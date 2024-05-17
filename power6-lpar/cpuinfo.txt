@@ -1,0 +1,9 @@
+cpu		: POWER6 (architected), altivec supported
+clock		: 4208.000000MHz
+revision	: 3.1 (pvr 003e 0301)
+
+timebase	: 512000000
+platform	: pSeries
+model		: IBM,9117-MMA
+machine		: CHRP IBM,9117-MMA
+MMU		: Hash

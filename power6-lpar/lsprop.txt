@@ -1,0 +1,1269 @@
+ibm,drc-names    00000c3e 4c4d4233 004c4d42 34004c4d
+		 4235004c 4d423600 4c4d4237 004c4d42
+		 38004c4d 4239004c 4d423130 004c4d42
+		 3131004c 4d423132 004c4d42 3133004c
+		 4d423134 004c4d42 3135004c 4d423136
+		 004c4d42 3137004c 4d423138 004c4d42
+		 3139004c 4d423230 004c4d42 3231004c
+		 4d423232 004c4d42 3233004c 4d423234
+		 [26948 bytes total]
+ibm,fw-net-version
+		 "bNW160108 09:57:35 /gsa/ausgsa-p2/00/esw_io_net/esw_io_net_350/NW160108/obj/rios_aix_4/of"
+ibm,drc-types    00000c3e 4d454d00 4d454d00 4d454d00
+		 4d454d00 4d454d00 4d454d00 4d454d00
+		 4d454d00 4d454d00 4d454d00 4d454d00
+		 4d454d00 4d454d00 4d454d00 4d454d00
+		 4d454d00 4d454d00 4d454d00 4d454d00
+		 4d454d00 4d454d00 4d454d00 4d454d00
+		 4d454d00 4d454d00 4d454d00 4d454d00
+		 4d454d00 4d454d00 4d454d00 50484200
+		 [12573 bytes total]
+#address-cells   00000002
+ibm,converged-loc-codes
+		
+ibm,migratable-partition
+		
+ibm,ignore-hp-po-fails-for-dlpar
+		
+ibm,max-boot-devices
+		 00000005
+ibm,phandle      ffffffff (-1)
+ibm,pci-full-cfg 00000001
+model            "IBM,9117-MMA"
+ibm,plat-res-int-priorities
+		 0000000c 000000e4
+ibm,platform-hardware-notification
+		 00000002 504f5745 52365f30 30334530
+		 33303100 504f5745 52365f30 30334530
+		 33303200
+ibm,extended-clock-frequency
+		 00000000 9e8c6100
+ibm,partition-name
+		 "5-Didgo"
+ibm,fw-net-compatibility
+		 "1"
+#size-cells      00000002
+ibm,drc-indexes  00000c3e 80000002 80000003 80000004
+		 80000005 80000006 80000007 80000008
+		 80000009 8000000a 8000000b 8000000c
+		 8000000d 8000000e 8000000f 80000010
+		 80000011 80000012 80000013 80000014
+		 80000015 80000016 80000017 80000018
+		 80000019 8000001a 8000001b 8000001c
+		 8000001d 8000001e 8000001f 20000001
+		 [12540 bytes total]
+ibm,lpar-capable
+ibm,fru-9006-deactivate
+		 00000001
+clock-frequency  9e8c6100
+ibm,fw-bytes-per-boot-device
+		 00000100 (256)
+ibm,fault-behavior
+		 00000001
+device_type      "chrp"
+hmc-managed?     ffffffff ffffffff
+compatible       "IBM,9117-MMA"
+ibm,enable-ci64-capable
+		
+ibm,extended-address
+		
+ibm,max-vios-function-level
+		 00000000
+ibm,partition-no 00000005
+phandle          00c89560 (13145440)
+ibm,partition-performance-parameters-level
+		 00000001
+ibm,model-class  "F5"
+system-id        "IBM,0210ACA3F"
+name             ""
+ibm,drc-power-domains
+		 00000c3e ffffffff ffffffff ffffffff
+		 ffffffff ffffffff ffffffff ffffffff
+		 ffffffff ffffffff ffffffff ffffffff
+		 ffffffff ffffffff ffffffff ffffffff
+		 ffffffff ffffffff ffffffff ffffffff
+		 ffffffff ffffffff ffffffff ffffffff
+		 ffffffff ffffffff ffffffff ffffffff
+		 ffffffff ffffffff ffffffff ffffffff
+		 [12540 bytes total]
+ibm,aix-diagnostics
+		
+ibm,eeh-default  00000001
+
+/proc/device-tree/ibm,bsr@3fbfff015000:
+ibm,#lock-bytes  00000008
+device_type      "ibm,bsr"
+compatible       "ibm,bsr"
+ibm,lock-stride  00000010 (16)
+reg              00003fbf ff015000 00000000 00001000
+phandle          00dc7bd0 (14449616)
+name             "ibm,bsr"
+
+/proc/device-tree/memory@0:
+#address-cells   00000001
+ibm,phandle      fffffffa (-6)
+#size-cells      00000000
+device_type      "memory"
+reg              00000000 00000000 00000000 08000000
+phandle          00cb5408 (13325320)
+name             "memory"
+ibm,associativity
+		 00000004 00000000 00000000 00000000 00000000
+available        00000000 00004000 00000000 000fc000
+		 00000000 0012aafc 00000000 00010504
+		 00000000 00250e00 00000000 009af200
+		 00000000 02261000 00000000 01d9f000
+		 00000000 04b08030 00000000 00000fd0
+		 00000000 04b1352c 00000000 00000ad4
+		 00000000 06527d58 00000000 000002a8
+		 00000000 06530030 00000000 00000fd0
+		 [160 bytes total]
+
+/proc/device-tree/ibm,bsr@3fbfff012000:
+ibm,#lock-bytes  00000008
+device_type      "ibm,bsr"
+compatible       "ibm,bsr"
+ibm,lock-stride  00000010 (16)
+reg              00003fbf ff012000 00000000 00001000
+phandle          00dc2998 (14428568)
+name             "ibm,bsr"
+
+/proc/device-tree/interrupt-controller@0:
+ibm,interrupt-buid-size
+		 00000010 (16)
+built-in        
+model            "IBM, Logical PowerPC-PIC, 00"
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 00000000 00000080
+compatible       "IBM,ppc-xicp"
+reg              00000000 00000000 00000000 00000000
+phandle          00dcd718 (14472984)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+/proc/device-tree/rtas:
+ibm,reset-capabilities
+		 00000001
+ibm,int-on       00000024 (36)
+ibm,associativity-reference-points
+		 00000002 00000003
+ibm,power-off-ups
+		 0000004a (74)
+ibm,indicator-0002
+		 ""
+ibm,configure-kernel-dump
+		 00000051 (81)
+ibm,errinjct-tokens
+		 7265636f 76657265 642d7370 65636961
+		 6c2d6576 656e7400 00000003 636f7272
+		 75707465 642d7061 67650000 00000469
+		 6f612d62 75732d65 72726f72 00000000
+		 07636f72 72757074 65642d64 63616368
+		 652d7374 61727400 00000009 636f7272
+		 75707465 642d6463 61636865 2d656e64
+		 00000000 0a636f72 72757074 65642d69
+		 [236 bytes total]
+get-time-of-day  00000003
+ibm,nmi-interlock
+		 00000031 (49)
+ibm,max-associativity-domains
+		 00000005 00000001 00000001 00000020 00000020 00000040
+ibm,get-dynamic-sensor-state
+		 00000047 (71)
+power-domains-tree
+		 00000000 00000002 00000000 00000001
+		 00000000 000000fa 00000064 00000001
+		 00000000 000000fa 00000000
+rtas-error-log-max
+		 00000800 (2048)
+ibm,get-sensor-indices-types
+		 0000232e 0000232f
+ibm,flash-block-version
+		 00000001
+power-on-max-latency
+		 ffffffff (-1)
+ibm,write-pci-config
+		 0000002f (47)
+rtas-display-device
+		 00df82f0 (14648048)
+ibm,configure-bridge
+		 00000038 (56)
+platform-power-sources
+		 00035b60 00004a38 000038a4 00000032
+ibm,query-interrupt-source-number
+		 0000004c (76)
+ibm,configure-kernel-dump-version
+		 00010001 (65537)
+ibm,suspend-me   0000004e (78)
+ibm,set-eeh-option
+		 0000002b (43)
+ibm,configure-kernel-dump-sizes
+		 00000001 00000000 00008020 00000002 00000000 00001000
+ibm,get-system-parameter
+		 00000032 (50)
+ibm,set-system-parameter
+		 00000034 (52)
+ibm,get-indices  00000037 (55)
+ibm,integrated-stop-self
+		
+ibm,os-term      0000001a (26)
+nvram-fetch      00000001
+ibm,phandle      fffffffd (-3)
+ibm,update-nodes 0000004f (79)
+ibm,indicator-9005
+		 ""
+ibm,read-slot-reset-state-functions
+		 00000003
+stop-self        00000018 (24)
+ibm,activate-firmware
+		 00000043 (67)
+ibm,extended-os-term
+		
+ibm,update-properties
+		 00000050 (80)
+rtas-indicators  00000001 00000000 00000002 00000000 0000232d 00000000
+rtas-event-scan-rate
+		 00000004
+rtas-version     00000001
+ibm,display-number-of-lines
+		 00000002
+check-exception  00000007
+set-indicator    0000000b (11)
+linux,rtas-base  06db0000 (115015680)
+ibm,open-errinjct
+		 00000026 (38)
+ibm,request-partition-shutdown
+		 00000000
+get-sensor-state 0000000c (12)
+set-time-for-power-on
+		 00000005
+set-power-level  0000000d (13)
+rtas-last-error  0000001f (31)
+ibm,display-line-length
+		 00000010 (16)
+display-character
+		 0000000a (10)
+ibm,read-slot-reset-state2
+		 00000048 (72)
+ibm,indicator-0001
+		 ""
+ibm,set-slot-reset
+		 0000002c (44)
+ibm,nmi-register 00000030 (48)
+ibm,display-truncation-length
+		 00000010 00000050
+ibm,sensor-0009  ""
+ibm,configure-connector
+		 0000002a (42)
+ibm,get-config-addr-info2
+		 0000004d (77)
+ibm,get-vpd      00000042 (66)
+ibm,recoverable-epow3
+		
+ibm,close-errinjct
+		 00000028 (40)
+ibm,manage-flash-image
+		 0000003c (60)
+linux,rtas-entry 06db1548 (115021128)
+nvram-store      00000002
+power-sources-names
+		 "power supply"
+ibm,slot-error-detail
+		 00000036 (54)
+set-time-of-day  00000004
+ibm,update-flash-64-and-reboot
+		 00000021 (33)
+rtas-sensors     00000001 00000000 00000005 00000000
+		 00000009 00000000 0000232d 00000000
+ibm,sensor-9005  ""
+ibm,errinjct     00000027 (39)
+ibm,get-xive     00000022 (34)
+ibm,change-msix-capable
+		
+ibm,configure-pe 00000052 (82)
+phandle          00dd2a88 (14494344)
+query-cpu-stopped-state
+		 0000001e (30)
+ibm,hypertas-functions
+		 6863616c 6c2d7066 74006863 616c6c2d
+		 74636500 6863616c 6c2d7370 72673000
+		 6863616c 6c2d6461 62720068 63616c6c
+		 2d636f70 79006863 616c6c2d 64656275
+		 67006863 616c6c2d 7465726d 00686361
+		 6c6c2d69 6e746572 72757074 00686361
+		 6c6c2d6d 69677261 74650068 63616c6c
+		 2d706572 666d6f6e 00686361 6c6c2d73
+		 [311 bytes total]
+event-scan       00000006
+ibm,get-indicator-indices-types
+		 0000232e 0000232f
+ibm,sensor-0005  ""
+ibm,get-config-addr-info
+		 0000004d (77)
+ibm,validate-flash-image
+		 0000003d (61)
+ibm,nmi-register-2
+		 00000030 (48)
+rtas-size        01150000 (18153472)
+power-off        00000011 (17)
+ibm,platform-dump
+		 0000003b (59)
+system-reboot    00000014 (20)
+ibm,lpar-perftools
+		 00000045 (69)
+get-power-level  0000000e (14)
+ibm,int-off      00000025 (37)
+ibm,set-dynamic-indicator
+		 00000046 (70)
+ibm,set-xive     00000023 (35)
+power-domains-controllers
+		 00df82f0 (14648048)
+start-cpu        00000019 (25)
+ibm,read-pci-config
+		 0000002e (46)
+ibm,lrdr-capacity
+		 00000000 80000000 00000000 04000000 00000002
+ibm,rks-hcalls   e0000000
+name             "rtas"
+power-domains-names
+		 "root power domain"
+ibm,dma-delay-time
+		 0003e800 (256000)
+ibm,vpd-size     0004b000 (307200)
+ibm,change-msi   0000004b (75)
+ibm,form-feed    0000000c (12)
+ibm,sensor-0001  ""
+
+/proc/device-tree/ibm,serial:
+device_type      "serial"
+used-by-rtas    
+compatible       "hvterm1"
+phandle          00c94f10 (13192976)
+name             "ibm,serial"
+
+/proc/device-tree/options:
+ibm,fw-n-bretry  "00"
+screen-#rows     "40"
+fcode-debug?     "true"
+diag-switch?     "false"
+diag-device      "/vdevice/l-lan@3000000b:speed=auto,duplex=auto,000.000.000.000,,000.000.000.000,000.000.000.000,5,5,255.255.255.000,512"
+real-base        "12582912"
+menu?            "false"
+oem-logo        
+use-nvramrc?     "false"
+ibm,fw-n-dbfp    "00000000"
+real-mode?       "true"
+virt-base        "4294967295"
+ibm,fw-default-mac-address?
+		 "false"
+boot-last-label  "dev"
+		 ""
+oem-banner       ""
+ibm,phandle      fffffffb (-5)
+ibm,fw-new-mem-def
+		 "true"
+screen-#columns  "100"
+ibm,fw-n-ru      "Y"
+auto-boot?       "true"
+ibm,dasd-spin-interval
+		 "5"
+ibm,fw-oflite-dbg
+		 "false"
+ibm,fw-keyboard  "1"
+boot-command     "boot"
+ibm,fw-00096bae6847
+		 61 75 74 6f 2c 61 75 74 6f                     auto,auto
+output-device    "/vdevice/vty@30000000"
+ibm,os-restart-policy
+		 "1"
+ibm,fw-prev-boot-vpd
+		
+ibm,fw-override-cas
+		 "false"
+ibm,fw-n-tretry  "00"
+real-size        "16777216"
+input-device     "/vdevice/vty@30000000"
+ibm,fw-n-dafp    "00000000"
+reboot-command   ""
+ibm,fw-tty-language
+		 "1"
+boot-once        ""
+virt-size        "4294967295"
+ibm,fw-forced-boot
+		 ""
+oem-banner?      "false"
+ibm,fw-show-true-pcie?
+		 "true"
+selftest-#megs   "0"
+diag-file        "diag"
+ibm,fw-menu-eabfb211dc0b
+		 "auto,auto,000.000.000.000,000.000.000.000,000.000.000.000,255.255.255.000,Standard,No,,5,512,5"
+nvramrc          ""
+ibm,fw-dc-select "100"
+boot-device      "/vdevice/l-lan@3000000b:speed=auto,duplex=auto,000.000.000.000,,000.000.000.000,000.000.000.000,5,5,255.255.255.000,512"
+ibm,fw-nbr-reboots
+		 "0"
+phandle          00cc03c8 (13370312)
+ibm,fw-force-ior "false"
+little-endian?   "false"
+ibm,fw-n-rc      "A"
+ibm,fw-n-bc      "255.255.255.255"
+oem-logo?        "false"
+ibm,fw-menu-00145e5f5743
+		 "auto,auto,000.000.000.000,000.000.000.000,000.000.000.000,255.255.255.000,Standard,No,,5,512,5"
+ibm,fw-eabfb211dc0b
+		 61 75 74 6f 2c 61 75 74 6f                     auto,auto
+boot-file        ""
+ibm,fw-00096bae6846
+		 61 75 74 6f 2c 61 75 74 6f                     auto,auto
+name             "options"
+ibm,fw-find-cdrom-alias
+		 "false"
+ibm,fw-find-tape-alias
+		 "false"
+load-base        "16384"
+
+/proc/device-tree/pci@800000020000202:
+ibm,drc-names    00000001 55373839 442e3030 312e4451
+		 44584844 442d5031 2d433500
+ibm,drc-types    00 00 00 01 31 37 00                           ....17.
+ibm,fw-phb-id    08000000 20000202
+#address-cells   00000003
+tce-table-minalign
+		 00800000 (8388608)
+bus-range        00000000 000000ff
+tce-table-minsize
+		 00800000 (8388608)
+built-in        
+ibm,phandle      20000202 (536871426)
+ibm,fw-ientry-size
+		 00000007
+model            "IBM,Logical_PHB"
+interrupt-map    00000800 00000000 00000000 00000001
+		 25000202 00000121 00000001 00000800
+		 00000000 00000000 00000002 25000202
+		 00000122 00000001 00000800 00000000
+		 00000000 00000003 25000202 00000123
+		 00000001 00000800 00000000 00000000
+		 00000004 25000202 00000124 00000001
+#size-cells      00000002
+ibm,drc-indexes  00000001 22010202
+clock-frequency  08500000 (139460608)
+device_type      "pci"
+interrupt-map-mask
+		 0000f800 00000000 00000000 00000007
+used-by-rtas    
+66mhz-capable   
+compatible       "IBM,Logical_PHB"
+ranges           01000000 00000000 000f0000 00003dff
+		 e03f0000 00000000 00010000 02000000
+		 00000000 80000000 00003c01 00000000
+		 00000000 80000000
+#interrupt-cells 00000001
+ibm,extended-address
+		
+ibm,fw-error-loc-code
+		 "U789D.001.DQDXHDD-P1-C5"
+reg              08000000 20000202 00000000 00000000 00003dff e0009000
+		 00000000 00000400 00003dff e0009500 00000000 00000b00
+phandle          00e03520 (14693664)
+ibm,dma-window   01000202 02000000 00000000 00000000 00000000 80000000
+ibm,my-drc-index 20000202 (536871426)
+ibm,loc-code     "U789D.001.DQDXHDD-P1"
+name             "pci"
+ibm,drc-power-domains
+		 00000001 22010202
+ibm,fw-dma-available
+		 00000000 00000000 00000000 80000000
+
+/proc/device-tree/pci@800000020000202/ethernet@1,1:
+address-bits     00000030 (48)
+fcode-rom-offset 00000000
+max-latency      00000000
+ibm,fw-card-type "UTP"
+local-mac-address
+		 00 09 6b ae 68 47                              ..k.hG
+devsel-speed     00000001
+interrupts       00000002
+class-code       00020000 (131072)
+assigned-addresses
+		 83000910 00000000 ffee0000 00000000 00020000
+		 83000918 00000000 fff80000 00000000 00040000
+		 81000920 00000000 000ffc00 00000000 00000040
+		 82000930 00000000 fffc0000 00000000 00040000
+mac-address      00 09 6b ae 68 47                              ..k.hG
+subsystem-id     00000289 (649)
+ibm,fw-adapter-name
+		 08000048 4800002c a600607d 01006b69
+		 00004039 6401417d 05009f42 a602487d
+		 14004a39 a6035a7d a6037b7d 2400004c
+		 4800d508 7fe00008 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 72756e30
+		 08000048 4800002c a600607d 01006b69
+		 00004039 6401417d 05009f42 a602487d
+		 [65336 bytes total]
+chosen-network-type
+		 "ethernet,auto,rj45,auto"
+max-frame-size   00000800 (2048)
+device_type      "network"
+revision-id      00000001
+66mhz-capable   
+compatible       "pci8086,1010.1014.289.1"
+		 "pci8086,1010.1014.289"
+		 "pci1014,289"
+		 "pci8086,1010.1"
+		 "pci8086,1010"
+		 "pciclass,020000"
+		 "pciclass,000200"
+vendor-id        00008086 (32902)
+reg              00000900 00000000 00000000 00000000 00000000
+		 03000910 00000000 00000000 00000000 00020000
+		 03000918 00000000 00000000 00000000 00040000
+		 01000920 00000000 00000000 00000000 00000040
+		 02000930 00000000 00000000 00000000 00040000
+phandle          00e21250 (14815824)
+supported-network-types
+		 65746865 726e6574 2c617574 6f2c726a
+		 34352c61 75746f00 65746865 726e6574
+		 2c31302c 726a3435 2c68616c 66006574
+		 6865726e 65742c31 302c726a 34352c66
+		 756c6c00 65746865 726e6574 2c313030
+		 2c726a34 352c6861 6c660065 74686572
+		 6e65742c 3130302c 726a3435 2c66756c
+		 6c006574 6865726e 65742c31 3030302c
+		 [138 bytes total]
+ibm,fw-driver-version
+		 00000150 (336)
+ibm,fw-revision-level
+		 00000110 (272)
+ibm,my-drc-index 22010202 (570491394)
+ibm,loc-code     "U789D.001.DQDXHDD-P1-C5-T2"
+name             "ethernet"
+device-id        00001010 (4112)
+min-grant        000000ff (255)
+subsystem-vendor-id
+		 00001014 (4116)
+133mhz-capable  
+
+/proc/device-tree/pci@800000020000202/ethernet@1:
+address-bits     00000030 (48)
+fcode-rom-offset 00000000
+max-latency      00000000
+ibm,fw-card-type "UTP"
+local-mac-address
+		 00 09 6b ae 68 46                              ..k.hF
+ibm,phandle      22010202 (570491394)
+devsel-speed     00000001
+interrupts       00000001
+class-code       00020000 (131072)
+assigned-addresses
+		 83000810 00000000 ffec0000 00000000 00020000
+		 83000818 00000000 fff00000 00000000 00040000
+		 81000820 00000000 000ff800 00000000 00000040
+		 82000830 00000000 fff40000 00000000 00040000
+mac-address      00 09 6b ae 68 46                              ..k.hF
+subsystem-id     00000289 (649)
+ibm,fw-adapter-name
+		 08000048 4800002c a600607d 01006b69
+		 00004039 6401417d 05009f42 a602487d
+		 14004a39 a6035a7d a6037b7d 2400004c
+		 4800d508 7fe00008 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 72756e30
+		 08000048 4800002c a600607d 01006b69
+		 00004039 6401417d 05009f42 a602487d
+		 [65336 bytes total]
+chosen-network-type
+		 "ethernet,auto,rj45,auto"
+max-frame-size   00000800 (2048)
+device_type      "network"
+revision-id      00000001
+66mhz-capable   
+compatible       "pci8086,1010.1014.289.1"
+		 "pci8086,1010.1014.289"
+		 "pci1014,289"
+		 "pci8086,1010.1"
+		 "pci8086,1010"
+		 "pciclass,020000"
+		 "pciclass,000200"
+vendor-id        00008086 (32902)
+reg              00000800 00000000 00000000 00000000 00000000
+		 03000810 00000000 00000000 00000000 00020000
+		 03000818 00000000 00000000 00000000 00040000
+		 01000820 00000000 00000000 00000000 00000040
+		 02000830 00000000 00000000 00000000 00040000
+phandle          00e11480 (14750848)
+supported-network-types
+		 65746865 726e6574 2c617574 6f2c726a
+		 34352c61 75746f00 65746865 726e6574
+		 2c31302c 726a3435 2c68616c 66006574
+		 6865726e 65742c31 302c726a 34352c66
+		 756c6c00 65746865 726e6574 2c313030
+		 2c726a34 352c6861 6c660065 74686572
+		 6e65742c 3130302c 726a3435 2c66756c
+		 6c006574 6865726e 65742c31 3030302c
+		 [138 bytes total]
+ibm,fw-driver-version
+		 00000150 (336)
+ibm,fw-revision-level
+		 00000110 (272)
+ibm,my-drc-index 22010202 (570491394)
+ibm,loc-code     "U789D.001.DQDXHDD-P1-C5-T1"
+name             "ethernet"
+device-id        00001010 (4112)
+min-grant        000000ff (255)
+subsystem-vendor-id
+		 00001014 (4116)
+133mhz-capable  
+
+/proc/device-tree/openprom:
+ibm,fw-next-bank "T"
+ibm,fw-vernum_encoded
+		 "EM350_176"
+ibm,phandle      fffffffe (-2)
+model            "IBM,EM350_176"
+relative-addressing
+		
+phandle          00ce03b0 (13501360)
+name             "openprom"
+
+/proc/device-tree/ibm,dynamic-reconfiguration-memory:
+ibm,dynamic-memory
+		 0000001e 00000000 08000000 80000002
+		 00000000 00000000 00000008 00000000
+		 0c000000 80000003 00000000 00000000
+		 00000008 00000000 10000000 80000004
+		 00000000 00000000 00000008 00000000
+		 14000000 80000005 00000000 00000000
+		 00000008 00000000 18000000 80000006
+		 00000000 00000000 00000008 00000000
+		 [724 bytes total]
+ibm,phandle      fffffff9 (-7)
+ibm,memory-preservation-time
+		 00000000
+ibm,lmb-size     00000000 04000000
+ibm,memory-flags-mask
+		 000000ff (255)
+phandle          00cbbea8 (13352616)
+ibm,associativity-lookup-arrays
+		 00000400 00000004 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 00000000 00000001 00000000 00000000
+		 00000000 00000002 00000000 00000000
+		 00000000 00000003 00000000 00000000
+		 00000000 00000004 00000000 00000000
+		 00000000 00000005 00000000 00000000
+		 00000000 00000006 00000000 00000000
+		 [16392 bytes total]
+name             "ibm,dynamic-reconfiguration-memory"
+
+/proc/device-tree/ibm,bsr@3fbfff017000:
+ibm,#lock-bytes  00000008
+device_type      "ibm,bsr"
+compatible       "ibm,bsr"
+ibm,lock-stride  00000010 (16)
+reg              00003fbf ff017000 00000000 00001000
+phandle          00dcb2a0 (14463648)
+name             "ibm,bsr"
+
+/proc/device-tree/ibm,bsr@3fbfff014000:
+ibm,#lock-bytes  00000008
+device_type      "ibm,bsr"
+compatible       "ibm,bsr"
+ibm,lock-stride  00000010 (16)
+reg              00003fbf ff014000 00000000 00001000
+phandle          00dc6068 (14442600)
+name             "ibm,bsr"
+
+/proc/device-tree/ibm,bsr@3fbfff011000:
+ibm,#lock-bytes  00000008
+device_type      "ibm,bsr"
+compatible       "ibm,bsr"
+ibm,lock-stride  00000010 (16)
+reg              00003fbf ff011000 00000000 00001000
+phandle          00dc0e30 (14421552)
+name             "ibm,bsr"
+
+/proc/device-tree/event-sources:
+ibm,fw-lpevent-xirr
+		 00090000 (589824)
+#interrupt-cells 00000002
+phandle          00dcb840 (14465088)
+name             "event-sources"
+interrupt-controller
+		
+interrupt-ranges 00090000 00000008
+
+/proc/device-tree/event-sources/epow-events:
+interrupts       00090001 00000000
+phandle          00dcd5b0 (14472624)
+name             "epow-events"
+
+/proc/device-tree/aliases:
+nvram            "/vdevice/nvram@4002"
+scsi             "/vdevice/v-scsi@30000032"
+net              "/vdevice/l-lan@3000000b"
+phandle          00cc1328 (13374248)
+ibm,sp           "/vdevice/IBM,sp@4000"
+name             "aliases"
+rtc              "/vdevice/rtc@4001"
+network          "/vdevice/l-lan@3000000b"
+
+/proc/device-tree/packages:
+phandle          00c96130 (13197616)
+name             "packages"
+
+/proc/device-tree/packages/iso-9660-files:
+phandle          00da5b08 (14310152)
+name             "iso-9660-files"
+
+/proc/device-tree/packages/chrp-loader:
+phandle          00db6950 (14379344)
+name             "chrp-loader"
+
+/proc/device-tree/packages/gscsi:
+#address-cells   00000001
+phandle          00d46d68 (13921640)
+name             "gscsi"
+
+/proc/device-tree/packages/gscsi/disk:
+device_type      "block"
+phandle          00d4c848 (13944904)
+name             "disk"
+
+/proc/device-tree/packages/gscsi/tape:
+device_type      "byte"
+phandle          00d4e6d8 (13952728)
+name             "tape"
+
+/proc/device-tree/packages/gui:
+phandle          00e34bc0 (14896064)
+name             "gui"
+
+/proc/device-tree/packages/gui/iscsi:
+phandle          00e54d60 (15027552)
+name             "iscsi"
+
+/proc/device-tree/packages/elf-loader:
+phandle          00db7620 (14382624)
+name             "elf-loader"
+
+/proc/device-tree/packages/post:
+phandle          00e68058 (15106136)
+name             "post"
+
+/proc/device-tree/packages/iso-13346-files:
+phandle          00d58858 (13994072)
+name             "iso-13346-files"
+
+/proc/device-tree/packages/lpevents:
+phandle          00cc5a58 (13392472)
+name             "lpevents"
+
+/proc/device-tree/packages/fabric-mgr:
+phandle          00ccbb40 (13417280)
+name             "fabric-mgr"
+
+/proc/device-tree/packages/boot-mgr:
+phandle          00da6f50 (14315344)
+name             "boot-mgr"
+
+/proc/device-tree/packages/udp:
+phandle          00d08930 (13666608)
+name             "udp"
+
+/proc/device-tree/packages/disk-label:
+phandle          00ce27b8 (13510584)
+name             "disk-label"
+
+/proc/device-tree/packages/tape-label:
+phandle          00ce79c0 (13531584)
+name             "tape-label"
+
+/proc/device-tree/packages/bootp:
+phandle          00d1f3c0 (13759424)
+name             "bootp"
+
+/proc/device-tree/packages/gen-iso-13346-files:
+phandle          00d62100 (14033152)
+name             "gen-iso-13346-files"
+
+/proc/device-tree/packages/ping:
+phandle          00d17768 (13727592)
+name             "ping"
+
+/proc/device-tree/packages/cas:
+phandle          00dbbc50 (14400592)
+name             "cas"
+
+/proc/device-tree/packages/net:
+phandle          00d9e310 (14279440)
+name             "net"
+
+/proc/device-tree/packages/prep-boot:
+phandle          00d55c20 (13982752)
+name             "prep-boot"
+
+/proc/device-tree/packages/nls-support:
+phandle          00dbae58 (14397016)
+name             "nls-support"
+
+/proc/device-tree/packages/iptest:
+phandle          00d50240 (13959744)
+name             "iptest"
+
+/proc/device-tree/packages/pe-loader:
+phandle          00db6b30 (14379824)
+name             "pe-loader"
+
+/proc/device-tree/packages/ipv6:
+phandle          00d01178 (13635960)
+name             "ipv6"
+
+/proc/device-tree/packages/tcp:
+phandle          00d0fd80 (13696384)
+name             "tcp"
+
+/proc/device-tree/packages/iscsi:
+phandle          00d3f010 (13889552)
+name             "iscsi"
+
+/proc/device-tree/packages/ipv4:
+phandle          00cf9928 (13605160)
+name             "ipv4"
+
+/proc/device-tree/packages/disassembler:
+phandle          00c96228 (13197864)
+name             "disassembler"
+
+/proc/device-tree/packages/tftp:
+phandle          00d346a8 (13846184)
+name             "tftp"
+
+/proc/device-tree/packages/obp-tftp:
+iscsi            "iscsi"
+		 "ipv6"
+		 "dhcp"
+phandle          00ce86f0 (13534960)
+name             "obp-tftp"
+network          "bootp"
+		 "iscsi"
+		 "ipv6"
+		 "dhcp"
+
+/proc/device-tree/packages/fat-files:
+phandle          00d564b0 (13984944)
+name             "fat-files"
+
+/proc/device-tree/packages/assembler:
+phandle          00c9c600 (13223424)
+name             "assembler"
+
+/proc/device-tree/packages/utilities:
+phandle          00d6afd0 (14069712)
+name             "utilities"
+
+/proc/device-tree/packages/utilities/trace:
+phandle          00d97328 (14250792)
+name             "trace"
+
+/proc/device-tree/packages/dev-tree:
+phandle          00cc5298 (13390488)
+name             "dev-tree"
+
+/proc/device-tree/packages/dynamic-reconfig:
+phandle          00dbd748 (14407496)
+name             "dynamic-reconfig"
+
+/proc/device-tree/packages/dhcp:
+phandle          00d286f0 (13797104)
+name             "dhcp"
+
+/proc/device-tree/packages/terminal-emulator:
+phandle          00dbd650 (14407248)
+iso6429-1983-colors
+		
+name             "terminal-emulator"
+
+/proc/device-tree/packages/deblocker:
+phandle          00ce1680 (13506176)
+name             "deblocker"
+
+/proc/device-tree/interrupt-controller@800000025000202:
+ibm,interrupt-server#-size
+		 00000010 (16)
+built-in        
+ibm,phandle      25000202 (620757506)
+model            "IBM,Logical PHB"
+ibm,fw-child-intr-ph
+		 00000000 00e03520
+device_type      "PowerPC-LSI-Source"
+compatible       "ibm,ppc-xics"
+#interrupt-cells 00000002
+reg              08000000 25000202 00000000 00000100
+phandle          00dcf188 (14479752)
+ibm,my-drc-index 20000202 (536871426)
+ibm,loc-code     "U789D.001.DQDXHDD-P1"
+name             "interrupt-controller"
+interrupt-controller
+		
+interrupt-ranges 00000121 00000004
+
+/proc/device-tree/chosen:
+nvram            01b52800 (28649472)
+ibm,client-architecture-support-reboot
+		 00000000
+bootp-response   02010600 e5ad57aa 00000000 00000000
+		 0a3d8e32 0a3d0207 00000000 eabfb211
+		 dc0b0000 00000000 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 7961626f
+		 6f742e64 6964676f 35000000 00000000
+		 [300 bytes total]
+bootargs         "ro debug root=/dev/sda4 "
+cpu              01bcba00 (29145600)
+linux,memory-limit
+		 00000000 80000000
+stdin            01b52900 (28649728)
+linux,kernel-end 00000000 01a20000
+phandle          00c95ef0 (13197040)
+ibm,architecture-vec-5
+		 03 00 f3 00 00                                 .....
+stdout           01bd4280 (29180544)
+linux,stdout-path
+		 "/vdevice/vty@30000000"
+name             "chosen"
+bootpath         "/vdevice/l-lan@3000000b:speed=auto,duplex=auto,000.000.000.000,,000.000.000.000,000.000.000.000,5,5,255.255.255.000,512"
+memory           01bcbc00 (29146112)
+mmu              01bcba00 (29145600)
+
+/proc/device-tree/vdevice:
+ibm,drc-names    00000064 55393131 372e4d4d 412e3130
+		 41434133 462d5635 2d433000 55393131
+		 372e4d4d 412e3130 41434133 462d5635
+		 2d433100 55393131 372e4d4d 412e3130
+		 41434133 462d5635 2d433200 55393131
+		 372e4d4d 412e3130 41434133 462d5635
+		 2d433300 55393131 372e4d4d 412e3130
+		 41434133 462d5635 2d433400 55393131
+		 [2494 bytes total]
+ibm,drc-types    00000064 534c4f54 00534c4f 5400534c
+		 4f540053 4c4f5400 534c4f54 00534c4f
+		 5400534c 4f540053 4c4f5400 534c4f54
+		 00534c4f 5400534c 4f540053 4c4f5400
+		 534c4f54 00534c4f 5400534c 4f540053
+		 4c4f5400 534c4f54 00534c4f 5400534c
+		 4f540053 4c4f5400 534c4f54 00534c4f
+		 5400534c 4f540053 4c4f5400 534c4f54
+		 [504 bytes total]
+#address-cells   00000001
+ibm,phandle      fffffffc (-4)
+#size-cells      00000000
+ibm,drc-indexes  00000064 30000000 30000001 30000002
+		 30000003 30000004 30000005 30000006
+		 30000007 30000008 30000009 3000000a
+		 3000000b 3000000c 3000000d 3000000e
+		 3000000f 30000010 30000011 30000012
+		 30000013 30000014 30000015 30000016
+		 30000017 30000018 30000019 3000001a
+		 3000001b 3000001c 3000001d 3000001e
+		 [404 bytes total]
+ibm,max-virtual-dma-size
+		 00050000 (327680)
+device_type      "vdevice"
+compatible       "IBM,vdevice"
+#interrupt-cells 00000002
+phandle          00dda1b0 (14524848)
+name             "vdevice"
+ibm,drc-power-domains
+		 00000064 ffffffff ffffffff ffffffff
+		 ffffffff ffffffff ffffffff ffffffff
+		 ffffffff ffffffff ffffffff ffffffff
+		 ffffffff ffffffff ffffffff ffffffff
+		 ffffffff ffffffff ffffffff ffffffff
+		 ffffffff ffffffff ffffffff ffffffff
+		 ffffffff ffffffff ffffffff ffffffff
+		 ffffffff ffffffff ffffffff ffffffff
+		 [404 bytes total]
+interrupt-controller
+		
+interrupt-ranges 000a0000 00000063 000b0000 00000063
+
+/proc/device-tree/vdevice/l-lan@3000000b:
+address-bits     00000030 (48)
+ibm,#dma-size-cells
+		 00000002
+ibm,illan-options
+		
+local-mac-address
+		 ea bf b2 11 dc 0b                              ......
+ibm,phandle      3000000b (805306379)
+interrupts       000a000b 00000000
+mac-address      ea bf b2 11 dc 0b                              ......
+ibm,fw-adapter-name
+		 "Interpartition Logical LAN"
+ibm,mac-address-filters
+		 000000ff (255)
+chosen-network-type
+		 "ethernet,auto,none,auto"
+max-frame-size   000005dc (1500)
+device_type      "network"
+compatible       "IBM,l-lan"
+ibm,vserver     
+ibm,my-dma-window
+		 1000000b 00000000 00000000 00000000 10000000
+reg              3000000b (805306379)
+phandle          00ddfd10 (14548240)
+supported-network-types
+		 "ethernet,auto,none,auto"
+ibm,#dma-address-cells
+		 00000002
+ibm,my-drc-index 3000000b (805306379)
+ibm,loc-code     "U9117.MMA.10ACA3F-V5-C11-T1"
+name             "l-lan"
+
+/proc/device-tree/vdevice/rtc@4001:
+ibm,fw-device-code
+		 da190000
+device_type      "rtc"
+used-by-rtas    
+reg              00004001 (16385)
+phandle          00df92c0 (14652096)
+name             "rtc"
+
+/proc/device-tree/vdevice/v-scsi@30000032:
+ibm,#dma-size-cells
+		 00000002
+ibm,write-blocks-supported
+		
+ibm,#vscsi-address-bits
+		 00000040 (64)
+ibm,phandle      30000032 (805306418)
+interrupts       000a0032 00000000
+ibm,fw-gscsi-access
+		 70726f74 6f636f6c 3d6e6f6e 65006e75
+		 6d2d6164 64726573 732d6c61 79657273
+		 3d310072 65706f72 742d6c75 6e732d6d
+		 6574686f 643d7673 6373692d 7265706f
+		 72742d6c 756e7300 6c756e2d 6c697374
+		 2d666f72 6d61743d 6663702d 7777706e
+		 00736574 2d616464 72657373 2d6d6574
+		 686f643d 7365742d 76736373 692d6164
+		 [134 bytes total]
+ibm,fw-adapter-name
+		 "Virtual SCSI"
+device_type      "vscsi"
+compatible       "IBM,v-scsi"
+ibm,my-dma-window
+		 10000032 00000000 00000000 00000000 20000000
+reg              30000032 (805306418)
+phandle          00de8b68 (14584680)
+ibm,#dma-address-cells
+		 00000002
+ibm,my-drc-index 30000032 (805306418)
+ibm,loc-code     "U9117.MMA.10ACA3F-V5-C50-T1"
+name             "v-scsi"
+
+/proc/device-tree/vdevice/v-scsi@30000032/disk:
+device_type      "block"
+phandle          00df20d0 (14622928)
+ibm,16byte-cdb-supported
+		
+name             "disk"
+ibm,write-supported
+		
+
+/proc/device-tree/vdevice/v-scsi@30000032/tape:
+device_type      "byte"
+phandle          00df46f0 (14632688)
+name             "tape"
+
+/proc/device-tree/vdevice/IBM,sp@4000:
+device_type      "IBM,sp"
+used-by-rtas    
+reg              00004000 (16384)
+phandle          00df82f0 (14648048)
+name             "IBM,sp"
+
+/proc/device-tree/vdevice/gscsi@4004:
+#address-cells   00000001
+#size-cells      00000000
+ibm,fw-gscsi-access
+		 "protocol=none"
+		 "num-address-layers=1"
+		 "report-luns-method="
+		 "lun-list-format=NONE"
+		 "set-address-method=NONE"
+device_type      "scsi-2"
+used-by-rtas    
+reg              00004004 (16388)
+phandle          00df9ec0 (14655168)
+name             "gscsi"
+
+/proc/device-tree/vdevice/gscsi@4004/disk:
+device_type      "block"
+phandle          00dfa810 (14657552)
+name             "disk"
+ibm,write-supported
+		
+
+/proc/device-tree/vdevice/nvram@4002:
+#bytes           00003c00 (15360)
+device_type      "nvram"
+used-by-rtas    
+reg              00004002 (16386)
+phandle          00df9bd0 (14654416)
+name             "nvram"
+
+/proc/device-tree/vdevice/vty@30000000:
+ibm,phandle      "0"
+		 ""
+		 ""
+interrupts       000a0000 00000000
+device_type      "serial"
+compatible       "hvterm1"
+reg              "0"
+		 ""
+		 ""
+phandle          00dde6f8 (14542584)
+ibm,my-drc-index "0"
+		 ""
+		 ""
+ibm,loc-code     "U9117.MMA.10ACA3F-V5-C0"
+name             "vty"
+
+/proc/device-tree/ibm,bsr@3fbfff016000:
+ibm,#lock-bytes  00000008
+device_type      "ibm,bsr"
+compatible       "ibm,bsr"
+ibm,lock-stride  00000010 (16)
+reg              00003fbf ff016000 00000000 00001000
+phandle          00dc9738 (14456632)
+name             "ibm,bsr"
+
+/proc/device-tree/ibm,bsr@3fbfff013000:
+ibm,#lock-bytes  00000008
+device_type      "ibm,bsr"
+compatible       "ibm,bsr"
+ibm,lock-stride  00000010 (16)
+reg              00003fbf ff013000 00000000 00001000
+phandle          00dc4500 (14435584)
+name             "ibm,bsr"
+
+/proc/device-tree/ibm,bsr@3fbfff010000:
+ibm,#lock-bytes  00000008
+device_type      "ibm,bsr"
+compatible       "ibm,bsr"
+ibm,lock-stride  00000010 (16)
+reg              00003fbf ff010000 00000000 00001000
+phandle          00dbf2c8 (14414536)
+name             "ibm,bsr"
+
+/proc/device-tree/cpus:
+ibm,drc-names    00000002 43505520 31004350 55203300
+ibm,drc-types    00000002 43505500 43505500
+#address-cells   00000001
+smp-enabled     
+ibm,phandle      fffffff8 (-8)
+#size-cells      00000000
+ibm,drc-indexes  00000002 10000000 10000002
+phandle          00caee38 (13299256)
+name             "cpus"
+ibm,drc-power-domains
+		 00000002 ffffffff ffffffff
+
+/proc/device-tree/cpus/PowerPC,POWER6@0:
+ibm,purr         00000001
+ibm,estimate-precision
+		 66 72 65 00 00 00 00 08 66 72 65 73 00 00 00 00fre.....fres....
+		 08 66 72 73 71 72 74 65 00 00 00 00 05 66 72 73.frsqrte.....frs
+		 71 72 74 65 73 00 00 00 00 05                  qrtes.....
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000040 (64)
+d-cache-line-size
+		 00000080 (128)
+graphics        
+slb-size         00000040 (64)
+ibm,vrma-page-sizes
+		 00000018 00000010 0000000c 00000000
+		 00000010 00000011 00000022 00000013
+translations    
+bus-frequency    9e8c6100
+tlb-size         00000000
+performance-monitor
+		 00000000 00000000
+ibm,spurr        00000001
+ibm,segment-page-sizes
+		 0000000c 00000000 00000002 0000000c
+		 00000000 00000010 00000007 00000010
+		 00000110 00000001 00000010 00000001
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,tbu40-offset 00000000 00000000
+ibm,nominal-tbf  1e848000 (512000000)
+tlb-sets         00000000
+ibm,phandle      10000000 (268435456)
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+ibm,pa-optimizations
+		 02001005 (33558533)
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 fad0fc00
+ibm,ppc-interrupt-gserver#s
+		 00000000 0000ffff 00000001 0000ffff
+i-cache-line-size
+		 00000080 (128)
+ibm,raw-pi-features
+		 01 00 00                                       ...
+ibm,processor-storage-keys
+		 00000008 00000000
+clock-frequency  fad0fc00
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,pft-size     00000000 00000019
+ibm,pi-features  01 00 a0                                       ...
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+ibm,extended-bus-frequency
+		 00000000 9e8c6100
+existing         00000000 00000000 80000000 00000000
+		 80000000 00000000 80000000 00000000
+i-cache-size     00010000 (65536)
+ibm,vmx          00000001
+timebase-frequency
+		 1e848000 (512000000)
+reg              00000000
+phandle          00cb3d30 (13319472)
+d-cache-sets     00000040 (64)
+i-cache-block-size
+		 00000080 (128)
+ibm,negotiated-pa-features
+		 01 00 00                                       ...
+i-cache-sets     00000080 (128)
+d-tlb-size       00000000
+ibm,ppc-interrupt-server#s
+		 00000000 00000001
+ibm,pa-features  0600f63f c60000c0
+ibm,my-drc-index 10000000 (268435456)
+i-tlb-size       00000000
+name             "PowerPC,POWER6"
+d-tlb-sets       00000000
+ibm,processor-vadd-size
+		 00000044 (68)
+ibm,dfp          00000001
+cpu-version      0f000002 (251658242)
+available        00000000 00000000 ffffffff ff000000

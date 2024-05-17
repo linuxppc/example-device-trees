@@ -1,0 +1,10 @@
+cpu             : POWER9 (raw), altivec supported
+clock           : 3266.000000MHz
+revision        : 2.2 (pvr 004e 1202)
+
+timebase        : 512000000
+platform        : PowerNV
+model           : ZAIUS_FX_08
+machine         : PowerNV ZAIUS_FX_08
+firmware        : OPAL
+MMU             : Radix

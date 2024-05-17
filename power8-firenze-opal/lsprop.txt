@@ -1,0 +1,5897 @@
+nest-frequency   00000000 77359400
+#address-cells   00000002
+vendor           "IBM"
+ibm,vpd-lx-info  00000000 31000401 00300042
+model            "8247-22L"
+#size-cells      00000002
+ibm,io-vpd       00000000 00000000 00000084 28005254
+		 04564844 52564402 30315054 0e56544f
+		 43d50037 00900138 0e640050 46080000
+		 00000000 00007884 8c015254 0456544f
+		 435054fc 56494e49 d500c701 9000140e
+		 24004c58 5230ff00 57022000 0c0e0800
+		 42523030 ff007702 5000f80d 14004257
+		 3030ff00 c7021800 f20d0600 50523030
+		 [3740 bytes total]
+reserved-ranges  0000001f fe600000 00000000 00100000
+		 0000001f fe200000 00000000 00100000
+		 0000001f fde00000 00000000 00100000
+		 0000001f fda00000 00000000 00100000
+		 0000001f fd510000 00000000 00190000
+		 0000001f fd6a0000 00000000 00060000
+		 0000001f fd700000 00000000 00100000
+		 00000000 31c00000 00000000 023e0000
+		 [208 bytes total]
+reserved-names   69626d2c 736c772d 696d6167 65006962
+		 6d2c736c 772d696d 61676500 69626d2c
+		 736c772d 696d6167 65006962 6d2c736c
+		 772d696d 61676500 69626d2c 68627274
+		 2d636f64 652d696d 61676500 69626d2c
+		 68627274 2d746172 6765742d 696d6167
+		 65006962 6d2c6862 72742d76 70642d69
+		 6d616765 0069626d 2c666972 6d776172
+		 [258 bytes total]
+compatible       "ibm,powernv"
+		 "ibm,firenze"
+model-name       "IBM Power System S822L"
+phandle          00000001
+ibm,hbrt-mini-fdt
+		 d00dfeed 000005c6 00000128 0000052c
+		 00000028 00000011 00000010 00000000
+		 0000009a 00000404 0000001f fd700000
+		 00000000 00100000 0000001f fd6a0000
+		 00000000 00060000 0000001f fd510000
+		 00000000 00190000 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 [4096 bytes total]
+system-brand     "S0"
+ibm,io-base-loc-code
+		 "U78CB.001.WZS008T-P1"
+system-id        "1010C9A"
+ibm,enabled-idle-states
+		 "nap"
+		 "fast-sleep"
+		 "rvwinkle"
+name             ""
+lid-type         "phyp"
+
+interrupt-controller@3ffff80020000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 00000020 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80020000 00000000 00001000
+		 0003ffff 80021000 00000000 00001000
+		 0003ffff 80022000 00000000 00001000
+		 0003ffff 80023000 00000000 00001000
+		 0003ffff 80024000 00000000 00001000
+		 0003ffff 80025000 00000000 00001000
+		 0003ffff 80026000 00000000 00001000
+		 0003ffff 80027000 00000000 00001000
+phandle          00000009
+name             "interrupt-controller"
+interrupt-controller
+		
+
+interrupt-controller@3ffff80830000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 00000830 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80830000 00000000 00001000
+		 0003ffff 80831000 00000000 00001000
+		 0003ffff 80832000 00000000 00001000
+		 0003ffff 80833000 00000000 00001000
+		 0003ffff 80834000 00000000 00001000
+		 0003ffff 80835000 00000000 00001000
+		 0003ffff 80836000 00000000 00001000
+		 0003ffff 80837000 00000000 00001000
+phandle          00000039 (57)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+xscom@3fc8000000000:
+ibm,chip-id      00000010 (16)
+#address-cells   00000001
+ibm,mem-interleave-scope
+		 00000000
+bus-frequency    00000000 1dcd6500
+ibm,hw-module-id 00000001
+ibm,module-vpd   000f17ba 5598401f 3bd42b84 28005254
+		 04564844 52564402 30315054 0e56544f
+		 43d50037 007401d5 b85d0050 46080000
+		 00000000 00007884 70015254 0456544f
+		 435054fc 56494e49 d500ab01 9000b1b8
+		 24004350 3030ff00 3b024061 61a05018
+		 5652544e ff007b63 14011ca0 45005653
+		 5243ff00 8f647800 fe9f1e00 56524d4c
+		 [65536 bytes total]
+ibm,ccm-node-id  00000000
+scom-controller 
+ibm,occ-functional-state
+		 00000001
+#size-cells      00000001
+compatible       "ibm,xscom"
+		 "ibm,power8-xscom"
+ibm,proc-chip-id 00000002
+ibm,hw-card-id   00000000
+reg              0003fc80 00000000 00000008 00000000
+phandle          00000098 (152)
+ibm,dbob-id      00000000
+name             "xscom"
+
+xscom@3fc8000000000/psihb@2010900:
+compatible       "ibm,power8-psihb-x"
+		 "ibm,psihb-x"
+status           "ok"
+reg              02010900 00000020
+phandle          00000099 (153)
+name             "psihb"
+
+xscom@3fc8000000000/nx@2010000:
+ibm,842-coprocessor-instance
+		 00000011 (17)
+ibm,842-coprocessor-type
+		 00000003
+compatible       "ibm,power-nx"
+		 "ibm,power8-nx"
+reg              02010000 00004000
+phandle          000000a4 (164)
+name             "nx"
+
+xscom@3fc8000000000/pbcq@2012000:
+ibm,hub-id       00000002
+ibm,use-ab-detect
+		
+ibm,lane-eq      77777777 77777777 77777777 77777777
+		 77777777 77777777 77777777 77777777
+ibm,phb-index    00000000
+compatible       "ibm,power8-pbcq"
+reg              02012000 00000020 09012000 00000005 09013c00 00000015
+phandle          000000aa (170)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C33"
+name             "pbcq"
+
+xscom@3fc8000000000/i2cm@a0020:
+#address-cells   00000001
+chip-engine#     00000001
+#size-cells      00000000
+clock-frequency  07735940 (125000000)
+compatible       "ibm,power8-i2cm"
+reg              000a0020 00000020
+phandle          10000012 (268435474)
+name             "i2cm"
+
+xscom@3fc8000000000/i2cm@a0020/i2c-bus@0:
+#address-cells   00000001
+bus-frequency    00061a80 (400000)
+#size-cells      00000000
+compatible       "ibm,power8-i2c-port"
+		 "ibm,opal-i2c"
+reg              00000000
+phandle          10000013 (268435475)
+ibm,opal-id      00000002
+name             "i2c-bus"
+ibm,port-name    "p8_00000010_e1p0"
+
+xscom@3fc8000000000/i2cm@a0020/i2c-bus@0/power-control@39:
+target-list      "slot-C4"
+		 "slot-C5"
+label            "pcie-hotplug"
+compatible       "maxim,5961"
+status           "reserved"
+reg              00000039 (57)
+phandle          10000014 (268435476)
+name             "power-control"
+
+xscom@3fc8000000000/i2cm@a0020/i2c-bus@0/power-control@3a:
+target-list      "slot-C2"
+		 "slot-C3"
+label            "pcie-hotplug"
+compatible       "maxim,5961"
+status           "reserved"
+reg              0000003a (58)
+phandle          10000015 (268435477)
+name             "power-control"
+
+xscom@3fc8000000000/chiptod@40000:
+secondary       
+compatible       "ibm,power-chiptod"
+		 "ibm,power8-chiptod"
+reg              00040000 00000034
+phandle          000000a0 (160)
+name             "chiptod"
+
+hwrng@3ffff40008000:
+ibm,chip-id      00000010 (16)
+compatible       "ibm,power-rng"
+reg              0003ffff 40008000 00000000 00001000
+phandle          10000074 (268435572)
+name             "hwrng"
+
+pciex@3fffe40000000:
+ibm,chip-id      00000000
+ibm,hub-id       00000000
+ibm,opal-single-pe
+		
+ibm,opal-phbid   00000000 00000000
+#address-cells   00000003
+ibm,opal-rba-table
+		 00000000 3b5c0100 00000100
+ibm,mmio-window  00002000 00000000 00000100 00000000
+		 00003fe0 00000000 00000000 80000000
+bus-range        00000000 000000ff
+ibm,msi-eoi-method
+		 "ioda2"
+ibm,opal-m64-window
+		 00002000 00000000 00002000 00000000 00000100 00000000
+ibm,opal-ivt-table
+		 00000000 3b580000 00040000
+ibm,opal-num-pes 00000100 (256)
+ibm,use-ab-detect
+		
+ibm,max-link-speed
+		 00000003
+ibm,lane-eq      77777777 77777777 77777777 77777777
+		 77777777 77777777 77777777 77777777
+ibm,phb-index    00000000
+ibm,opal-reserved-pe
+		 000000ff (255)
+ibm,opal-msi-ranges
+		 00000800 000007f8
+#size-cells      00000002
+interrupt-parent 1000000e (268435470)
+ibm,capi-flags   00000001
+clock-frequency  00000200 00000000
+ibm,pbcq         000000a6 (166)
+device_type      "pciex"
+compatible       "ibm,power8-pciex"
+		 "ibm,ioda2-phb"
+ibm,opal-peltv-table
+		 00000000 3b542000 00002000
+ranges           02000000 00000000 80000000 00003fe0
+		 00000000 00000000 7fff0000
+#interrupt-cells 00000001
+reg              0003fffe 40000000 00000000 00001000
+ibm,opal-rtt-table
+		 00000000 3b520000 00020000
+phandle          10000076 (268435574)
+ibm,xscom-bases  02012000 09013c00 09012000
+ibm,opal-pest-table
+		 00000000 3b545000 00001000
+ibm,opal-ive-stride
+		 00000010 (16)
+ibm,capp-timebase-sync
+		 ""
+ibm,loc-code     "U78CB.001.WZS008T-P1-C32"
+ibm,opal-tce-kill
+		 0003fffe 40000210
+name             "pciex"
+ibm,associativity
+		 00000004 00000000 00000000 00000000 00000000
+
+pciex@3fffe40000000/pci@0:
+ibm,slot-label   "C7"
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000001
+#address-cells   00000003
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 00000ff8 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 00000ff9 00000001 00000000 00000000
+		 00000000 00000003 1000000e 00000ffa
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 00000ffb 00000001
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000003
+ibm,slot-connector-type
+		 00000005
+device_type      "pciex"
+interrupt-map-mask
+		 00000000 00000000 00000000 00000007
+revision-id      00000000
+ibm,slot-card-desc
+		 00000000
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000001
+#interrupt-cells 00000001
+vendor-id        00001014 (4116)
+ibm,slot-wired-lanes
+		 00000005
+reg              00000000 00000000 00000000 00000000 00000000
+ibm,slot-location-code
+		 "U78CB.001.WZS008T-P1-C7"
+phandle          1000007d (268435581)
+ibm,slot-power-ctl
+		 00000001
+ibm,slot-card-mech
+		 00000000
+ibm,loc-code     "C7"
+name             "pci"
+device-id        000003dc (988)
+ibm,slot-surprise-pluggable
+		 00000001
+
+interrupt-controller@3ffff80828000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 00000828 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80828000 00000000 00001000
+		 0003ffff 80829000 00000000 00001000
+		 0003ffff 8082a000 00000000 00001000
+		 0003ffff 8082b000 00000000 00001000
+		 0003ffff 8082c000 00000000 00001000
+		 0003ffff 8082d000 00000000 00001000
+		 0003ffff 8082e000 00000000 00001000
+		 0003ffff 8082f000 00000000 00001000
+phandle          00000035 (53)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+ibm,opal:
+ibm,associativity-reference-points
+		 00000004 00000003
+#address-cells   00000000
+ibm,opal-trace-mask
+		 00000000 300b0518
+ibm,opal-memcons 00000000 300af000
+opal-msg-async-num
+		 00000008
+opal-runtime-size
+		 00000000 09c00000
+#size-cells      00000000
+opal-entry-address
+		 00000000 300050b0
+opal-interrupts  00000010 00000011 00000012 00000013 00000014 00020010
+		 00020011 00020012 00020013 00020014 00000ffe 00000fff
+		 000017fe 000017ff 00002ffe 00002fff 000037fe 000037ff
+		 00020ffe 00020fff 00022ffe 00022fff 000237fe 000237ff
+compatible       "ibm,opal-v2"
+		 "ibm,opal-v3"
+phandle          00000003
+ibm,opal-traces  00000000 30203fb0 00000000 00010077
+		 00000000 3b001010 00000000 001000a7
+		 00000000 3b103010 00000000 001000a7
+		 00000000 3b205010 00000000 001000a7
+		 00000000 3b307010 00000000 001000a7
+		 00000000 3b409010 00000000 001000a7
+		 00000010 01801010 00000000 001000a7
+		 00000010 01903010 00000000 001000a7
+		 [336 bytes total]
+ibm,heartbeat-ms 000007d0 (2000)
+name             "ibm,opal"
+opal-msg-size    00000048 (72)
+opal-base-address
+		 00000000 30000000
+
+ibm,opal/sysparams:
+param-id         f0000001 f0000003 f0000012 f0000016 f000001d
+		 f0000023 f0000024 f0000025 f0000026 f0000027
+param-perm       03 01 03 03 03 02 03 03 03 03                  ..........
+param-name       73757276 65696c6c 616e6365 00686d63
+		 2d6d616e 6167656d 656e7400 63757064
+		 2d706f6c 69637900 706c6174 2d686d63
+		 2d6d616e 61676564 0066772d 6c696365
+		 6e73652d 706f6c69 63790077 6f726c64
+		 2d776964 652d706f 72742d6e 756d0064
+		 65666175 6c742d62 6f6f742d 64657669
+		 6365006e 6578742d 626f6f74 2d646576
+		 [164 bytes total]
+param-len        00000004 00000004 00000004 00000004 00000004
+		 0000000c 00000001 00000001 00000001 00000030
+compatible       "ibm,opal-sysparams"
+phandle          10000033 (268435507)
+name             "sysparams"
+
+ibm,opal/nvram:
+#bytes           00100000 (1048576)
+compatible       "ibm,opal-nvram"
+phandle          100000d1 (268435665)
+name             "nvram"
+
+ibm,opal/fw-features:
+phandle          0000005c (92)
+name             "fw-features"
+
+ibm,opal/fw-features/inst-thread-reconfig-control-trig0-1:
+phandle          00000064 (100)
+disabled        
+name             "inst-thread-reconfig-control-trig0-1"
+
+ibm,opal/fw-features/fw-count-cache-disabled:
+enabled         
+phandle          00000065 (101)
+name             "fw-count-cache-disabled"
+
+ibm,opal/fw-features/inst-l1d-flush-trig2:
+phandle          00000061 (97)
+disabled        
+name             "inst-l1d-flush-trig2"
+
+ibm,opal/fw-features/user-mode-branch-speculation:
+phandle          00000068 (104)
+disabled        
+name             "user-mode-branch-speculation"
+
+ibm,opal/fw-features/fw-branch-hints-honored:
+enabled         
+phandle          00000063 (99)
+name             "fw-branch-hints-honored"
+
+ibm,opal/fw-features/speculation-policy-favor-security:
+enabled         
+phandle          00000067 (103)
+name             "speculation-policy-favor-security"
+
+ibm,opal/fw-features/tm-suspend-mode:
+enabled         
+phandle          0000005d (93)
+name             "tm-suspend-mode"
+
+ibm,opal/fw-features/inst-spec-barrier-ori31,31,0:
+enabled         
+phandle          0000005e (94)
+name             "inst-spec-barrier-ori31,31,0"
+
+ibm,opal/fw-features/needs-l1d-flush-msr-pr-0-to-1:
+enabled         
+phandle          0000006a (106)
+name             "needs-l1d-flush-msr-pr-0-to-1"
+
+ibm,opal/fw-features/needs-spec-barrier-for-bound-checks:
+enabled         
+phandle          0000006b (107)
+name             "needs-spec-barrier-for-bound-checks"
+
+ibm,opal/fw-features/fw-l1d-thread-split:
+phandle          00000062 (98)
+disabled        
+name             "fw-l1d-thread-split"
+
+ibm,opal/fw-features/inst-l1d-flush-ori30,30,0:
+enabled         
+phandle          00000060 (96)
+name             "inst-l1d-flush-ori30,30,0"
+
+ibm,opal/fw-features/fw-bcctrl-serialized:
+phandle          0000005f (95)
+disabled        
+name             "fw-bcctrl-serialized"
+
+ibm,opal/fw-features/fw-ltptr-serialized:
+phandle          00000066 (102)
+disabled        
+name             "fw-ltptr-serialized"
+
+ibm,opal/fw-features/needs-l1d-flush-msr-hv-1-to-0:
+enabled         
+phandle          00000069 (105)
+name             "needs-l1d-flush-msr-hv-1-to-0"
+
+ibm,opal/oppanel:
+#lines           00000002
+compatible       "ibm,opal-oppanel"
+#length          00000010 (16)
+phandle          10000034 (268435508)
+name             "oppanel"
+
+ibm,opal/event:
+compatible       "ibm,opal-event"
+#interrupt-cells 00000001
+phandle          1000000f (268435471)
+name             "event"
+interrupt-controller
+		
+
+ibm,opal/sensors:
+compatible       "ibm,opal-sensor"
+phandle          1000001e (268435486)
+name             "sensors"
+
+ibm,opal/sensors/cooling-fan#8460-data:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000069 (268435561)
+sensor-id        0205210c (33890572)
+name             "cooling-fan#8460-data"
+
+ibm,opal/sensors/core-temp@8e8:
+sensor-data      008008e8 (8390888)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    018008e8 (25168104)
+phandle          10000031 (268435505)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          000008e8 (2280)
+
+ibm,opal/sensors/cooling-fan#8453-thrs:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          1000004e (268435534)
+sensor-id        01052105 (17113349)
+ibm,loc-code     "A3"
+name             "cooling-fan#8453-thrs"
+
+ibm,opal/sensors/cooling-fan#8448-faulted:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000038 (268435512)
+sensor-id        00052100 (336128)
+name             "cooling-fan#8448-faulted"
+
+ibm,opal/sensors/cooling-fan#8449-data:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          1000005e (268435550)
+sensor-id        02052101 (33890561)
+name             "cooling-fan#8449-data"
+
+ibm,opal/sensors/cooling-fan#8459-thrs:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000054 (268435540)
+sensor-id        0105210b (17113355)
+ibm,loc-code     "A6"
+name             "cooling-fan#8459-thrs"
+
+ibm,opal/sensors/cooling-fan#8454-data:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000063 (268435555)
+sensor-id        02052106 (33890566)
+name             "cooling-fan#8454-data"
+
+ibm,opal/sensors/cooling-fan#8456-faulted:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000040 (268435520)
+sensor-id        00052108 (336136)
+name             "cooling-fan#8456-faulted"
+
+ibm,opal/sensors/core-temp@828:
+sensor-data      00800828 (8390696)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    01800828 (25167912)
+phandle          1000002a (268435498)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          00000828 (2088)
+
+ibm,opal/sensors/core-temp@8a8:
+sensor-data      008008a8 (8390824)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    018008a8 (25168040)
+phandle          1000002e (268435502)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          000008a8 (2216)
+
+ibm,opal/sensors/power#4097-faulted:
+compatible       "ibm,opal-sensor-power"
+phandle          10000037 (268435511)
+sensor-id        00031001 (200705)
+name             "power#4097-faulted"
+
+ibm,opal/sensors/cooling-fan#8452-thrs:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          1000004d (268435533)
+sensor-id        01052104 (17113348)
+ibm,loc-code     "A3"
+name             "cooling-fan#8452-thrs"
+
+ibm,opal/sensors/core-temp@60:
+sensor-data      00800060 (8388704)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    01800060 (25165920)
+phandle          10000022 (268435490)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          00000060 (96)
+
+ibm,opal/sensors/core-temp@e0:
+sensor-data      008000e0 (8388832)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    018000e0 (25166048)
+phandle          10000027 (268435495)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          000000e0 (224)
+
+ibm,opal/sensors/cooling-fan#8448-data:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          1000005d (268435549)
+sensor-id        02052100 (33890560)
+name             "cooling-fan#8448-data"
+
+ibm,opal/sensors/cooling-fan#8458-thrs:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000053 (268435539)
+sensor-id        0105210a (17113354)
+ibm,loc-code     "A6"
+name             "cooling-fan#8458-thrs"
+
+ibm,opal/sensors/cooling-fan#8458-faulted:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000042 (268435522)
+sensor-id        0005210a (336138)
+name             "cooling-fan#8458-faulted"
+
+ibm,opal/sensors/cooling-fan#8453-data:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000062 (268435554)
+sensor-id        02052105 (33890565)
+name             "cooling-fan#8453-data"
+
+ibm,opal/sensors/amb-temp#24576-faulted:
+compatible       "ibm,opal-sensor-amb-temp"
+phandle          10000058 (268435544)
+sensor-id        00096000 (614400)
+name             "amb-temp#24576-faulted"
+
+ibm,opal/sensors/core-temp@30:
+sensor-data      00800030 (8388656)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    01800030 (25165872)
+phandle          10000021 (268435489)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          00000030 (48)
+
+ibm,opal/sensors/core-temp@b0:
+sensor-data      008000b0 (8388784)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    018000b0 (25166000)
+phandle          10000026 (268435494)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          000000b0 (176)
+
+ibm,opal/sensors/cooling-fan#8451-faulted:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          1000003b (268435515)
+sensor-id        00052103 (336131)
+name             "cooling-fan#8451-faulted"
+
+ibm,opal/sensors/core-temp@20:
+sensor-data      00800020 (8388640)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    01800020 (25165856)
+phandle          1000001f (268435487)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          00000020 (32)
+
+ibm,opal/sensors/core-temp@a0:
+sensor-data      008000a0 (8388768)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    018000a0 (25165984)
+phandle          10000024 (268435492)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          000000a0 (160)
+
+ibm,opal/sensors/cooling-fan#8459-data:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000068 (268435560)
+sensor-id        0205210b (33890571)
+name             "cooling-fan#8459-data"
+
+ibm,opal/sensors/cooling-fan#8451-thrs:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          1000004c (268435532)
+sensor-id        01052103 (17113347)
+ibm,loc-code     "A2"
+name             "cooling-fan#8451-thrs"
+
+ibm,opal/sensors/amb-temp#24578-thrs:
+compatible       "ibm,opal-sensor-amb-temp"
+phandle          10000048 (268435528)
+sensor-id        01096002 (17391618)
+ibm,loc-code     "D1"
+name             "amb-temp#24578-thrs"
+
+ibm,opal/sensors/core-temp@870:
+sensor-data      00800870 (8390768)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    01800870 (25167984)
+phandle          1000002d (268435501)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          00000870 (2160)
+
+ibm,opal/sensors/core-temp@8f0:
+sensor-data      008008f0 (8390896)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    018008f0 (25168112)
+phandle          10000032 (268435506)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          000008f0 (2288)
+
+ibm,opal/sensors/core-temp@860:
+sensor-data      00800860 (8390752)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    01800860 (25167968)
+phandle          1000002c (268435500)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          00000860 (2144)
+
+ibm,opal/sensors/cooling-fan#8457-thrs:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000052 (268435538)
+sensor-id        01052109 (17113353)
+ibm,loc-code     "A5"
+name             "cooling-fan#8457-thrs"
+
+ibm,opal/sensors/core-temp@8e0:
+sensor-data      008008e0 (8390880)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    018008e0 (25168096)
+phandle          10000030 (268435504)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          000008e0 (2272)
+
+ibm,opal/sensors/amb-temp#24578-faulted:
+compatible       "ibm,opal-sensor-amb-temp"
+phandle          1000005c (268435548)
+sensor-id        00096002 (614402)
+name             "amb-temp#24578-faulted"
+
+ibm,opal/sensors/cooling-fan#8453-faulted:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          1000003d (268435517)
+sensor-id        00052105 (336133)
+name             "cooling-fan#8453-faulted"
+
+ibm,opal/sensors/cooling-fan#8452-data:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000061 (268435553)
+sensor-id        02052104 (33890564)
+name             "cooling-fan#8452-data"
+
+ibm,opal/sensors/core-temp@830:
+sensor-data      00800830 (8390704)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    01800830 (25167920)
+phandle          1000002b (268435499)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          00000830 (2096)
+
+ibm,opal/sensors/cooling-fan#8458-data:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000067 (268435559)
+sensor-id        0205210a (33890570)
+name             "cooling-fan#8458-data"
+
+ibm,opal/sensors/core-temp@8b0:
+sensor-data      008008b0 (8390832)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    018008b0 (25168048)
+phandle          1000002f (268435503)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          000008b0 (2224)
+
+ibm,opal/sensors/cooling-fan#8450-thrs:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          1000004b (268435531)
+sensor-id        01052102 (17113346)
+ibm,loc-code     "A2"
+name             "cooling-fan#8450-thrs"
+
+ibm,opal/sensors/amb-temp#24577-thrs:
+compatible       "ibm,opal-sensor-amb-temp"
+phandle          10000047 (268435527)
+sensor-id        01096001 (17391617)
+ibm,loc-code     "D1"
+name             "amb-temp#24577-thrs"
+
+ibm,opal/sensors/core-temp@820:
+sensor-data      00800820 (8390688)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    01800820 (25167904)
+phandle          10000029 (268435497)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          00000820 (2080)
+
+ibm,opal/sensors/cooling-fan#8461-faulted:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000045 (268435525)
+sensor-id        0005210d (336141)
+name             "cooling-fan#8461-faulted"
+
+ibm,opal/sensors/cooling-fan#8456-thrs:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000051 (268435537)
+sensor-id        01052108 (17113352)
+ibm,loc-code     "A5"
+name             "cooling-fan#8456-thrs"
+
+ibm,opal/sensors/cooling-fan#8455-faulted:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          1000003f (268435519)
+sensor-id        00052107 (336135)
+name             "cooling-fan#8455-faulted"
+
+ibm,opal/sensors/power#4096-faulted:
+compatible       "ibm,opal-sensor-power"
+phandle          10000036 (268435510)
+sensor-id        00031000 (200704)
+name             "power#4096-faulted"
+
+ibm,opal/sensors/cooling-fan#8451-data:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000060 (268435552)
+sensor-id        02052103 (33890563)
+name             "cooling-fan#8451-data"
+
+ibm,opal/sensors/amb-temp#24578-data:
+compatible       "ibm,opal-sensor-amb-temp"
+phandle          1000005b (268435547)
+sensor-id        02096002 (34168834)
+name             "amb-temp#24578-data"
+
+ibm,opal/sensors/cooling-fan#8449-faulted:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000039 (268435513)
+sensor-id        00052101 (336129)
+name             "cooling-fan#8449-faulted"
+
+ibm,opal/sensors/cooling-fan#8461-thrs:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000056 (268435542)
+sensor-id        0105210d (17113357)
+ibm,loc-code     "E2"
+name             "cooling-fan#8461-thrs"
+
+ibm,opal/sensors/cooling-fan#8457-data:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000066 (268435558)
+sensor-id        02052109 (33890569)
+name             "cooling-fan#8457-data"
+
+ibm,opal/sensors/amb-temp#24576-thrs:
+compatible       "ibm,opal-sensor-amb-temp"
+phandle          10000046 (268435526)
+sensor-id        01096000 (17391616)
+ibm,loc-code     "D1"
+name             "amb-temp#24576-thrs"
+
+ibm,opal/sensors/cooling-fan#8457-faulted:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000041 (268435521)
+sensor-id        00052109 (336137)
+name             "cooling-fan#8457-faulted"
+
+ibm,opal/sensors/power#4097-data:
+compatible       "ibm,opal-sensor-power"
+phandle          1000006c (268435564)
+sensor-id        02031001 (33755137)
+name             "power#4097-data"
+
+ibm,opal/sensors/cooling-fan#8455-thrs:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000050 (268435536)
+sensor-id        01052107 (17113351)
+ibm,loc-code     "A4"
+name             "cooling-fan#8455-thrs"
+
+ibm,opal/sensors/cooling-fan#8450-faulted:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          1000003a (268435514)
+sensor-id        00052102 (336130)
+name             "cooling-fan#8450-faulted"
+
+ibm,opal/sensors/cooling-fan#8450-data:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          1000005f (268435551)
+sensor-id        02052102 (33890562)
+name             "cooling-fan#8450-data"
+
+ibm,opal/sensors/amb-temp#24577-data:
+compatible       "ibm,opal-sensor-amb-temp"
+phandle          10000059 (268435545)
+sensor-id        02096001 (34168833)
+name             "amb-temp#24577-data"
+
+ibm,opal/sensors/cooling-fan#8460-thrs:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000055 (268435541)
+sensor-id        0105210c (17113356)
+ibm,loc-code     "E1"
+name             "cooling-fan#8460-thrs"
+
+ibm,opal/sensors/cooling-fan#8456-data:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000065 (268435557)
+sensor-id        02052108 (33890568)
+name             "cooling-fan#8456-data"
+
+ibm,opal/sensors/cooling-fan#8449-thrs:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          1000004a (268435530)
+sensor-id        01052101 (17113345)
+ibm,loc-code     "A1"
+name             "cooling-fan#8449-thrs"
+
+ibm,opal/sensors/core-temp@68:
+sensor-data      00800068 (8388712)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    01800068 (25165928)
+phandle          10000023 (268435491)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          00000068 (104)
+
+ibm,opal/sensors/cooling-fan#8459-faulted:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000043 (268435523)
+sensor-id        0005210b (336139)
+name             "cooling-fan#8459-faulted"
+
+ibm,opal/sensors/core-temp@e8:
+sensor-data      008000e8 (8388840)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    018000e8 (25166056)
+phandle          10000028 (268435496)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          000000e8 (232)
+
+ibm,opal/sensors/amb-temp#24577-faulted:
+compatible       "ibm,opal-sensor-amb-temp"
+phandle          1000005a (268435546)
+sensor-id        00096001 (614401)
+name             "amb-temp#24577-faulted"
+
+ibm,opal/sensors/power#4096-data:
+compatible       "ibm,opal-sensor-power"
+phandle          1000006b (268435563)
+sensor-id        02031000 (33755136)
+name             "power#4096-data"
+
+ibm,opal/sensors/cooling-fan#8461-data:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          1000006a (268435562)
+sensor-id        0205210d (33890573)
+name             "cooling-fan#8461-data"
+
+ibm,opal/sensors/cooling-fan#8452-faulted:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          1000003c (268435516)
+sensor-id        00052104 (336132)
+name             "cooling-fan#8452-faulted"
+
+ibm,opal/sensors/cooling-fan#8454-thrs:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          1000004f (268435535)
+sensor-id        01052106 (17113350)
+ibm,loc-code     "A4"
+name             "cooling-fan#8454-thrs"
+
+ibm,opal/sensors/amb-temp#24576-data:
+compatible       "ibm,opal-sensor-amb-temp"
+phandle          10000057 (268435543)
+sensor-id        02096000 (34168832)
+name             "amb-temp#24576-data"
+
+ibm,opal/sensors/core-temp@28:
+sensor-data      00800028 (8388648)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    01800028 (25165864)
+phandle          10000020 (268435488)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          00000028 (40)
+
+ibm,opal/sensors/core-temp@a8:
+sensor-data      008000a8 (8388776)
+label            "Core"
+compatible       "ibm,opal-sensor"
+sensor-status    018000a8 (25165992)
+phandle          10000025 (268435493)
+sensor-type      "temp"
+name             "core-temp"
+ibm,pir          000000a8 (168)
+
+ibm,opal/sensors/cooling-fan#8460-faulted:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000044 (268435524)
+sensor-id        0005210c (336140)
+name             "cooling-fan#8460-faulted"
+
+ibm,opal/sensors/cooling-fan#8455-data:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000064 (268435556)
+sensor-id        02052107 (33890567)
+name             "cooling-fan#8455-data"
+
+ibm,opal/sensors/cooling-fan#8448-thrs:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          10000049 (268435529)
+sensor-id        01052100 (17113344)
+ibm,loc-code     "A1"
+name             "cooling-fan#8448-thrs"
+
+ibm,opal/sensors/cooling-fan#8454-faulted:
+compatible       "ibm,opal-sensor-cooling-fan"
+phandle          1000003e (268435518)
+sensor-id        00052106 (336134)
+name             "cooling-fan#8454-faulted"
+
+ibm,opal/power-mgt:
+ibm,pstate-frequencies-mhz
+		 00000e6a 00000e49 00000e28 00000e07
+		 00000de5 00000dc4 00000da3 00000d82
+		 00000d60 00000d3f 00000d1e 00000cfd
+		 00000cdb 00000cba 00000c99 00000c78
+		 00000c56 00000c35 00000c14 00000bf3
+		 00000bd1 00000bb0 00000b8f 00000b6e
+		 00000b4c 00000b2b 00000b0a 00000ae9
+		 00000ac7 00000aa6 00000a85 00000a64
+		 [200 bytes total]
+ibm,cpu-idle-state-latencies-ns
+		 00000fa0 00009c40 00989680
+ibm,cpu-idle-state-pmicr-mask
+		 00000000 00000000 00000030 00000000 00000000 00000000
+ibm,cpu-idle-state-flags
+		 00011000 00081003 00047003
+ibm,pstate-vdds  77 77 76 75 75 74 74 73 72 72 71 71 70 6f 6f 6ewwvuuttsrrqqpoon
+		 6e 6d 6d 6c 6b 6b 6a 6a 69 68 68 67 67 66 65 65nmmlkkjjihhggfee
+		 64 64 63 63 62 61 61 60 60 5f 5e 5d 5c 5b 5a 59ddccbaa``_^]\[ZY
+		 58 57                                          XW
+ibm,cpu-idle-state-residency-ns
+		 000186a0 11e1a300 3b9aca00
+ibm,pstate-min   ffffffcf (-49)
+ibm,pstate-ids   00000000 ffffffff fffffffe fffffffd
+		 fffffffc fffffffb fffffffa fffffff9
+		 fffffff8 fffffff7 fffffff6 fffffff5
+		 fffffff4 fffffff3 fffffff2 fffffff1
+		 fffffff0 ffffffef ffffffee ffffffed
+		 ffffffec ffffffeb ffffffea ffffffe9
+		 ffffffe8 ffffffe7 ffffffe6 ffffffe5
+		 ffffffe4 ffffffe3 ffffffe2 ffffffe1
+		 [200 bytes total]
+ibm,cpu-idle-state-names
+		 "nap"
+		 "fastsleep_"
+		 "winkle"
+ibm,pstate-max   00000000
+phandle          10000011 (268435473)
+ibm,pstate-vcss  65 65 64 64 64 63 63 63 63 62 62 62 62 61 61 61eedddccccbbbbaaa
+		 61 60 60 60 5f 5f 5f 5f 5e 5e 5e 5e 5d 5d 5d 5da```____^^^^]]]]
+		 5c 5c 5c 5b 5b 5b 5b 5a 5a 5a 5a 59 58 57 56 55\\\[[[[ZZZZYXWVU
+		 54 53                                          TS
+ibm,pstate-nominal
+		 fffffff8 (-8)
+ibm,cpu-idle-state-pmicr
+		 00000000 00000000 00000020 00000000 00000000 00000000
+name             "power-mgt"
+
+ibm,opal/leds:
+compatible       "ibm,opal-v3-led"
+led-mode         "lightpath"
+phandle          00000004
+name             "leds"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C1:
+led-types        "identify"
+		 "fault"
+phandle          100000ad (268435629)
+name             "U78CB.001.WZS008T-P1-C1"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C20:
+led-types        "identify"
+		 "fault"
+phandle          100000bb (268435643)
+name             "U78CB.001.WZS008T-P1-C20"
+
+ibm,opal/leds/U78CB.001.WZS008T:
+led-types        "identify"
+		 "fault"
+phandle          100000d0 (268435664)
+name             "U78CB.001.WZS008T"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C10:
+led-types        "identify"
+		 "fault"
+phandle          100000ae (268435630)
+name             "U78CB.001.WZS008T-P1-C10"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C29:
+led-types        "identify"
+		 "fault"
+phandle          100000c4 (268435652)
+name             "U78CB.001.WZS008T-P1-C29"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C19:
+led-types        "identify"
+		 "fault"
+phandle          100000b9 (268435641)
+name             "U78CB.001.WZS008T-P1-C19"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C27:
+led-types        "identify"
+		 "fault"
+phandle          100000c2 (268435650)
+name             "U78CB.001.WZS008T-P1-C27"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C17:
+led-types        "identify"
+		 "fault"
+phandle          100000b7 (268435639)
+name             "U78CB.001.WZS008T-P1-C17"
+
+ibm,opal/leds/U78CB.001.WZS008T-A5:
+led-types        "identify"
+		 "fault"
+phandle          100000aa (268435626)
+name             "U78CB.001.WZS008T-A5"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C15-C1:
+led-types        "identify"
+		 "fault"
+phandle          100000b5 (268435637)
+name             "U78CB.001.WZS008T-P1-C15-C1"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C6:
+led-types        "identify"
+		 "fault"
+phandle          100000cb (268435659)
+name             "U78CB.001.WZS008T-P1-C6"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C25:
+led-types        "identify"
+		 "fault"
+phandle          100000c0 (268435648)
+name             "U78CB.001.WZS008T-P1-C25"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C15:
+led-types        "identify"
+		 "fault"
+phandle          100000b4 (268435636)
+name             "U78CB.001.WZS008T-P1-C15"
+
+ibm,opal/leds/U78CB.001.WZS008T-E1:
+led-types        "identify"
+		 "fault"
+phandle          100000a4 (268435620)
+name             "U78CB.001.WZS008T-E1"
+
+ibm,opal/leds/U78CB.001.WZS008T-A3:
+led-types        "identify"
+		 "fault"
+phandle          100000a8 (268435624)
+name             "U78CB.001.WZS008T-A3"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C33:
+led-types        "identify"
+		 "fault"
+phandle          100000c9 (268435657)
+name             "U78CB.001.WZS008T-P1-C33"
+
+ibm,opal/leds/U78CB.001.WZS008T-D1:
+led-types        "attention"
+phandle          1000000c (268435468)
+name             "U78CB.001.WZS008T-D1"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C23:
+led-types        "identify"
+		 "fault"
+phandle          100000be (268435646)
+name             "U78CB.001.WZS008T-P1-C23"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C13:
+led-types        "identify"
+		 "fault"
+phandle          100000b1 (268435633)
+name             "U78CB.001.WZS008T-P1-C13"
+
+ibm,opal/leds/U78CB.001.WZS008T-A1:
+led-types        "identify"
+		 "fault"
+phandle          100000a6 (268435622)
+name             "U78CB.001.WZS008T-A1"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C31:
+led-types        "identify"
+		 "fault"
+phandle          100000c7 (268435655)
+name             "U78CB.001.WZS008T-P1-C31"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1:
+led-types        "identify"
+		 "fault"
+phandle          100000ac (268435628)
+name             "U78CB.001.WZS008T-P1"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C2:
+led-types        "identify"
+		 "fault"
+phandle          100000ba (268435642)
+name             "U78CB.001.WZS008T-P1-C2"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C21:
+led-types        "identify"
+		 "fault"
+phandle          100000bc (268435644)
+name             "U78CB.001.WZS008T-P1-C21"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C11:
+led-types        "identify"
+		 "fault"
+phandle          100000af (268435631)
+name             "U78CB.001.WZS008T-P1-C11"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C14-C1:
+led-types        "identify"
+		 "fault"
+phandle          100000b3 (268435635)
+name             "U78CB.001.WZS008T-P1-C14-C1"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C9:
+led-types        "identify"
+		 "fault"
+phandle          100000cd (268435661)
+name             "U78CB.001.WZS008T-P1-C9"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C28:
+led-types        "identify"
+		 "fault"
+phandle          100000c3 (268435651)
+name             "U78CB.001.WZS008T-P1-C28"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C18:
+led-types        "identify"
+		 "fault"
+phandle          100000b8 (268435640)
+name             "U78CB.001.WZS008T-P1-C18"
+
+ibm,opal/leds/U78CB.001.WZS008T-A6:
+led-types        "identify"
+		 "fault"
+phandle          100000ab (268435627)
+name             "U78CB.001.WZS008T-A6"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C7:
+led-types        "identify"
+		 "fault"
+phandle          100000cc (268435660)
+name             "U78CB.001.WZS008T-P1-C7"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C26:
+led-types        "identify"
+		 "fault"
+phandle          100000c1 (268435649)
+name             "U78CB.001.WZS008T-P1-C26"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C16:
+led-types        "identify"
+		 "fault"
+phandle          100000b6 (268435638)
+name             "U78CB.001.WZS008T-P1-C16"
+
+ibm,opal/leds/U78CB.001.WZS008T-E2:
+led-types        "identify"
+		 "fault"
+phandle          100000a5 (268435621)
+name             "U78CB.001.WZS008T-E2"
+
+ibm,opal/leds/U78CB.001.WZS008T-A4:
+led-types        "identify"
+		 "fault"
+phandle          100000a9 (268435625)
+name             "U78CB.001.WZS008T-A4"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C5:
+led-types        "identify"
+		 "fault"
+phandle          100000ca (268435658)
+name             "U78CB.001.WZS008T-P1-C5"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C24:
+led-types        "identify"
+		 "fault"
+phandle          100000bf (268435647)
+name             "U78CB.001.WZS008T-P1-C24"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C14:
+led-types        "identify"
+		 "fault"
+phandle          100000b2 (268435634)
+name             "U78CB.001.WZS008T-P1-C14"
+
+ibm,opal/leds/U78CB.001.WZS008T-A2:
+led-types        "identify"
+		 "fault"
+phandle          100000a7 (268435623)
+name             "U78CB.001.WZS008T-A2"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C32:
+led-types        "identify"
+		 "fault"
+phandle          100000c8 (268435656)
+name             "U78CB.001.WZS008T-P1-C32"
+
+ibm,opal/leds/U78CB.001.WZS008T-P2:
+led-types        "identify"
+		 "fault"
+phandle          100000cf (268435663)
+name             "U78CB.001.WZS008T-P2"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C3:
+led-types        "identify"
+		 "fault"
+phandle          100000c5 (268435653)
+name             "U78CB.001.WZS008T-P1-C3"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C22:
+led-types        "identify"
+		 "fault"
+phandle          100000bd (268435645)
+name             "U78CB.001.WZS008T-P1-C22"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C12:
+led-types        "identify"
+		 "fault"
+phandle          100000b0 (268435632)
+name             "U78CB.001.WZS008T-P1-C12"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-E1:
+led-types        "identify"
+		 "fault"
+phandle          100000ce (268435662)
+name             "U78CB.001.WZS008T-P1-E1"
+
+ibm,opal/leds/U78CB.001.WZS008T-P1-C30:
+led-types        "identify"
+		 "fault"
+phandle          100000c6 (268435654)
+name             "U78CB.001.WZS008T-P1-C30"
+
+ibm,opal/consoles:
+#address-cells   00000001
+#size-cells      00000000
+phandle          1000006f (268435567)
+name             "consoles"
+
+ibm,opal/consoles/serial@0:
+interrupts       0000003e (62)
+interrupt-parent 1000000f (268435471)
+device_type      "serial"
+compatible       "ibm,opal-console-raw"
+reg              00000000
+phandle          10000070 (268435568)
+#write-buffer-size
+		 0000fff0 (65520)
+name             "serial"
+
+ibm,opal/consoles/serial@1:
+interrupts       0000003d (61)
+interrupt-parent 1000000f (268435471)
+device_type      "serial"
+compatible       "ibm,opal-console-hvsi"
+reg              00000001
+phandle          10000071 (268435569)
+#write-buffer-size
+		 0000fff0 (65520)
+name             "serial"
+
+ibm,opal/firmware:
+ml-version       4d 4c 20 46 57 38 36 30 2e 42 33 20 46 57 38 36ML.FW860.B3.FW86
+		 30 2e 32 30 20 46 57 38 36 30 2e 42 33         0.20.FW860.B3
+compatible       "ibm,opal-firmware"
+phandle          10000010 (268435472)
+version          "skiboot-v5.4.12"
+mi-version       4d492053 56383630 5f323435 20535638
+		 36305f30 38322053 56383630 5f323435
+symbol-map       00000000 300dcae0 00000000 00028cc2
+name             "firmware"
+
+ibm,opal/ipmi:
+ibm,ipmi-interface-id
+		 00000000
+interrupts       0000003f (63)
+compatible       "ibm,opal-ipmi"
+phandle          10000035 (268435509)
+name             "ipmi"
+
+ibm,opal/epow:
+epow-classes     "power"
+		 "temperature"
+		 "cooling"
+compatible       "ibm,opal-v3-epow"
+phandle          1000006e (268435566)
+name             "epow"
+
+ibm,opal/rtc:
+has-tpo         
+compatible       "ibm,opal-rtc"
+phandle          1000006d (268435565)
+name             "rtc"
+
+interrupt-controller@3ffff80060000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 00000060 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80060000 00000000 00001000
+		 0003ffff 80061000 00000000 00001000
+		 0003ffff 80062000 00000000 00001000
+		 0003ffff 80063000 00000000 00001000
+		 0003ffff 80064000 00000000 00001000
+		 0003ffff 80065000 00000000 00001000
+		 0003ffff 80066000 00000000 00001000
+		 0003ffff 80067000 00000000 00001000
+phandle          00000015 (21)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+interrupt-controller@3ffff80870000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 00000870 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80870000 00000000 00001000
+		 0003ffff 80871000 00000000 00001000
+		 0003ffff 80872000 00000000 00001000
+		 0003ffff 80873000 00000000 00001000
+		 0003ffff 80874000 00000000 00001000
+		 0003ffff 80875000 00000000 00001000
+		 0003ffff 80876000 00000000 00001000
+		 0003ffff 80877000 00000000 00001000
+phandle          00000041 (65)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+fsps:
+#address-cells   00000001
+#size-cells      00000000
+phandle          0000009c (156)
+name             "fsps"
+
+fsps/fsp@0:
+hw-version       00000002
+ibm,psi-links    00000000 00000010
+primary         
+sw-version       00000001
+compatible       "ibm,fsp"
+		 "ibm,fsp2"
+reg-offset       b0011000
+reg              00000000
+phandle          0000009d (157)
+name             "fsp"
+
+psi@3fffe80100000:
+ibm,chip-id      00000010 (16)
+interrupts       00020010 00000001
+interrupt-parent 1000000e (268435470)
+compatible       "ibm,psi"
+		 "ibm,power8-psi"
+reg              0003fffe 80100000 00000001 00000000
+phandle          1000001d (268435485)
+name             "psi"
+
+interrupt-controller@3ffff80130000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 000000b0 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80130000 00000000 00001000
+		 0003ffff 80131000 00000000 00001000
+		 0003ffff 80132000 00000000 00001000
+		 0003ffff 80133000 00000000 00001000
+		 0003ffff 80134000 00000000 00001000
+		 0003ffff 80135000 00000000 00001000
+		 0003ffff 80136000 00000000 00001000
+		 0003ffff 80137000 00000000 00001000
+phandle          00000025 (37)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+interrupt-controller@3ffff80128000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 000000a8 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80128000 00000000 00001000
+		 0003ffff 80129000 00000000 00001000
+		 0003ffff 8012a000 00000000 00001000
+		 0003ffff 8012b000 00000000 00001000
+		 0003ffff 8012c000 00000000 00001000
+		 0003ffff 8012d000 00000000 00001000
+		 0003ffff 8012e000 00000000 00001000
+		 0003ffff 8012f000 00000000 00001000
+phandle          00000021 (33)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+memory@0:
+ibm,chip-id      00000000
+device_type      "memory"
+reg              00000000 00000000 00000010 00000000
+phandle          00000092 (146)
+name             "memory"
+ibm,associativity
+		 00000004 00000000 00000000 00000000 00000000
+
+ipl-params:
+#address-cells   00000000
+#size-cells      00000000
+phandle          00000056 (86)
+name             "ipl-params"
+
+ipl-params/ipl-params:
+#address-cells   00000000
+fsp-ipl-side     "temp"
+os-ipl-mode      00000000
+#size-cells      00000000
+cec-major-type   "cold"
+phandle          00000058 (88)
+cec-ipl-side     "temp"
+name             "ipl-params"
+
+ipl-params/sys-params:
+#address-cells   00000000
+#size-cells      00000000
+phandle          00000057 (87)
+ibm,sys-model    " 22L"
+name             "sys-params"
+
+ipl-params/platform-dump:
+phandle          0000005b (91)
+name             "platform-dump"
+
+ipl-params/fsp-serial:
+#address-cells   00000001
+#size-cells      00000000
+phandle          00000059 (89)
+name             "fsp-serial"
+
+ipl-params/fsp-serial/serial@2a00:
+compatible       "ibm,fsp-serial"
+reg              00002a00 (10752)
+phandle          0000005a (90)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C1-T1"
+name             "serial"
+
+interrupt-controller@3ffff80168000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 000000e8 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80168000 00000000 00001000
+		 0003ffff 80169000 00000000 00001000
+		 0003ffff 8016a000 00000000 00001000
+		 0003ffff 8016b000 00000000 00001000
+		 0003ffff 8016c000 00000000 00001000
+		 0003ffff 8016d000 00000000 00001000
+		 0003ffff 8016e000 00000000 00001000
+		 0003ffff 8016f000 00000000 00001000
+phandle          0000002d (45)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+pciex@3fffe40500000:
+ibm,chip-id      00000001
+ibm,hub-id       00000001
+ibm,opal-single-pe
+		
+ibm,opal-phbid   00000000 00000005
+#address-cells   00000003
+ibm,opal-rba-table
+		 00000010 02880100 00000100
+ibm,mmio-window  00002500 00000000 00000100 00000000
+		 00003fe2 80000000 00000000 80000000
+bus-range        00000000 000000ff
+ibm,msi-eoi-method
+		 "ioda2"
+ibm,opal-m64-window
+		 00002500 00000000 00002500 00000000 00000100 00000000
+ibm,opal-ivt-table
+		 00000010 02840000 00040000
+ibm,opal-num-pes 00000100 (256)
+ibm,use-ab-detect
+		
+ibm,max-link-speed
+		 00000003
+ibm,lane-eq      "hhhhhhhhhhhhhhhh"
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+ibm,phb-index    00000001
+ibm,opal-reserved-pe
+		 000000ff (255)
+ibm,opal-msi-ranges
+		 00003000 000007f8
+#size-cells      00000002
+interrupt-parent 1000000e (268435470)
+ibm,capi-flags   00000001
+clock-frequency  00000200 00000000
+ibm,pbcq         000000a9 (169)
+device_type      "pciex"
+compatible       "ibm,power8-pciex"
+		 "ibm,ioda2-phb"
+ibm,opal-peltv-table
+		 00000010 02802000 00002000
+ranges           02000000 00000000 80000000 00003fe2
+		 80000000 00000000 7fff0000
+#interrupt-cells 00000001
+reg              0003fffe 40500000 00000000 00001000
+ibm,opal-rtt-table
+		 00000010 027e0000 00020000
+phandle          10000079 (268435577)
+ibm,xscom-bases  02012400 09013c40 09012400
+ibm,opal-pest-table
+		 00000010 02805000 00001000
+ibm,opal-ive-stride
+		 00000010 (16)
+ibm,capp-timebase-sync
+		 ""
+ibm,loc-code     "U78CB.001.WZS008T-P1-C32"
+ibm,opal-tce-kill
+		 0003fffe 40500210
+name             "pciex"
+ibm,associativity
+		 00000004 00000000 00000000 00000000 00000001
+
+pciex@3fffe40500000/pci@0:
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000000
+#address-cells   00000003
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 000037f8 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 000037f9 00000001 00000000 00000000
+		 00000000 00000003 1000000e 000037fa
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 000037fb 00000001
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000000
+ibm,slot-connector-type
+		 00000000
+device_type      "pciex"
+interrupt-map-mask
+		 00000000 00000000 00000000 00000007
+revision-id      00000000
+ibm,slot-card-desc
+		 00000000
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000000
+#interrupt-cells 00000001
+vendor-id        00001014 (4116)
+ibm,slot-wired-lanes
+		 00000004
+reg              00000000 00000000 00000000 00000000 00000000
+phandle          10000086 (268435590)
+ibm,slot-power-ctl
+		 00000000
+ibm,slot-card-mech
+		 00000000
+name             "pci"
+device-id        000003dc (988)
+ibm,slot-surprise-pluggable
+		 00000001
+
+pciex@3fffe40500000/pci@0/pci@0:
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000000
+#address-cells   00000003
+interrupts       00000001
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 000037f8 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 000037f9 00000001 00000000 00000000
+		 00000000 00000003 1000000e 000037fa
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 000037fb 00000001
+		 00000800 00000000 00000000 00000001
+		 [3584 bytes total]
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000000
+ibm,slot-connector-type
+		 00000000
+device_type      "pciex"
+interrupt-map-mask
+		 0000f800 00000000 00000000 00000007
+revision-id      000000ca (202)
+ibm,slot-card-desc
+		 00000000
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000000
+#interrupt-cells 00000001
+vendor-id        000010b5 (4277)
+ibm,slot-wired-lanes
+		 00000004
+reg              00010000 00000000 00000000 00000000 00000000
+phandle          10000087 (268435591)
+ibm,slot-power-ctl
+		 00000000
+ibm,slot-card-mech
+		 00000000
+name             "pci"
+device-id        00008748 (34632)
+ibm,slot-surprise-pluggable
+		 00000000
+
+pciex@3fffe40500000/pci@0/pci@0/pci@11:
+ibm,slot-label   "C9"
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000001
+#address-cells   00000003
+interrupts       00000001
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 000037f9 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 000037fa 00000001 00000000 00000000
+		 00000000 00000003 1000000e 000037fb
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 000037f8 00000001
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000003
+ibm,slot-connector-type
+		 00000004
+device_type      "pciex"
+interrupt-map-mask
+		 00000000 00000000 00000000 00000007
+revision-id      000000ca (202)
+ibm,slot-card-desc
+		 00000001
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000001
+#interrupt-cells 00000001
+vendor-id        000010b5 (4277)
+ibm,slot-wired-lanes
+		 00000004
+reg              00028800 00000000 00000000 00000000 00000000
+ibm,slot-location-code
+		 "U78CB.001.WZS008T-P1-C9"
+phandle          10000092 (268435602)
+ibm,slot-power-ctl
+		 00000001
+ibm,slot-card-mech
+		 00000000
+ibm,loc-code     "C9"
+name             "pci"
+device-id        00008748 (34632)
+ibm,slot-surprise-pluggable
+		 00000001
+
+pciex@3fffe40500000/pci@0/pci@0/pci@8:
+ibm,slot-label   "C15"
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000001
+#address-cells   00000003
+interrupts       00000001
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 000037f8 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 000037f9 00000001 00000000 00000000
+		 00000000 00000003 1000000e 000037fa
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 000037fb 00000001
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000000
+ibm,slot-connector-type
+		 0000000e (14)
+device_type      "pciex"
+interrupt-map-mask
+		 00000000 00000000 00000000 00000007
+revision-id      000000ca (202)
+ibm,slot-card-desc
+		 00000000
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000000
+#interrupt-cells 00000001
+vendor-id        000010b5 (4277)
+ibm,slot-wired-lanes
+		 00000004
+reg              00024000 00000000 00000000 00000000 00000000
+ibm,slot-location-code
+		 "U78CB.001.WZS008T-P1-C15"
+phandle          1000008a (268435594)
+ibm,slot-power-ctl
+		 00000000
+ibm,slot-card-mech
+		 00000001
+ibm,loc-code     "C15"
+name             "pci"
+device-id        00008748 (34632)
+ibm,slot-surprise-pluggable
+		 00000001
+
+pciex@3fffe40500000/pci@0/pci@0/pci@8/raid@0:
+ibm,pci-config-space-type
+		 00000001
+class-code       00010400 (66560)
+revision-id      00000002
+vendor-id        00001014 (4116)
+reg              00040000 00000000 00000000 00000000 00000000
+phandle          1000008b (268435595)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C15"
+name             "raid"
+device-id        0000034a (842)
+
+pciex@3fffe40500000/pci@0/pci@0/pci@9:
+ibm,slot-label   "C10"
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000001
+#address-cells   00000003
+interrupts       00000001
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 000037f9 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 000037fa 00000001 00000000 00000000
+		 00000000 00000003 1000000e 000037fb
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 000037f8 00000001
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000003
+ibm,slot-connector-type
+		 00000004
+device_type      "pciex"
+interrupt-map-mask
+		 00000000 00000000 00000000 00000007
+revision-id      000000ca (202)
+ibm,slot-card-desc
+		 00000001
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000001
+#interrupt-cells 00000001
+vendor-id        000010b5 (4277)
+ibm,slot-wired-lanes
+		 00000004
+reg              00024800 00000000 00000000 00000000 00000000
+ibm,slot-location-code
+		 "U78CB.001.WZS008T-P1-C10"
+phandle          1000008c (268435596)
+ibm,slot-power-ctl
+		 00000001
+ibm,slot-card-mech
+		 00000000
+ibm,loc-code     "C10"
+name             "pci"
+device-id        00008748 (34632)
+ibm,slot-surprise-pluggable
+		 00000001
+
+pciex@3fffe40500000/pci@0/pci@0/pci@9/ethernet@0,3:
+ibm,pci-config-space-type
+		 00000001
+interrupts       00000002
+class-code       00020000 (131072)
+revision-id      00000001
+vendor-id        000014e4 (5348)
+reg              00050300 00000000 00000000 00000000 00000000
+phandle          10000090 (268435600)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C10-T4"
+name             "ethernet"
+device-id        00001657 (5719)
+
+pciex@3fffe40500000/pci@0/pci@0/pci@9/ethernet@0,1:
+ibm,pci-config-space-type
+		 00000001
+interrupts       00000002
+class-code       00020000 (131072)
+revision-id      00000001
+vendor-id        000014e4 (5348)
+reg              00050100 00000000 00000000 00000000 00000000
+phandle          1000008e (268435598)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C10-T2"
+name             "ethernet"
+device-id        00001657 (5719)
+
+pciex@3fffe40500000/pci@0/pci@0/pci@9/ethernet@0,2:
+ibm,pci-config-space-type
+		 00000001
+interrupts       00000001
+class-code       00020000 (131072)
+revision-id      00000001
+vendor-id        000014e4 (5348)
+reg              00050200 00000000 00000000 00000000 00000000
+phandle          1000008f (268435599)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C10-T3"
+name             "ethernet"
+device-id        00001657 (5719)
+
+pciex@3fffe40500000/pci@0/pci@0/pci@9/ethernet@0:
+ibm,pci-config-space-type
+		 00000001
+interrupts       00000001
+class-code       00020000 (131072)
+revision-id      00000001
+vendor-id        000014e4 (5348)
+reg              00050000 00000000 00000000 00000000 00000000
+phandle          1000008d (268435597)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C10-T1"
+name             "ethernet"
+device-id        00001657 (5719)
+
+pciex@3fffe40500000/pci@0/pci@0/pci@10:
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000001
+#address-cells   00000003
+interrupts       00000001
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 000037f8 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 000037f9 00000001 00000000 00000000
+		 00000000 00000003 1000000e 000037fa
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 000037fb 00000001
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000000
+ibm,slot-connector-type
+		 00000000
+device_type      "pciex"
+interrupt-map-mask
+		 00000000 00000000 00000000 00000007
+revision-id      000000ca (202)
+ibm,slot-card-desc
+		 00000000
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000000
+#interrupt-cells 00000001
+vendor-id        000010b5 (4277)
+ibm,slot-wired-lanes
+		 00000008
+reg              00028000 00000000 00000000 00000000 00000000
+phandle          10000091 (268435601)
+ibm,slot-power-ctl
+		 00000001
+ibm,slot-card-mech
+		 00000000
+name             "pci"
+device-id        00008748 (34632)
+ibm,slot-surprise-pluggable
+		 00000001
+
+pciex@3fffe40500000/pci@0/pci@0/pci@1:
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000000
+#address-cells   00000003
+interrupts       00000001
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 000037f9 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 000037fa 00000001 00000000 00000000
+		 00000000 00000003 1000000e 000037fb
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 000037f8 00000001
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000000
+ibm,slot-connector-type
+		 00000000
+device_type      "pciex"
+interrupt-map-mask
+		 00000000 00000000 00000000 00000007
+revision-id      000000ca (202)
+ibm,slot-card-desc
+		 00000000
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000000
+#interrupt-cells 00000001
+vendor-id        000010b5 (4277)
+ibm,slot-wired-lanes
+		 00000001
+reg              00020800 00000000 00000000 00000000 00000000
+phandle          10000088 (268435592)
+ibm,slot-power-ctl
+		 00000000
+ibm,slot-card-mech
+		 00000000
+name             "pci"
+device-id        00008748 (34632)
+ibm,slot-surprise-pluggable
+		 00000001
+
+pciex@3fffe40500000/pci@0/pci@0/pci@1/usb-xhci@0:
+ibm,pci-config-space-type
+		 00000001
+interrupts       00000001
+class-code       000c0330 (787248)
+revision-id      00000002
+vendor-id        0000104c (4172)
+reg              00030000 00000000 00000000 00000000 00000000
+phandle          10000089 (268435593)
+name             "usb-xhci"
+device-id        00008241 (33345)
+
+psi@3fffe80000000:
+ibm,chip-id      00000000
+interrupts       00000010 00000001
+interrupt-parent 1000000e (268435470)
+compatible       "ibm,psi"
+		 "ibm,power8-psi"
+reg              0003fffe 80000000 00000001 00000000
+phandle          1000001c (268435484)
+name             "psi"
+
+interrupt-controller@3ffff80030000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 00000030 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80030000 00000000 00001000
+		 0003ffff 80031000 00000000 00001000
+		 0003ffff 80032000 00000000 00001000
+		 0003ffff 80033000 00000000 00001000
+		 0003ffff 80034000 00000000 00001000
+		 0003ffff 80035000 00000000 00001000
+		 0003ffff 80036000 00000000 00001000
+		 0003ffff 80037000 00000000 00001000
+phandle          00000011 (17)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+xscom@3fc0000000000:
+ibm,chip-id      00000000
+#address-cells   00000001
+ibm,mem-interleave-scope
+		 00000000
+bus-frequency    00000000 1dcd6500
+ibm,hw-module-id 00000000
+ibm,module-vpd   000f17ba 5598401f 3bd42b84 28005254
+		 04564844 52564402 30315054 0e56544f
+		 43d50037 007401d5 b85d0050 46080000
+		 00000000 00007884 70015254 0456544f
+		 435054fc 56494e49 d500ab01 9000b1b8
+		 24004350 3030ff00 3b024061 61a05018
+		 5652544e ff007b63 14011ca0 45005653
+		 5243ff00 8f647800 fe9f1e00 56524d4c
+		 [65536 bytes total]
+ibm,ccm-node-id  00000000
+scom-controller 
+ibm,occ-functional-state
+		 00000001
+#size-cells      00000001
+compatible       "ibm,xscom"
+		 "ibm,power8-xscom"
+ibm,proc-chip-id 00000000
+ibm,hw-card-id   00000000
+reg              0003fc00 00000000 00000008 00000000
+phandle          00000094 (148)
+ibm,dbob-id      00000000
+name             "xscom"
+
+xscom@3fc0000000000/psihb@2010900:
+boot-link       
+compatible       "ibm,power8-psihb-x"
+		 "ibm,psihb-x"
+status           "ok"
+reg              02010900 00000020
+phandle          00000095 (149)
+name             "psihb"
+
+xscom@3fc0000000000/pbcq@2012400:
+ibm,hub-id       00000000
+ibm,use-ab-detect
+		
+ibm,lane-eq      "wwwwwwwwwwwwwwww"
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+ibm,phb-index    00000001
+compatible       "ibm,power8-pbcq"
+reg              02012400 00000020 09012400 00000005 09013c40 00000015
+phandle          000000a7 (167)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C32"
+name             "pbcq"
+
+xscom@3fc0000000000/nx@2010000:
+ibm,842-coprocessor-instance
+		 00000001
+ibm,842-coprocessor-type
+		 00000003
+compatible       "ibm,power-nx"
+		 "ibm,power8-nx"
+reg              02010000 00004000
+phandle          000000a2 (162)
+name             "nx"
+
+xscom@3fc0000000000/pbcq@2012000:
+ibm,hub-id       00000000
+ibm,use-ab-detect
+		
+ibm,lane-eq      77777777 77777777 77777777 77777777
+		 77777777 77777777 77777777 77777777
+ibm,phb-index    00000000
+compatible       "ibm,power8-pbcq"
+reg              02012000 00000020 09012000 00000005 09013c00 00000015
+phandle          000000a6 (166)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C32"
+name             "pbcq"
+
+xscom@3fc0000000000/i2cm@a0020:
+#address-cells   00000001
+chip-engine#     00000001
+#size-cells      00000000
+clock-frequency  07735940 (125000000)
+compatible       "ibm,power8-i2cm"
+reg              000a0020 00000020
+phandle          10000016 (268435478)
+name             "i2cm"
+
+xscom@3fc0000000000/i2cm@a0020/i2c-bus@0:
+#address-cells   00000001
+bus-frequency    00061a80 (400000)
+#size-cells      00000000
+compatible       "ibm,power8-i2c-port"
+		 "ibm,opal-i2c"
+reg              00000000
+phandle          10000017 (268435479)
+ibm,opal-id      00000001
+name             "i2c-bus"
+ibm,port-name    "p8_00000000_e1p0"
+
+xscom@3fc0000000000/i2cm@a0020/i2c-bus@0/power-control@36:
+target-list      "slot-C8"
+		 "slot-C9"
+label            "pcie-hotplug"
+compatible       "maxim,5961"
+status           "reserved"
+reg              00000036 (54)
+phandle          1000001a (268435482)
+name             "power-control"
+
+xscom@3fc0000000000/i2cm@a0020/i2c-bus@0/power-control@32:
+target-list      "slot-C10"
+		 "slot-C11"
+label            "pcie-hotplug"
+compatible       "maxim,5961"
+status           "reserved"
+reg              00000032 (50)
+phandle          10000018 (268435480)
+name             "power-control"
+
+xscom@3fc0000000000/i2cm@a0020/i2c-bus@0/power-control@39:
+target-list      "slot-C12"
+label            "pcie-hotplug"
+compatible       "maxim,5961"
+status           "reserved"
+reg              00000039 (57)
+phandle          1000001b (268435483)
+name             "power-control"
+
+xscom@3fc0000000000/i2cm@a0020/i2c-bus@0/power-control@35:
+target-list      "slot-C6"
+		 "slot-C7"
+label            "pcie-hotplug"
+compatible       "maxim,5961"
+status           "reserved"
+reg              00000035 (53)
+phandle          10000019 (268435481)
+name             "power-control"
+
+xscom@3fc0000000000/chiptod@40000:
+primary         
+compatible       "ibm,power-chiptod"
+		 "ibm,power8-chiptod"
+reg              00040000 00000034
+phandle          0000009e (158)
+name             "chiptod"
+
+vpd:
+compatible       "ibm,opal-v3-vpd"
+ibm,vpd          84b00052 54045653 59534452 06535953
+		 54454d42 52025330 53450731 30313043
+		 39415347 07202020 20202020 544d0838
+		 3234372d 32324c54 4e082020 20202020
+		 20204d4e 07202020 20202020 49440220
+		 20535506 0004ac1a 47374e4e 10202020
+		 20202020 20202020 20202020 20524704
+		 f0c00000 52420433 20202057 4e0c4330
+		 [184 bytes total]
+phandle          00000002
+ibm,loc-code     "U8247.22L.1010C9A"
+name             "vpd"
+
+vpd/root-node-vpd@a000:
+fru-type         56 56                                          VV
+phandle          0000006c (108)
+ibm,loc-code     "U8247.22L.1010C9A"
+name             "root-node-vpd"
+
+vpd/root-node-vpd@a000/system-vpd@1c00:
+fru-type         53 56                                          SV
+phandle          0000006e (110)
+ibm,loc-code     "U8247.22L.1010C9A"
+name             "system-vpd"
+
+vpd/root-node-vpd@a000/enclosure@1e00:
+description      "System planar 2S2U"
+ccin             "2CD6"
+serial-number    "YL10UF42L026"
+fru-number       "00E2022"
+part-number      "00E3997"
+ibm,vpd          848c0052 54045649 4e494452 10492f4f
+		 20424143 4b504c41 4e452020 20434501
+		 31565a02 3032464e 07303045 32303232
+		 504e0730 30453339 3937534e 0c594c31
+		 30554634 324c3032 36434304 32434436
+		 50520821 00000000 00000048 45043030
+		 30324354 0480f300 26485702 00044233
+		 06000000 00000142 34010042 370c0000
+		 [252 bytes total]
+fru-type         45 56                                          EV
+phandle          0000006f (111)
+ibm,loc-code     "U78CB.001.WZS008T"
+name             "enclosure"
+
+vpd/root-node-vpd@a000/enclosure@1e00/enclosure-led@a200:
+fru-type         45 49                                          EI
+phandle          00000090 (144)
+ibm,loc-code     "U78CB.001.WZS008T-D1"
+name             "enclosure-led"
+
+vpd/root-node-vpd@a000/enclosure@1e00/dasd-backplane@2400:
+fru-type         44 42                                          DB
+phandle          00000086 (134)
+ibm,loc-code     "U78CB.001.WZS008T-P2"
+name             "dasd-backplane"
+
+vpd/root-node-vpd@a000/enclosure@1e00/air-mover@3a04:
+fru-type         41 4d                                          AM
+phandle          0000008e (142)
+ibm,loc-code     "U78CB.001.WZS008T-A2"
+name             "air-mover"
+
+vpd/root-node-vpd@a000/enclosure@1e00/air-mover@3a02:
+fru-type         41 4d                                          AM
+phandle          0000008c (140)
+ibm,loc-code     "U78CB.001.WZS008T-A4"
+name             "air-mover"
+
+vpd/root-node-vpd@a000/enclosure@1e00/air-mover@3a00:
+fru-type         41 4d                                          AM
+phandle          0000008a (138)
+ibm,loc-code     "U78CB.001.WZS008T-A1"
+name             "air-mover"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800:
+description      "System planar 2S2U"
+ccin             "2CD6"
+serial-number    "YL10UF42L026"
+fru-number       "00E2022"
+part-number      "00E3997"
+ibm,vpd          848c0052 54045649 4e494452 10492f4f
+		 20424143 4b504c41 4e452020 20434501
+		 31565a02 3032464e 07303045 32303232
+		 504e0730 30453339 3937534e 0c594c31
+		 30554634 324c3032 36434304 32434436
+		 50520821 00000000 00000048 45043030
+		 30324354 0480f300 26485702 00044233
+		 06000000 00000142 34010042 370c0000
+		 [180 bytes total]
+fru-type         42 50                                          BP
+phandle          00000070 (112)
+ibm,loc-code     "U78CB.001.WZS008T-P1"
+name             "backplane"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/usb-connector@2902:
+fru-type         43 55                                          CU
+phandle          0000007a (122)
+ibm,loc-code     "U78CB.001.WZS008T-P1-T3"
+name             "usb-connector"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/processor@1001:
+ibm,chip-id      00000001
+description      "Unknown"
+ccin             "54E8"
+serial-number    "YA1932097088"
+fru-number       "00FX518"
+part-number      "00FX740"
+ibm,vpd          848c0052 54045649 4e494452 1031302d
+		 57415920 50524f43 2043554f 44464e07
+		 30304658 35313850 4e073030 46583734
+		 30534e0c 59413139 33323039 37303838
+		 43430435 34453848 45043030 30314354
+		 04000000 00485702 00014233 06000000
+		 00000042 34010042 370c0000 00000000
+		 00000000 00005052 08350050 01220080
+		 [145 bytes total]
+fru-type         50 46                                          PF
+phandle          00000076 (118)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C32"
+name             "processor"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/hmc-connector@2d01:
+fru-type         48 4d                                          HM
+phandle          0000007f (127)
+ibm,loc-code     "U78CB.001.WZS008T-P1-T2"
+name             "hmc-connector"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/ms-dimm@d008:
+ibm,chip-id      00000010 (16)
+description      "32GB CDIMM"
+ccin             "31E9"
+serial-number    "YH10MU42C1DZ"
+fru-number       "00JA664"
+ibm,memory-bus-frequency
+		 00000000 00000000
+part-number      "00JA664"
+size             "0032768"
+ibm,vpd          84940052 54045649 4e494452 1049424d
+		 20333247 42204d53 20202020 20434501
+		 31565a02 3132464e 0730304a 41363634
+		 504e0730 304a4136 3634534e 0c594831
+		 304d5534 32433144 5a434304 33314539
+		 50520849 00000000 01000053 5a073030
+		 33323736 38484504 30303031 43540400
+		 00000048 57020100 42330600 00000000
+		 [156 bytes total]
+fru-type         4d 53                                          MS
+phandle          00000082 (130)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C24"
+name             "ms-dimm"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/ms-dimm@d002:
+ibm,chip-id      00000000
+description      "32GB CDIMM"
+ccin             "31E9"
+serial-number    "YH10MU42C1FK"
+fru-number       "00JA664"
+ibm,memory-bus-frequency
+		 00000000 00000000
+part-number      "00JA664"
+size             "0032768"
+ibm,vpd          84940052 54045649 4e494452 1049424d
+		 20333247 42204d53 20202020 20434501
+		 31565a02 3132464e 0730304a 41363634
+		 504e0730 304a4136 3634534e 0c594831
+		 304d5534 32433146 4b434304 33314539
+		 50520849 00000000 01000053 5a073030
+		 33323736 38484504 30303031 43540400
+		 00000048 57020100 42330600 00000000
+		 [156 bytes total]
+fru-type         4d 53                                          MS
+phandle          00000081 (129)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C18"
+name             "ms-dimm"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/usb-connector@2905:
+fru-type         43 55                                          CU
+phandle          0000007d (125)
+ibm,loc-code     "U78CB.001.WZS008T-P1-T5"
+name             "usb-connector"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/ms-dimm@d000:
+ibm,chip-id      00000000
+description      "32GB CDIMM"
+ccin             "31E9"
+serial-number    "YH10MU42C1F1"
+fru-number       "00JA664"
+ibm,memory-bus-frequency
+		 00000000 00000000
+part-number      "00JA664"
+size             "0032768"
+ibm,vpd          84940052 54045649 4e494452 1049424d
+		 20333247 42204d53 20202020 20434501
+		 31565a02 3132464e 0730304a 41363634
+		 504e0730 304a4136 3634534e 0c594831
+		 304d5534 32433146 31434304 33314539
+		 50520849 00000000 01000053 5a073030
+		 33323736 38484504 30303031 43540400
+		 00000048 57020100 42330600 00000000
+		 [156 bytes total]
+fru-type         4d 53                                          MS
+phandle          00000080 (128)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C16"
+name             "ms-dimm"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/usb-connector@2903:
+fru-type         43 55                                          CU
+phandle          0000007b (123)
+ibm,loc-code     "U78CB.001.WZS008T-P1-T4"
+name             "usb-connector"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/processor@1002:
+ibm,chip-id      00000010 (16)
+description      "Unknown"
+ccin             "54E8"
+serial-number    "YA1932058806"
+fru-number       "00FX518"
+part-number      "00FX740"
+ibm,vpd          848c0052 54045649 4e494452 1031302d
+		 57415920 50524f43 2043554f 44464e07
+		 30304658 35313850 4e073030 46583734
+		 30534e0c 59413139 33323035 38383036
+		 43430435 34453848 45043030 30314354
+		 04000000 00485702 00014233 06000000
+		 00000042 34010042 370c0000 00000000
+		 00000000 00005052 08350050 01220080
+		 [145 bytes total]
+fru-type         50 46                                          PF
+phandle          00000077 (119)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C33"
+name             "processor"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/processor@1000:
+ibm,chip-id      00000000
+description      "Unknown"
+ccin             "54E8"
+serial-number    "YA1932097088"
+fru-number       "00FX518"
+part-number      "00FX740"
+ibm,vpd          848c0052 54045649 4e494452 1031302d
+		 57415920 50524f43 2043554f 44464e07
+		 30304658 35313850 4e073030 46583734
+		 30534e0c 59413139 33323039 37303838
+		 43430435 34453848 45043030 30314354
+		 04000000 00485702 00014233 06000000
+		 00000042 34010042 370c0000 00000000
+		 00000000 00005052 08350050 01220080
+		 [145 bytes total]
+fru-type         50 46                                          PF
+phandle          00000075 (117)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C32"
+name             "processor"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/hmc-connector@2d00:
+fru-type         48 4d                                          HM
+phandle          0000007e (126)
+ibm,loc-code     "U78CB.001.WZS008T-P1-T1"
+name             "hmc-connector"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/ms-dimm@d00a:
+ibm,chip-id      00000010 (16)
+description      "32GB CDIMM"
+ccin             "31E9"
+serial-number    "YH10MU42C1DX"
+fru-number       "00JA664"
+ibm,memory-bus-frequency
+		 00000000 00000000
+part-number      "00JA664"
+size             "0032768"
+ibm,vpd          84940052 54045649 4e494452 1049424d
+		 20333247 42204d53 20202020 20434501
+		 31565a02 3132464e 0730304a 41363634
+		 504e0730 304a4136 3634534e 0c594831
+		 304d5534 32433144 58434304 33314539
+		 50520849 00000000 01000053 5a073030
+		 33323736 38484504 30303031 43540400
+		 00000048 57020100 42330600 00000000
+		 [156 bytes total]
+fru-type         4d 53                                          MS
+phandle          00000083 (131)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C26"
+name             "ms-dimm"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/anchor-card@500:
+description      "System Anchor Card - IBM Power 822L"
+ccin             "524D"
+serial-number    "YL1011436002"
+fru-number       "00E3427"
+part-number      "00E2148"
+ibm,vpd          84cc0052 54045649 4e494452 10414e43
+		 484f5220 20202020 20202020 20434501
+		 31565a02 3031464e 07303045 33343237
+		 504e0730 30453231 3438534e 0c594c31
+		 30313134 33363030 32434304 35323444
+		 50520881 00300000 00000048 45043030
+		 31304354 0440b400 00485702 00014233
+		 06000000 00000142 34010042 370c0000
+		 [212 bytes total]
+fru-type         41 56                                          AV
+phandle          00000079 (121)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C13"
+name             "anchor-card"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/backplane-extender@900:
+description      "Native I/O Card"
+ccin             "2B0B"
+serial-number    "YL10UF42L051"
+fru-number       "00E2164"
+part-number      "00E3811"
+ibm,vpd          84800052 54045649 4e494452 104e4154
+		 49564520 492f4f20 43415244 20434501
+		 31565a02 3031464e 07303045 32313634
+		 504e0730 30453338 3131534e 0c594c31
+		 30554634 324c3035 31434304 32423042
+		 48450430 30303143 540480b5 00004857
+		 02000142 33060000 00000000 42340100
+		 42370c00 00000000 00000000 00000050
+		 [136 bytes total]
+fru-type         42 58                                          BX
+phandle          00000071 (113)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C1"
+name             "backplane-extender"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/backplane-extender@900/usb-connector@2900:
+fru-type         43 55                                          CU
+phandle          00000072 (114)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C1-T2"
+name             "usb-connector"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/backplane-extender@900/usb-connector@2901:
+fru-type         43 55                                          CU
+phandle          00000073 (115)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C1-T3"
+name             "usb-connector"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/backplane-extender@900/serial-connector@2a00:
+fru-type         43 53                                          CS
+phandle          00000074 (116)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C1-T1"
+name             "serial-connector"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/usb-connector@2904:
+fru-type         43 55                                          CU
+phandle          0000007c (124)
+ibm,loc-code     "U78CB.001.WZS008T-P1-T6"
+name             "usb-connector"
+
+vpd/root-node-vpd@a000/enclosure@1e00/backplane@800/processor@1003:
+ibm,chip-id      00000011 (17)
+description      "Unknown"
+ccin             "54E8"
+serial-number    "YA1932058806"
+fru-number       "00FX518"
+part-number      "00FX740"
+ibm,vpd          848c0052 54045649 4e494452 1031302d
+		 57415920 50524f43 2043554f 44464e07
+		 30304658 35313850 4e073030 46583734
+		 30534e0c 59413139 33323035 38383036
+		 43430435 34453848 45043030 30314354
+		 04000000 00485702 00014233 06000000
+		 00000042 34010042 370c0000 00000000
+		 00000000 00005052 08350050 01220080
+		 [145 bytes total]
+fru-type         50 46                                          PF
+phandle          00000078 (120)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C33"
+name             "processor"
+
+vpd/root-node-vpd@a000/enclosure@1e00/power-supply@3100:
+fru-type         50 53                                          PS
+phandle          00000088 (136)
+ibm,loc-code     "U78CB.001.WZS008T-E1"
+name             "power-supply"
+
+vpd/root-node-vpd@a000/enclosure@1e00/dasd-backplane@2401:
+fru-type         44 42                                          DB
+phandle          00000087 (135)
+ibm,loc-code     "U78CB.001.WZS008T-P2"
+name             "dasd-backplane"
+
+vpd/root-node-vpd@a000/enclosure@1e00/service-processor@200:
+description      "System planar 2S2U"
+ccin             "2CD6"
+serial-number    "YL10UF42L026"
+fru-number       "00E2022"
+part-number      "00E3997"
+ibm,vpd          848c0052 54045649 4e494452 10492f4f
+		 20424143 4b504c41 4e452020 20434501
+		 31565a02 3032464e 07303045 32303232
+		 504e0730 30453339 3937534e 0c594c31
+		 30554634 324c3032 36434304 32434436
+		 50520821 00000000 00000048 45043030
+		 30324354 0480f300 26485702 00044233
+		 06000000 00000142 34010042 370c0000
+		 [332 bytes total]
+fru-type         53 50                                          SP
+phandle          00000084 (132)
+ibm,loc-code     "U78CB.001.WZS008T-P1"
+name             "service-processor"
+
+vpd/root-node-vpd@a000/enclosure@1e00/air-mover@3a05:
+fru-type         41 4d                                          AM
+phandle          0000008f (143)
+ibm,loc-code     "U78CB.001.WZS008T-A5"
+name             "air-mover"
+
+vpd/root-node-vpd@a000/enclosure@1e00/enclosure-fault-led@a300:
+fru-type         45 46                                          EF
+phandle          00000091 (145)
+ibm,loc-code     "U78CB.001.WZS008T-D1"
+name             "enclosure-fault-led"
+
+vpd/root-node-vpd@a000/enclosure@1e00/air-mover@3a03:
+fru-type         41 4d                                          AM
+phandle          0000008d (141)
+ibm,loc-code     "U78CB.001.WZS008T-A6"
+name             "air-mover"
+
+vpd/root-node-vpd@a000/enclosure@1e00/op-panel@300:
+description      "Unknown"
+ccin             "2B08"
+serial-number    "YL10UF418005"
+fru-number       "00E1966"
+part-number      "00E3770"
+ibm,vpd          84800052 54045649 4e494452 10434543
+		 204f5020 50414e45 4c202020 20434501
+		 31565a02 3032464e 07303045 31393636
+		 504e0730 30453337 3730534e 0c594c31
+		 30554634 31383030 35434304 32423038
+		 48450430 30303143 540480b5 00004857
+		 02000342 33060000 00000000 42340100
+		 42370c00 00000000 00000000 00000050
+		 [136 bytes total]
+fru-type         4f 50                                          OP
+phandle          00000085 (133)
+ibm,loc-code     "U78CB.001.WZS008T-D1"
+name             "op-panel"
+
+vpd/root-node-vpd@a000/enclosure@1e00/air-mover@3a01:
+fru-type         41 4d                                          AM
+phandle          0000008b (139)
+ibm,loc-code     "U78CB.001.WZS008T-A3"
+name             "air-mover"
+
+vpd/root-node-vpd@a000/enclosure@1e00/power-supply@3101:
+fru-type         50 53                                          PS
+phandle          00000089 (137)
+ibm,loc-code     "U78CB.001.WZS008T-E2"
+name             "power-supply"
+
+vpd/root-node-vpd@a000/root-node-vpd@a001:
+fru-type         56 56                                          VV
+phandle          0000006d (109)
+ibm,loc-code     "U8247.22L.1010C9A"
+name             "root-node-vpd"
+
+interrupt-controller@3ffff80028000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 00000028 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80028000 00000000 00001000
+		 0003ffff 80029000 00000000 00001000
+		 0003ffff 8002a000 00000000 00001000
+		 0003ffff 8002b000 00000000 00001000
+		 0003ffff 8002c000 00000000 00001000
+		 0003ffff 8002d000 00000000 00001000
+		 0003ffff 8002e000 00000000 00001000
+		 0003ffff 8002f000 00000000 00001000
+phandle          0000000d (13)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+interrupt-controller@3ffff80068000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 00000068 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80068000 00000000 00001000
+		 0003ffff 80069000 00000000 00001000
+		 0003ffff 8006a000 00000000 00001000
+		 0003ffff 8006b000 00000000 00001000
+		 0003ffff 8006c000 00000000 00001000
+		 0003ffff 8006d000 00000000 00001000
+		 0003ffff 8006e000 00000000 00001000
+		 0003ffff 8006f000 00000000 00001000
+phandle          00000019 (25)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+interrupt-controller@0:
+#address-cells   00000000
+device_type      "PowerPC-Interrupt-Source-Controller"
+compatible       "IBM,ppc-xics"
+		 "IBM,opal-xics"
+#interrupt-cells 00000002
+reg              00000000 00000000 00000000 00000000
+phandle          1000000e (268435470)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+hwrng@3ffff40001000:
+ibm,chip-id      00000001
+compatible       "ibm,power-rng"
+reg              0003ffff 40001000 00000000 00001000
+phandle          10000073 (268435571)
+name             "hwrng"
+
+pciex@3fffe40400000:
+ibm,chip-id      00000001
+ibm,hub-id       00000001
+ibm,opal-single-pe
+		
+ibm,opal-phbid   00000000 00000004
+#address-cells   00000003
+ibm,opal-rba-table
+		 00000010 027c0100 00000100
+ibm,mmio-window  00002400 00000000 00000100 00000000
+		 00003fe2 00000000 00000000 80000000
+bus-range        00000000 000000ff
+ibm,msi-eoi-method
+		 "ioda2"
+ibm,opal-m64-window
+		 00002400 00000000 00002400 00000000 00000100 00000000
+ibm,opal-ivt-table
+		 00000010 02780000 00040000
+ibm,opal-num-pes 00000100 (256)
+ibm,use-ab-detect
+		
+ibm,max-link-speed
+		 00000003
+ibm,lane-eq      77777777 77777777 77777777 77777777
+		 77777777 77777777 77777777 77777777
+ibm,phb-index    00000000
+ibm,opal-reserved-pe
+		 000000ff (255)
+ibm,opal-msi-ranges
+		 00002800 000007f8
+#size-cells      00000002
+interrupt-parent 1000000e (268435470)
+ibm,capi-flags   00000001
+clock-frequency  00000200 00000000
+ibm,pbcq         000000a8 (168)
+device_type      "pciex"
+compatible       "ibm,power8-pciex"
+		 "ibm,ioda2-phb"
+ibm,opal-peltv-table
+		 00000010 02742000 00002000
+ranges           02000000 00000000 80000000 00003fe2
+		 00000000 00000000 7fff0000
+#interrupt-cells 00000001
+reg              0003fffe 40400000 00000000 00001000
+ibm,opal-rtt-table
+		 00000010 02720000 00020000
+phandle          10000078 (268435576)
+ibm,xscom-bases  02012000 09013c00 09012000
+ibm,opal-pest-table
+		 00000010 02745000 00001000
+ibm,opal-ive-stride
+		 00000010 (16)
+ibm,capp-timebase-sync
+		 ""
+ibm,loc-code     "U78CB.001.WZS008T-P1-C32"
+ibm,opal-tce-kill
+		 0003fffe 40400210
+name             "pciex"
+ibm,associativity
+		 00000004 00000000 00000000 00000000 00000001
+
+pciex@3fffe40400000/pci@0:
+ibm,slot-label   "C6"
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000001
+#address-cells   00000003
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 00002ff8 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 00002ff9 00000001 00000000 00000000
+		 00000000 00000003 1000000e 00002ffa
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 00002ffb 00000001
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000003
+ibm,slot-connector-type
+		 00000005
+device_type      "pciex"
+interrupt-map-mask
+		 00000000 00000000 00000000 00000007
+revision-id      00000000
+ibm,slot-card-desc
+		 00000000
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000001
+#interrupt-cells 00000001
+vendor-id        00001014 (4116)
+ibm,slot-wired-lanes
+		 00000005
+reg              00000000 00000000 00000000 00000000 00000000
+ibm,slot-location-code
+		 "U78CB.001.WZS008T-P1-C6"
+phandle          10000085 (268435589)
+ibm,slot-power-ctl
+		 00000001
+ibm,slot-card-mech
+		 00000002
+ibm,loc-code     "C6"
+name             "pci"
+device-id        000003dc (988)
+ibm,slot-surprise-pluggable
+		 00000001
+
+xscom@3fc8800000000:
+ibm,chip-id      00000011 (17)
+#address-cells   00000001
+ibm,mem-interleave-scope
+		 00000000
+bus-frequency    00000000 1dcd6500
+ibm,hw-module-id 00000001
+ibm,module-vpd   000f17ba 5598401f 3bd42b84 28005254
+		 04564844 52564402 30315054 0e56544f
+		 43d50037 007401d5 b85d0050 46080000
+		 00000000 00007884 70015254 0456544f
+		 435054fc 56494e49 d500ab01 9000b1b8
+		 24004350 3030ff00 3b024061 61a05018
+		 5652544e ff007b63 14011ca0 45005653
+		 5243ff00 8f647800 fe9f1e00 56524d4c
+		 [65536 bytes total]
+ibm,ccm-node-id  00000000
+scom-controller 
+ibm,occ-functional-state
+		 00000001
+#size-cells      00000001
+compatible       "ibm,xscom"
+		 "ibm,power8-xscom"
+ibm,proc-chip-id 00000003
+ibm,hw-card-id   00000000
+reg              0003fc88 00000000 00000008 00000000
+phandle          0000009a (154)
+ibm,dbob-id      00000000
+name             "xscom"
+
+xscom@3fc8800000000/psihb@2010900:
+compatible       "ibm,power8-psihb-x"
+		 "ibm,psihb-x"
+reg              02010900 00000020
+phandle          0000009b (155)
+name             "psihb"
+
+xscom@3fc8800000000/pbcq@2012400:
+ibm,hub-id       00000003
+ibm,use-ab-detect
+		
+ibm,lane-eq      "wwwwwwwwwwwwwwww"
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+ibm,phb-index    00000001
+compatible       "ibm,power8-pbcq"
+reg              02012400 00000020 09012400 00000005 09013c40 00000015
+phandle          000000ac (172)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C33"
+name             "pbcq"
+
+xscom@3fc8800000000/nx@2010000:
+ibm,842-coprocessor-instance
+		 00000012 (18)
+ibm,842-coprocessor-type
+		 00000003
+compatible       "ibm,power-nx"
+		 "ibm,power8-nx"
+reg              02010000 00004000
+phandle          000000a5 (165)
+name             "nx"
+
+xscom@3fc8800000000/pbcq@2012000:
+ibm,hub-id       00000003
+ibm,use-ab-detect
+		
+ibm,lane-eq      77777777 77777777 77777777 77777777
+		 77777777 77777777 77777777 77777777
+ibm,phb-index    00000000
+compatible       "ibm,power8-pbcq"
+reg              02012000 00000020 09012000 00000005 09013c00 00000015
+phandle          000000ab (171)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C33"
+name             "pbcq"
+
+xscom@3fc8800000000/chiptod@40000:
+compatible       "ibm,power-chiptod"
+		 "ibm,power8-chiptod"
+reg              00040000 00000034
+phandle          000000a1 (161)
+name             "chiptod"
+
+pciex@3fffe42000000:
+ibm,chip-id      00000010 (16)
+ibm,hub-id       00000002
+ibm,opal-single-pe
+		
+ibm,opal-phbid   00000000 00000040
+#address-cells   00000003
+ibm,opal-rba-table
+		 00000010 02940100 00000100
+ibm,mmio-window  00002800 00000000 00000100 00000000
+		 00003ff0 00000000 00000000 80000000
+bus-range        00000000 000000ff
+ibm,msi-eoi-method
+		 "ioda2"
+ibm,opal-m64-window
+		 00002800 00000000 00002800 00000000 00000100 00000000
+ibm,opal-ivt-table
+		 00000010 02900000 00040000
+ibm,opal-num-pes 00000100 (256)
+ibm,use-ab-detect
+		
+ibm,max-link-speed
+		 00000003
+ibm,lane-eq      77777777 77777777 77777777 77777777
+		 77777777 77777777 77777777 77777777
+ibm,phb-index    00000000
+ibm,opal-reserved-pe
+		 000000ff (255)
+ibm,opal-msi-ranges
+		 00020800 000007f8
+#size-cells      00000002
+interrupt-parent 1000000e (268435470)
+ibm,capi-flags   00000001
+clock-frequency  00000200 00000000
+ibm,pbcq         000000aa (170)
+device_type      "pciex"
+compatible       "ibm,power8-pciex"
+		 "ibm,ioda2-phb"
+ibm,opal-peltv-table
+		 00000010 028c2000 00002000
+ranges           02000000 00000000 80000000 00003ff0
+		 00000000 00000000 7fff0000
+#interrupt-cells 00000001
+reg              0003fffe 42000000 00000000 00001000
+ibm,opal-rtt-table
+		 00000010 028a0000 00020000
+phandle          1000007a (268435578)
+ibm,xscom-bases  02012000 09013c00 09012000
+ibm,opal-pest-table
+		 00000010 028c5000 00001000
+ibm,opal-ive-stride
+		 00000010 (16)
+ibm,capp-timebase-sync
+		 ""
+ibm,loc-code     "U78CB.001.WZS008T-P1-C33"
+ibm,opal-tce-kill
+		 0003fffe 42000210
+name             "pciex"
+ibm,associativity
+		 00000004 00000000 00000000 00000001 00000010
+
+pciex@3fffe42000000/pci@0:
+ibm,slot-label   "C5"
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000001
+#address-cells   00000003
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 00020ff8 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 00020ff9 00000001 00000000 00000000
+		 00000000 00000003 1000000e 00020ffa
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 00020ffb 00000001
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000003
+ibm,slot-connector-type
+		 00000005
+device_type      "pciex"
+interrupt-map-mask
+		 00000000 00000000 00000000 00000007
+revision-id      00000000
+ibm,slot-card-desc
+		 00000000
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000001
+#interrupt-cells 00000001
+vendor-id        00001014 (4116)
+ibm,slot-wired-lanes
+		 00000005
+reg              00000000 00000000 00000000 00000000 00000000
+ibm,slot-location-code
+		 "U78CB.001.WZS008T-P1-C5"
+phandle          10000093 (268435603)
+ibm,slot-power-ctl
+		 00000001
+ibm,slot-card-mech
+		 00000001
+ibm,loc-code     "C5"
+name             "pci"
+device-id        000003dc (988)
+ibm,slot-surprise-pluggable
+		 00000001
+
+interrupt-controller@3ffff80960000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 000008e0 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80960000 00000000 00001000
+		 0003ffff 80961000 00000000 00001000
+		 0003ffff 80962000 00000000 00001000
+		 0003ffff 80963000 00000000 00001000
+		 0003ffff 80964000 00000000 00001000
+		 0003ffff 80965000 00000000 00001000
+		 0003ffff 80966000 00000000 00001000
+		 0003ffff 80967000 00000000 00001000
+phandle          0000004d (77)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+hwrng@3ffff40009000:
+ibm,chip-id      00000011 (17)
+compatible       "ibm,power-rng"
+reg              0003ffff 40009000 00000000 00001000
+phandle          10000075 (268435573)
+name             "hwrng"
+
+memory@1000000000:
+ibm,chip-id      00000010 (16)
+device_type      "memory"
+reg              00000010 00000000 00000010 00000000
+phandle          00000093 (147)
+name             "memory"
+ibm,associativity
+		 00000004 00000000 00000000 00000001 00000010
+
+chosen:
+linux,htab-size  00000000 08000000
+linux,initrd-end 00000000 065fd2c1
+bootargs         "root=/dev/mapper/p82--vg-root ro"
+linux,memory-limit
+		 00000000 00000000
+linux,initrd-start
+		 00000000 02be0000
+linux,htab-base  0000001f f0000000
+linux,kernel-end 00000000 02170000
+phandle          1000000d (268435469)
+ibm,architecture-vec-5
+		 05 00 00 00 00 80 00                           .......
+linux,stdout-path
+		 "/ibm,opal/consoles/serial@0"
+name             "chosen"
+
+hwrng@3ffff40000000:
+ibm,chip-id      00000000
+compatible       "ibm,power-rng"
+reg              0003ffff 40000000 00000000 00001000
+phandle          10000072 (268435570)
+name             "hwrng"
+
+interrupt-controller@3ffff80820000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 00000820 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80820000 00000000 00001000
+		 0003ffff 80821000 00000000 00001000
+		 0003ffff 80822000 00000000 00001000
+		 0003ffff 80823000 00000000 00001000
+		 0003ffff 80824000 00000000 00001000
+		 0003ffff 80825000 00000000 00001000
+		 0003ffff 80826000 00000000 00001000
+		 0003ffff 80827000 00000000 00001000
+phandle          00000031 (49)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+interrupt-controller@3ffff80860000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 00000860 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80860000 00000000 00001000
+		 0003ffff 80861000 00000000 00001000
+		 0003ffff 80862000 00000000 00001000
+		 0003ffff 80863000 00000000 00001000
+		 0003ffff 80864000 00000000 00001000
+		 0003ffff 80865000 00000000 00001000
+		 0003ffff 80866000 00000000 00001000
+		 0003ffff 80867000 00000000 00001000
+phandle          0000003d (61)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+xscom@3fc0800000000:
+ibm,chip-id      00000001
+#address-cells   00000001
+ibm,mem-interleave-scope
+		 00000000
+bus-frequency    00000000 1dcd6500
+ibm,hw-module-id 00000000
+ibm,module-vpd   000f17ba 5598401f 3bd42b84 28005254
+		 04564844 52564402 30315054 0e56544f
+		 43d50037 007401d5 b85d0050 46080000
+		 00000000 00007884 70015254 0456544f
+		 435054fc 56494e49 d500ab01 9000b1b8
+		 24004350 3030ff00 3b024061 61a05018
+		 5652544e ff007b63 14011ca0 45005653
+		 5243ff00 8f647800 fe9f1e00 56524d4c
+		 [65536 bytes total]
+ibm,ccm-node-id  00000000
+scom-controller 
+ibm,occ-functional-state
+		 00000001
+#size-cells      00000001
+compatible       "ibm,xscom"
+		 "ibm,power8-xscom"
+ibm,proc-chip-id 00000001
+ibm,hw-card-id   00000000
+reg              0003fc08 00000000 00000008 00000000
+phandle          00000096 (150)
+ibm,dbob-id      00000000
+name             "xscom"
+
+xscom@3fc0800000000/psihb@2010900:
+compatible       "ibm,power8-psihb-x"
+		 "ibm,psihb-x"
+reg              02010900 00000020
+phandle          00000097 (151)
+name             "psihb"
+
+xscom@3fc0800000000/pbcq@2012400:
+ibm,hub-id       00000001
+ibm,use-ab-detect
+		
+ibm,lane-eq      "hhhhhhhhhhhhhhhh"
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+ibm,phb-index    00000001
+compatible       "ibm,power8-pbcq"
+reg              02012400 00000020 09012400 00000005 09013c40 00000015
+phandle          000000a9 (169)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C32"
+name             "pbcq"
+
+xscom@3fc0800000000/nx@2010000:
+ibm,842-coprocessor-instance
+		 00000002
+ibm,842-coprocessor-type
+		 00000003
+compatible       "ibm,power-nx"
+		 "ibm,power8-nx"
+reg              02010000 00004000
+phandle          000000a3 (163)
+name             "nx"
+
+xscom@3fc0800000000/pbcq@2012000:
+ibm,hub-id       00000001
+ibm,use-ab-detect
+		
+ibm,lane-eq      77777777 77777777 77777777 77777777
+		 77777777 77777777 77777777 77777777
+ibm,phb-index    00000000
+compatible       "ibm,power8-pbcq"
+reg              02012000 00000020 09012000 00000005 09013c00 00000015
+phandle          000000a8 (168)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C32"
+name             "pbcq"
+
+xscom@3fc0800000000/chiptod@40000:
+compatible       "ibm,power-chiptod"
+		 "ibm,power8-chiptod"
+reg              00040000 00000034
+phandle          0000009f (159)
+name             "chiptod"
+
+pciex@3fffe42500000:
+ibm,chip-id      00000011 (17)
+ibm,hub-id       00000003
+ibm,opal-single-pe
+		
+ibm,opal-phbid   00000000 00000045
+#address-cells   00000003
+ibm,opal-rba-table
+		 00000010 02ac0100 00000100
+ibm,mmio-window  00002d00 00000000 00000100 00000000
+		 00003ff2 80000000 00000000 80000000
+bus-range        00000000 000000ff
+ibm,msi-eoi-method
+		 "ioda2"
+ibm,opal-m64-window
+		 00002d00 00000000 00002d00 00000000 00000100 00000000
+ibm,opal-ivt-table
+		 00000010 02a80000 00040000
+ibm,opal-num-pes 00000100 (256)
+ibm,use-ab-detect
+		
+ibm,max-link-speed
+		 00000003
+ibm,lane-eq      "wwwwwwwwwwwwwwww"
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+ibm,phb-index    00000001
+ibm,opal-reserved-pe
+		 000000ff (255)
+ibm,opal-msi-ranges
+		 00023000 000007f8
+#size-cells      00000002
+interrupt-parent 1000000e (268435470)
+ibm,capi-flags   00000001
+clock-frequency  00000200 00000000
+ibm,pbcq         000000ac (172)
+device_type      "pciex"
+compatible       "ibm,power8-pciex"
+		 "ibm,ioda2-phb"
+ibm,opal-peltv-table
+		 00000010 02a42000 00002000
+ranges           02000000 00000000 80000000 00003ff2
+		 80000000 00000000 7fff0000
+#interrupt-cells 00000001
+reg              0003fffe 42500000 00000000 00001000
+ibm,opal-rtt-table
+		 00000010 02a20000 00020000
+phandle          1000007c (268435580)
+ibm,xscom-bases  02012400 09013c40 09012400
+ibm,opal-pest-table
+		 00000010 02a45000 00001000
+ibm,opal-ive-stride
+		 00000010 (16)
+ibm,capp-timebase-sync
+		 ""
+ibm,loc-code     "U78CB.001.WZS008T-P1-C33"
+ibm,opal-tce-kill
+		 0003fffe 42500210
+name             "pciex"
+ibm,associativity
+		 00000004 00000000 00000000 00000001 00000011
+
+pciex@3fffe42500000/pci@0:
+ibm,slot-label   "C2"
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000001
+#address-cells   00000003
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 000237f8 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 000237f9 00000001 00000000 00000000
+		 00000000 00000003 1000000e 000237fa
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 000237fb 00000001
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000003
+ibm,slot-connector-type
+		 00000004
+device_type      "pciex"
+interrupt-map-mask
+		 00000000 00000000 00000000 00000007
+revision-id      00000000
+ibm,slot-card-desc
+		 00000001
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000001
+#interrupt-cells 00000001
+vendor-id        00001014 (4116)
+ibm,slot-wired-lanes
+		 00000004
+reg              00000000 00000000 00000000 00000000 00000000
+ibm,slot-location-code
+		 "U78CB.001.WZS008T-P1-C2"
+phandle          10000095 (268435605)
+ibm,slot-power-ctl
+		 00000001
+ibm,slot-card-mech
+		 00000002
+ibm,loc-code     "C2"
+name             "pci"
+device-id        000003dc (988)
+ibm,slot-surprise-pluggable
+		 00000001
+
+cpus:
+#address-cells   00000001
+#size-cells      00000000
+phandle          00000005
+name             "cpus"
+
+cpus/l2-cache@200008e8:
+l2-cache         00000050 (80)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              200008e8 (536873192)
+phandle          0000004f (79)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/PowerPC,POWER8@30:
+ibm,chip-id      00000000
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         0000000f (15)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              00000030 (48)
+phandle          0000000e (14)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 00000030 00000031 00000032 00000033
+		 00000034 00000035 00000036 00000037
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          00000030 (48)
+ibm,associativity
+		 00000005 00000000 00000000 00000000 00000000 00000006
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/PowerPC,POWER8@b0:
+ibm,chip-id      00000001
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         00000023 (35)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              000000b0 (176)
+phandle          00000022 (34)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 000000b0 000000b1 000000b2 000000b3
+		 000000b4 000000b5 000000b6 000000b7
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          000000b0 (176)
+ibm,associativity
+		 00000005 00000000 00000000 00000000 00000001 00000006
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/PowerPC,POWER8@20:
+ibm,chip-id      00000000
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         00000007
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              00000020 (32)
+phandle          00000006
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 00000020 00000021 00000022 00000023
+		 00000024 00000025 00000026 00000027
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          00000020 (32)
+ibm,associativity
+		 00000005 00000000 00000000 00000000 00000000 00000004
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/PowerPC,POWER8@a0:
+ibm,chip-id      00000001
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         0000001b (27)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              000000a0 (160)
+phandle          0000001a (26)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 000000a0 000000a1 000000a2 000000a3
+		 000000a4 000000a5 000000a6 000000a7
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          000000a0 (160)
+ibm,associativity
+		 00000005 00000000 00000000 00000000 00000001 00000004
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/l2-cache@20000828:
+l2-cache         00000034 (52)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              20000828 (536873000)
+phandle          00000033 (51)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/l2-cache@200008a8:
+l2-cache         00000044 (68)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              200008a8 (536873128)
+phandle          00000043 (67)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/l3-cache@30000870:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              30000870 (805308528)
+phandle          00000040 (64)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/l3-cache@300008f0:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              300008f0 (805308656)
+phandle          00000054 (84)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/l3-cache@30000860:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              30000860 (805308512)
+phandle          0000003c (60)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/l3-cache@300008e0:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              300008e0 (805308640)
+phandle          0000004c (76)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/l3-cache@30000068:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              30000068 (805306472)
+phandle          00000018 (24)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/PowerPC,POWER8@8e8:
+ibm,chip-id      00000011 (17)
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         0000004f (79)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              000008e8 (2280)
+phandle          0000004e (78)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 000008e8 000008e9 000008ea 000008eb
+		 000008ec 000008ed 000008ee 000008ef
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          000008e8 (2280)
+ibm,associativity
+		 00000005 00000000 00000000 00000001 00000011 0000000d
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/l3-cache@300000e8:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              300000e8 (805306600)
+phandle          0000002c (44)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/l3-cache@30000830:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              30000830 (805308464)
+phandle          00000038 (56)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/l3-cache@300008b0:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              300008b0 (805308592)
+phandle          00000048 (72)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/l3-cache@30000820:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              30000820 (805308448)
+phandle          00000030 (48)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/l2-cache@20000870:
+l2-cache         00000040 (64)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              20000870 (536873072)
+phandle          0000003f (63)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/l2-cache@200008f0:
+l2-cache         00000054 (84)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              200008f0 (536873200)
+phandle          00000053 (83)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/l2-cache@20000860:
+l2-cache         0000003c (60)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              20000860 (536873056)
+phandle          0000003b (59)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/l2-cache@200008e0:
+l2-cache         0000004c (76)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              200008e0 (536873184)
+phandle          0000004b (75)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/PowerPC,POWER8@828:
+ibm,chip-id      00000010 (16)
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         00000033 (51)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              00000828 (2088)
+phandle          00000032 (50)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 00000828 00000829 0000082a 0000082b
+		 0000082c 0000082d 0000082e 0000082f
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          00000828 (2088)
+ibm,associativity
+		 00000005 00000000 00000000 00000001 00000010 00000005
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/l3-cache@30000028:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              30000028 (805306408)
+phandle          0000000c (12)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/PowerPC,POWER8@8a8:
+ibm,chip-id      00000011 (17)
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         00000043 (67)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              000008a8 (2216)
+phandle          00000042 (66)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 000008a8 000008a9 000008aa 000008ab
+		 000008ac 000008ad 000008ae 000008af
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          000008a8 (2216)
+ibm,associativity
+		 00000005 00000000 00000000 00000001 00000011 00000005
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/l3-cache@300000a8:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              300000a8 (805306536)
+phandle          00000020 (32)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/l2-cache@20000068:
+l2-cache         00000018 (24)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              20000068 (536871016)
+phandle          00000017 (23)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/l2-cache@200000e8:
+l2-cache         0000002c (44)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              200000e8 (536871144)
+phandle          0000002b (43)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/l2-cache@20000830:
+l2-cache         00000038 (56)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              20000830 (536873008)
+phandle          00000037 (55)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/l2-cache@200008b0:
+l2-cache         00000048 (72)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              200008b0 (536873136)
+phandle          00000047 (71)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/l2-cache@20000820:
+l2-cache         00000030 (48)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              20000820 (536872992)
+phandle          0000002f (47)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/l2-cache@20000028:
+l2-cache         0000000c (12)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              20000028 (536870952)
+phandle          0000000b (11)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/l2-cache@200000a8:
+l2-cache         00000020 (32)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              200000a8 (536871080)
+phandle          0000001f (31)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/PowerPC,POWER8@68:
+ibm,chip-id      00000000
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         00000017 (23)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              00000068 (104)
+phandle          00000016 (22)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 00000068 00000069 0000006a 0000006b
+		 0000006c 0000006d 0000006e 0000006f
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          00000068 (104)
+ibm,associativity
+		 00000005 00000000 00000000 00000000 00000000 0000000d
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/PowerPC,POWER8@e8:
+ibm,chip-id      00000001
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         0000002b (43)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              000000e8 (232)
+phandle          0000002a (42)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 000000e8 000000e9 000000ea 000000eb
+		 000000ec 000000ed 000000ee 000000ef
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          000000e8 (232)
+ibm,associativity
+		 00000005 00000000 00000000 00000000 00000001 0000000d
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/PowerPC,POWER8@870:
+ibm,chip-id      00000010 (16)
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         0000003f (63)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              00000870 (2160)
+phandle          0000003e (62)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 00000870 00000871 00000872 00000873
+		 00000874 00000875 00000876 00000877
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          00000870 (2160)
+ibm,associativity
+		 00000005 00000000 00000000 00000001 00000010 0000000e
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/PowerPC,POWER8@8f0:
+ibm,chip-id      00000011 (17)
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         00000053 (83)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              000008f0 (2288)
+phandle          00000052 (82)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 000008f0 000008f1 000008f2 000008f3
+		 000008f4 000008f5 000008f6 000008f7
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          000008f0 (2288)
+ibm,associativity
+		 00000005 00000000 00000000 00000001 00000011 0000000e
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/PowerPC,POWER8@860:
+ibm,chip-id      00000010 (16)
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         0000003b (59)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              00000860 (2144)
+phandle          0000003a (58)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 00000860 00000861 00000862 00000863
+		 00000864 00000865 00000866 00000867
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          00000860 (2144)
+ibm,associativity
+		 00000005 00000000 00000000 00000001 00000010 0000000c
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/l3-cache@30000060:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              30000060 (805306464)
+phandle          00000014 (20)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/PowerPC,POWER8@8e0:
+ibm,chip-id      00000011 (17)
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         0000004b (75)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              000008e0 (2272)
+phandle          0000004a (74)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 000008e0 000008e1 000008e2 000008e3
+		 000008e4 000008e5 000008e6 000008e7
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          000008e0 (2272)
+ibm,associativity
+		 00000005 00000000 00000000 00000001 00000011 0000000c
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/l3-cache@300000e0:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              300000e0 (805306592)
+phandle          00000028 (40)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/PowerPC,POWER8@28:
+ibm,chip-id      00000000
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         0000000b (11)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              00000028 (40)
+phandle          0000000a (10)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 00000028 00000029 0000002a 0000002b
+		 0000002c 0000002d 0000002e 0000002f
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          00000028 (40)
+ibm,associativity
+		 00000005 00000000 00000000 00000000 00000000 00000005
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/PowerPC,POWER8@a8:
+ibm,chip-id      00000001
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         0000001f (31)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              000000a8 (168)
+phandle          0000001e (30)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 000000a8 000000a9 000000aa 000000ab
+		 000000ac 000000ad 000000ae 000000af
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          000000a8 (168)
+ibm,associativity
+		 00000005 00000000 00000000 00000000 00000001 00000005
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/PowerPC,POWER8@830:
+ibm,chip-id      00000010 (16)
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         00000037 (55)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              00000830 (2096)
+phandle          00000036 (54)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 00000830 00000831 00000832 00000833
+		 00000834 00000835 00000836 00000837
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          00000830 (2096)
+ibm,associativity
+		 00000005 00000000 00000000 00000001 00000010 00000006
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/l3-cache@30000030:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              30000030 (805306416)
+phandle          00000010 (16)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/PowerPC,POWER8@8b0:
+ibm,chip-id      00000011 (17)
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         00000047 (71)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              000008b0 (2224)
+phandle          00000046 (70)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 000008b0 000008b1 000008b2 000008b3
+		 000008b4 000008b5 000008b6 000008b7
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          000008b0 (2224)
+ibm,associativity
+		 00000005 00000000 00000000 00000001 00000011 00000006
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/l3-cache@300000b0:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              300000b0 (805306544)
+phandle          00000024 (36)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/PowerPC,POWER8@820:
+ibm,chip-id      00000010 (16)
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         0000002f (47)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              00000820 (2080)
+phandle          0000002e (46)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 00000820 00000821 00000822 00000823
+		 00000824 00000825 00000826 00000827
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          00000820 (2080)
+ibm,associativity
+		 00000005 00000000 00000000 00000001 00000010 00000004
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/l3-cache@30000020:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              30000020 (805306400)
+phandle          00000008
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/l3-cache@300000a0:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              300000a0 (805306528)
+phandle          0000001c (28)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/l2-cache@20000060:
+l2-cache         00000014 (20)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              20000060 (536871008)
+phandle          00000013 (19)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/l2-cache@200000e0:
+l2-cache         00000028 (40)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              200000e0 (536871136)
+phandle          00000027 (39)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/l3-cache@300008e8:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              300008e8 (805308648)
+phandle          00000050 (80)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/l2-cache@20000030:
+l2-cache         00000010 (16)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              20000030 (536870960)
+phandle          0000000f (15)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/l2-cache@200000b0:
+l2-cache         00000024 (36)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              200000b0 (536871088)
+phandle          00000023 (35)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/l2-cache@20000020:
+l2-cache         00000008
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              20000020 (536870944)
+phandle          00000007
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/l2-cache@200000a0:
+l2-cache         0000001c (28)
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+reg              200000a0 (536871072)
+phandle          0000001b (27)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l2-cache"
+
+cpus/PowerPC,POWER8@60:
+ibm,chip-id      00000000
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         00000013 (19)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              00000060 (96)
+phandle          00000012 (18)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 00000060 00000061 00000062 00000063
+		 00000064 00000065 00000066 00000067
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          00000060 (96)
+ibm,associativity
+		 00000005 00000000 00000000 00000000 00000000 0000000c
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/PowerPC,POWER8@e0:
+ibm,chip-id      00000001
+ibm,purr         00000001
+general-purpose 
+i-tlb-sets       00000000
+ibm,slb-size     00000020 (32)
+graphics        
+tlb-size         00000800 (2048)
+performance-monitor
+		 00000000 00000001
+ibm,spurr        00000001
+l2-cache         00000027 (39)
+ibm,segment-page-sizes
+		 0000000c 00000000 00000003 0000000c
+		 00000000 00000010 00000007 00000018
+		 00000038 00000010 00000110 00000002
+		 00000010 00000001 00000018 00000008
+		 00000018 00000100 00000001 00000018
+		 00000000 00000022 00000120 00000001
+		 00000022 00000003
+32-64-bridge    
+ibm,extended-timebase-frequency
+		 00000000 1e848000
+tlb-sets         00000004
+ibm,processor-segment-sizes
+		 0000001c 00000028 ffffffff ffffffff
+d-cache-block-size
+		 00000080 (128)
+ibm,extended-clock-frequency
+		 00000000 cc255a40
+clock-frequency  cc255a40
+device_type      "cpu"
+ibm,processor-page-sizes
+		 0000000c 00000010 00000018 00000022
+reservation-granule-size
+		 00000080 (128)
+ibm,dec-bits     00000020 (32)
+status           "okay"
+d-cache-size     00010000 (65536)
+64-bit          
+i-cache-size     00008000 (32768)
+ibm,vmx          00000002
+timebase-frequency
+		 1e848000 (512000000)
+reg              000000e0 (224)
+phandle          00000026 (38)
+d-cache-sets     00000008
+i-cache-block-size
+		 00000080 (128)
+i-cache-sets     00000004
+d-tlb-size       00000800 (2048)
+ibm,ppc-interrupt-server#s
+		 000000e0 000000e1 000000e2 000000e3
+		 000000e4 000000e5 000000e6 000000e7
+ibm,pa-features  0600f63f c70080c0
+i-tlb-size       00000000
+name             "PowerPC,POWER8"
+d-tlb-sets       00000004
+ibm,pir          000000e0 (224)
+ibm,associativity
+		 00000005 00000000 00000000 00000000 00000001 0000000c
+ibm,dfp          00000002
+cpu-version      004b0201 (4915713)
+
+cpus/l3-cache@30000828:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              30000828 (805308456)
+phandle          00000034 (52)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+cpus/l3-cache@300008a8:
+cache-unified   
+device_type      "cache"
+status           "okay"
+d-cache-size     00800000 (8388608)
+i-cache-size     00800000 (8388608)
+reg              300008a8 (805308584)
+phandle          00000044 (68)
+d-cache-sets     00000008
+i-cache-sets     00000008
+name             "l3-cache"
+
+interrupt-controller@3ffff80120000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 000000a0 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80120000 00000000 00001000
+		 0003ffff 80121000 00000000 00001000
+		 0003ffff 80122000 00000000 00001000
+		 0003ffff 80123000 00000000 00001000
+		 0003ffff 80124000 00000000 00001000
+		 0003ffff 80125000 00000000 00001000
+		 0003ffff 80126000 00000000 00001000
+		 0003ffff 80127000 00000000 00001000
+phandle          0000001d (29)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+interrupt-controller@3ffff80930000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 000008b0 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80930000 00000000 00001000
+		 0003ffff 80931000 00000000 00001000
+		 0003ffff 80932000 00000000 00001000
+		 0003ffff 80933000 00000000 00001000
+		 0003ffff 80934000 00000000 00001000
+		 0003ffff 80935000 00000000 00001000
+		 0003ffff 80936000 00000000 00001000
+		 0003ffff 80937000 00000000 00001000
+phandle          00000049 (73)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+reserved-memory:
+#address-cells   00000002
+#size-cells      00000002
+ranges          
+phandle          10000096 (268435606)
+name             "reserved-memory"
+
+reserved-memory/ibm,firmware-allocs-memory@39c00000:
+reg              00000000 39c00000 00000000 01a80200
+phandle          100000a3 (268435619)
+name             "ibm,firmware-allocs-memory"
+
+reserved-memory/ibm,firmware-data@31000000:
+reg              00000000 31000000 00000000 00c00000
+phandle          1000009f (268435615)
+name             "ibm,firmware-data"
+
+reserved-memory/ibm,firmware-stacks@31c00000:
+reg              00000000 31c00000 00000000 023e0000
+phandle          1000009e (268435614)
+name             "ibm,firmware-stacks"
+
+reserved-memory/ibm,slw-image@1ffda00000:
+reg              0000001f fda00000 00000000 00100000
+phandle          1000009a (268435610)
+name             "ibm,slw-image"
+
+reserved-memory/ibm,firmware-allocs-memory@1000000000:
+reg              00000010 00000000 00000000 02ac0200
+phandle          100000a2 (268435618)
+name             "ibm,firmware-allocs-memory"
+
+reserved-memory/ibm,slw-image@1ffe200000:
+reg              0000001f fe200000 00000000 00100000
+phandle          10000098 (268435608)
+name             "ibm,slw-image"
+
+reserved-memory/ibm,hbrt-target-image@1ffd6a0000:
+reg              0000001f fd6a0000 00000000 00060000
+phandle          1000009c (268435612)
+name             "ibm,hbrt-target-image"
+
+reserved-memory/ibm,hbrt-code-image@1ffd510000:
+reg              0000001f fd510000 00000000 00190000
+phandle          1000009b (268435611)
+name             "ibm,hbrt-code-image"
+
+reserved-memory/ibm,slw-image@1ffde00000:
+reg              0000001f fde00000 00000000 00100000
+phandle          10000099 (268435609)
+name             "ibm,slw-image"
+
+reserved-memory/ibm,firmware-heap@30300000:
+reg              00000000 30300000 00000000 00d00000
+phandle          100000a0 (268435616)
+name             "ibm,firmware-heap"
+
+reserved-memory/ibm,firmware-code@30000000:
+reg              00000000 30000000 00000000 00300000
+phandle          100000a1 (268435617)
+name             "ibm,firmware-code"
+
+reserved-memory/ibm,slw-image@1ffe600000:
+reg              0000001f fe600000 00000000 00100000
+phandle          10000097 (268435607)
+name             "ibm,slw-image"
+
+reserved-memory/ibm,hbrt-vpd-image@1ffd700000:
+reg              0000001f fd700000 00000000 00100000
+phandle          1000009d (268435613)
+name             "ibm,hbrt-vpd-image"
+
+pciex@3fffe40100000:
+ibm,chip-id      00000000
+ibm,hub-id       00000000
+ibm,opal-single-pe
+		
+ibm,opal-phbid   00000000 00000001
+#address-cells   00000003
+ibm,opal-rba-table
+		 00000000 3b680100 00000100
+ibm,mmio-window  00002100 00000000 00000100 00000000
+		 00003fe0 80000000 00000000 80000000
+bus-range        00000000 000000ff
+ibm,msi-eoi-method
+		 "ioda2"
+ibm,opal-m64-window
+		 00002100 00000000 00002100 00000000 00000100 00000000
+ibm,opal-ivt-table
+		 00000000 3b640000 00040000
+ibm,opal-num-pes 00000100 (256)
+ibm,use-ab-detect
+		
+ibm,max-link-speed
+		 00000003
+ibm,lane-eq      "wwwwwwwwwwwwwwww"
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+ibm,phb-index    00000001
+ibm,opal-reserved-pe
+		 000000ff (255)
+ibm,opal-msi-ranges
+		 00001000 000007f8
+#size-cells      00000002
+interrupt-parent 1000000e (268435470)
+ibm,capi-flags   00000001
+clock-frequency  00000200 00000000
+ibm,pbcq         000000a7 (167)
+device_type      "pciex"
+compatible       "ibm,power8-pciex"
+		 "ibm,ioda2-phb"
+ibm,opal-peltv-table
+		 00000000 3b602000 00002000
+ranges           02000000 00000000 80000000 00003fe0
+		 80000000 00000000 7fff0000
+#interrupt-cells 00000001
+reg              0003fffe 40100000 00000000 00001000
+ibm,opal-rtt-table
+		 00000000 3b5e0000 00020000
+phandle          10000077 (268435575)
+ibm,xscom-bases  02012400 09013c40 09012400
+ibm,opal-pest-table
+		 00000000 3b605000 00001000
+ibm,opal-ive-stride
+		 00000010 (16)
+ibm,capp-timebase-sync
+		 ""
+ibm,loc-code     "U78CB.001.WZS008T-P1-C32"
+ibm,opal-tce-kill
+		 0003fffe 40100210
+name             "pciex"
+ibm,associativity
+		 00000004 00000000 00000000 00000000 00000000
+
+pciex@3fffe40100000/pci@0:
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000000
+#address-cells   00000003
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 000017f8 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 000017f9 00000001 00000000 00000000
+		 00000000 00000003 1000000e 000017fa
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 000017fb 00000001
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000000
+ibm,slot-connector-type
+		 00000000
+device_type      "pciex"
+interrupt-map-mask
+		 00000000 00000000 00000000 00000007
+revision-id      00000000
+ibm,slot-card-desc
+		 00000000
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000000
+#interrupt-cells 00000001
+vendor-id        00001014 (4116)
+ibm,slot-wired-lanes
+		 00000004
+reg              00000000 00000000 00000000 00000000 00000000
+phandle          1000007e (268435582)
+ibm,slot-power-ctl
+		 00000000
+ibm,slot-card-mech
+		 00000000
+name             "pci"
+device-id        000003dc (988)
+ibm,slot-surprise-pluggable
+		 00000001
+
+pciex@3fffe40100000/pci@0/pci@0:
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000000
+#address-cells   00000003
+interrupts       00000001
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 000017f8 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 000017f9 00000001 00000000 00000000
+		 00000000 00000003 1000000e 000017fa
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 000017fb 00000001
+		 00000800 00000000 00000000 00000001
+		 [3584 bytes total]
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000000
+ibm,slot-connector-type
+		 00000000
+device_type      "pciex"
+interrupt-map-mask
+		 0000f800 00000000 00000000 00000007
+revision-id      000000ca (202)
+ibm,slot-card-desc
+		 00000000
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000000
+#interrupt-cells 00000001
+vendor-id        000010b5 (4277)
+ibm,slot-wired-lanes
+		 00000004
+reg              00010000 00000000 00000000 00000000 00000000
+phandle          1000007f (268435583)
+ibm,slot-power-ctl
+		 00000000
+ibm,slot-card-mech
+		 00000000
+name             "pci"
+device-id        00008732 (34610)
+ibm,slot-surprise-pluggable
+		 00000000
+
+pciex@3fffe40100000/pci@0/pci@0/pci@8:
+ibm,slot-label   "C14"
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000001
+#address-cells   00000003
+interrupts       00000001
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 000017f8 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 000017f9 00000001 00000000 00000000
+		 00000000 00000003 1000000e 000017fa
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 000017fb 00000001
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000000
+ibm,slot-connector-type
+		 0000000e (14)
+device_type      "pciex"
+interrupt-map-mask
+		 00000000 00000000 00000000 00000007
+revision-id      000000ca (202)
+ibm,slot-card-desc
+		 00000000
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000000
+#interrupt-cells 00000001
+vendor-id        000010b5 (4277)
+ibm,slot-wired-lanes
+		 00000004
+reg              00024000 00000000 00000000 00000000 00000000
+ibm,slot-location-code
+		 "U78CB.001.WZS008T-P1-C14"
+phandle          10000082 (268435586)
+ibm,slot-power-ctl
+		 00000000
+ibm,slot-card-mech
+		 00000002
+ibm,loc-code     "C14"
+name             "pci"
+device-id        00008732 (34610)
+ibm,slot-surprise-pluggable
+		 00000001
+
+pciex@3fffe40100000/pci@0/pci@0/pci@9:
+ibm,slot-label   "C12"
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000001
+#address-cells   00000003
+interrupts       00000001
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 000017f9 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 000017fa 00000001 00000000 00000000
+		 00000000 00000003 1000000e 000017fb
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 000017f8 00000001
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000003
+ibm,slot-connector-type
+		 00000004
+device_type      "pciex"
+interrupt-map-mask
+		 00000000 00000000 00000000 00000007
+revision-id      000000ca (202)
+ibm,slot-card-desc
+		 00000001
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000001
+#interrupt-cells 00000001
+vendor-id        000010b5 (4277)
+ibm,slot-wired-lanes
+		 00000004
+reg              00024800 00000000 00000000 00000000 00000000
+ibm,slot-location-code
+		 "U78CB.001.WZS008T-P1-C12"
+phandle          10000083 (268435587)
+ibm,slot-power-ctl
+		 00000001
+ibm,slot-card-mech
+		 00000001
+ibm,loc-code     "C12"
+name             "pci"
+device-id        00008732 (34610)
+ibm,slot-surprise-pluggable
+		 00000001
+
+pciex@3fffe40100000/pci@0/pci@0/pci@9/usb-xhci@0:
+ibm,pci-config-space-type
+		 00000001
+interrupts       00000001
+class-code       000c0330 (787248)
+revision-id      00000002
+vendor-id        0000104c (4172)
+reg              00090000 00000000 00000000 00000000 00000000
+phandle          10000084 (268435588)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C12"
+name             "usb-xhci"
+device-id        00008241 (33345)
+
+pciex@3fffe40100000/pci@0/pci@0/pci@1:
+ibm,slot-label   "C11"
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000001
+#address-cells   00000003
+interrupts       00000001
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 000017f9 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 000017fa 00000001 00000000 00000000
+		 00000000 00000003 1000000e 000017fb
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 000017f8 00000001
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000003
+ibm,slot-connector-type
+		 00000004
+device_type      "pciex"
+interrupt-map-mask
+		 00000000 00000000 00000000 00000007
+revision-id      000000ca (202)
+ibm,slot-card-desc
+		 00000000
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000001
+#interrupt-cells 00000001
+vendor-id        000010b5 (4277)
+ibm,slot-wired-lanes
+		 00000004
+reg              00020800 00000000 00000000 00000000 00000000
+ibm,slot-location-code
+		 "U78CB.001.WZS008T-P1-C11"
+phandle          10000080 (268435584)
+ibm,slot-power-ctl
+		 00000001
+ibm,slot-card-mech
+		 00000000
+ibm,loc-code     "C11"
+name             "pci"
+device-id        00008732 (34610)
+ibm,slot-surprise-pluggable
+		 00000001
+
+pciex@3fffe40100000/pci@0/pci@0/pci@1/ethernet@0:
+ibm,pci-config-space-type
+		 00000001
+interrupts       00000001
+class-code       00020000 (131072)
+revision-id      00000000
+vendor-id        00001425 (5157)
+reg              00030000 00000000 00000000 00000000 00000000
+phandle          10000081 (268435585)
+ibm,loc-code     "U78CB.001.WZS008T-P1-C11-T1"
+name             "ethernet"
+device-id        00000030 (48)
+
+interrupt-controller@3ffff80928000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 000008a8 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80928000 00000000 00001000
+		 0003ffff 80929000 00000000 00001000
+		 0003ffff 8092a000 00000000 00001000
+		 0003ffff 8092b000 00000000 00001000
+		 0003ffff 8092c000 00000000 00001000
+		 0003ffff 8092d000 00000000 00001000
+		 0003ffff 8092e000 00000000 00001000
+		 0003ffff 8092f000 00000000 00001000
+phandle          00000045 (69)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+interrupt-controller@3ffff80160000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 000000e0 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80160000 00000000 00001000
+		 0003ffff 80161000 00000000 00001000
+		 0003ffff 80162000 00000000 00001000
+		 0003ffff 80163000 00000000 00001000
+		 0003ffff 80164000 00000000 00001000
+		 0003ffff 80165000 00000000 00001000
+		 0003ffff 80166000 00000000 00001000
+		 0003ffff 80167000 00000000 00001000
+phandle          00000029 (41)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+interrupt-controller@3ffff80970000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 000008f0 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80970000 00000000 00001000
+		 0003ffff 80971000 00000000 00001000
+		 0003ffff 80972000 00000000 00001000
+		 0003ffff 80973000 00000000 00001000
+		 0003ffff 80974000 00000000 00001000
+		 0003ffff 80975000 00000000 00001000
+		 0003ffff 80976000 00000000 00001000
+		 0003ffff 80977000 00000000 00001000
+phandle          00000055 (85)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+interrupt-controller@3ffff80968000:
+#address-cells   00000000
+device_type      "PowerPC-External-Interrupt-Presentation"
+ibm,interrupt-server-ranges
+		 000008e8 00000008
+compatible       "ibm,ppc-xicp"
+		 "IBM,power8-icp"
+reg              0003ffff 80968000 00000000 00001000
+		 0003ffff 80969000 00000000 00001000
+		 0003ffff 8096a000 00000000 00001000
+		 0003ffff 8096b000 00000000 00001000
+		 0003ffff 8096c000 00000000 00001000
+		 0003ffff 8096d000 00000000 00001000
+		 0003ffff 8096e000 00000000 00001000
+		 0003ffff 8096f000 00000000 00001000
+phandle          00000051 (81)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+pciex@3fffe42400000:
+ibm,chip-id      00000011 (17)
+ibm,hub-id       00000003
+ibm,opal-single-pe
+		
+ibm,opal-phbid   00000000 00000044
+#address-cells   00000003
+ibm,opal-rba-table
+		 00000010 02a00100 00000100
+ibm,mmio-window  00002c00 00000000 00000100 00000000
+		 00003ff2 00000000 00000000 80000000
+bus-range        00000000 000000ff
+ibm,msi-eoi-method
+		 "ioda2"
+ibm,opal-m64-window
+		 00002c00 00000000 00002c00 00000000 00000100 00000000
+ibm,opal-ivt-table
+		 00000010 029c0000 00040000
+ibm,opal-num-pes 00000100 (256)
+ibm,use-ab-detect
+		
+ibm,max-link-speed
+		 00000003
+ibm,lane-eq      77777777 77777777 77777777 77777777
+		 77777777 77777777 77777777 77777777
+ibm,phb-index    00000000
+ibm,opal-reserved-pe
+		 000000ff (255)
+ibm,opal-msi-ranges
+		 00022800 000007f8
+#size-cells      00000002
+interrupt-parent 1000000e (268435470)
+ibm,capi-flags   00000001
+clock-frequency  00000200 00000000
+ibm,pbcq         000000ab (171)
+device_type      "pciex"
+compatible       "ibm,power8-pciex"
+		 "ibm,ioda2-phb"
+ibm,opal-peltv-table
+		 00000010 02982000 00002000
+ranges           02000000 00000000 80000000 00003ff2
+		 00000000 00000000 7fff0000
+#interrupt-cells 00000001
+reg              0003fffe 42400000 00000000 00001000
+ibm,opal-rtt-table
+		 00000010 02960000 00020000
+phandle          1000007b (268435579)
+ibm,xscom-bases  02012000 09013c00 09012000
+ibm,opal-pest-table
+		 00000010 02985000 00001000
+ibm,opal-ive-stride
+		 00000010 (16)
+ibm,capp-timebase-sync
+		 ""
+ibm,loc-code     "U78CB.001.WZS008T-P1-C33"
+ibm,opal-tce-kill
+		 0003fffe 42400210
+name             "pciex"
+ibm,associativity
+		 00000004 00000000 00000000 00000001 00000011
+
+pciex@3fffe42400000/pci@0:
+ibm,slot-label   "C3"
+ibm,pci-config-space-type
+		 00000001
+ibm,slot-pluggable
+		 00000001
+#address-cells   00000003
+interrupt-map    00000000 00000000 00000000 00000001
+		 1000000e 00022ff8 00000001 00000000
+		 00000000 00000000 00000002 1000000e
+		 00022ff9 00000001 00000000 00000000
+		 00000000 00000003 1000000e 00022ffa
+		 00000001 00000000 00000000 00000000
+		 00000004 1000000e 00022ffb 00000001
+class-code       00060400 (394240)
+#size-cells      00000002
+ibm,slot-attn-led
+		 00000003
+ibm,slot-connector-type
+		 00000005
+device_type      "pciex"
+interrupt-map-mask
+		 00000000 00000000 00000000 00000007
+revision-id      00000000
+ibm,slot-card-desc
+		 00000000
+ranges           02000000 00000000 00000000 02000000
+		 00000000 00000000 f0000000 00000000
+ibm,reset-by-firmware
+		 00000001
+ibm,slot-power-led-ctlled
+		 00000001
+#interrupt-cells 00000001
+vendor-id        00001014 (4116)
+ibm,slot-wired-lanes
+		 00000005
+reg              00000000 00000000 00000000 00000000 00000000
+ibm,slot-location-code
+		 "U78CB.001.WZS008T-P1-C3"
+phandle          10000094 (268435604)
+ibm,slot-power-ctl
+		 00000001
+ibm,slot-card-mech
+		 00000000
+ibm,loc-code     "C3"
+name             "pci"
+device-id        000003dc (988)
+ibm,slot-surprise-pluggable
+		 00000001
