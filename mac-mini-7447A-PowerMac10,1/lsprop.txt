@@ -1,0 +1,1525 @@
+compatible       "PowerMac10,1"
+		 "MacRISC3"
+		 "Power Macintosh"
+		 ""
+copyright        "Copyright 1983-2004 Apple Computer, Inc. All Rights Reserved"
+AAPL,add-fcode-file
+		 ff869f30
+scb#             00000001
+device_type      "bootrom"
+display-config-info
+		 00000000 00000001
+serial-number    "RHT"
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 "YM515DDMRHT"
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+		 ""
+pid#             00000281 (641)
+model            "PowerMac10,1"
+#address-cells   00000001
+#size-cells      00000001
+phandle          ff891a00
+clock-frequency  09ec5815 (166483989)
+system-id        "0000000000000"
+customer-sw-config
+		 "           "
+name             ""
+
+/proc/device-tree/xmodem:
+phandle          ff96c1d0
+name             "xmodem"
+
+/proc/device-tree/pci@f2000000:
+compatible       "uni-north"
+built-in-names   0c 80 00 00 4d 41 43 2d 49 4f 00 55 53 42 32 00....MAC-IO.USB2.
+		 55 53 42 32 30 00                              USB20.
+device_type      "pci"
+interrupt-map-mask
+		 0000f800 00000000 00000000 00000000
+model            "AAPL,UniNorth"
+ranges           02000000 00000000 f3000000 f3000000 00000000 01000000
+		 01000000 00000000 00000000 f2000000 00000000 00800000
+		 02000000 00000000 80000000 80000000 00000000 10000000
+#interrupt-cells 00000001
+bus-range        00000000 00000000
+interrupt-parent ff97b7c0
+#address-cells   00000003
+interrupts       0000002d 00000001
+interrupt-map    00009000 00000000 00000000 00000000
+		 ff97b7c0 00000034 00000001 0000d800
+		 00000000 00000000 00000000 ff97b7c0
+		 0000003f 00000001 0000c000 00000000
+		 00000000 00000000 ff97b7c0 0000001b
+		 00000001 0000c800 00000000 00000000
+		 00000000 ff97b7c0 0000001c 00000001
+		 0000d000 00000000 00000000 00000000
+		 [140 bytes total]
+#size-cells      00000002
+write-combining 
+phandle          ff973a60
+reg              f2000000 02000000
+clock-frequency  01fca055 (33333333)
+slot-names       00 04 00 00 53 4c 4f 54 2d 42 00               ....SLOT-B.
+name             "pci"
+
+/proc/device-tree/pci@f2000000/usb@1b:
+compatible       "pci1033,35"
+		 "pciclass,0c0310"
+		 ""
+assigned-addresses
+		 8200d810 00000000 80082000 00000000 00001000
+device_type      "usb"
+revision-id      00000043 (67)
+subsystem-id     00000035 (53)
+class-code       000c0310 (787216)
+min-grant        00000001
+vendor-id        00001033 (4147)
+#address-cells   00000001
+interrupts       00000001
+#size-cells      00000000
+device-id        00000035 (53)
+max-latency      0000002a (42)
+built-in        
+phandle          ff9a1b00
+reg              0000d800 00000000 00000000 00000000 00000000
+		 0200d810 00000000 00000000 00000000 00001000
+devsel-speed     00000001
+subsystem-vendor-id
+		 00001033 (4147)
+sleep-power-state
+		 "D3cold"
+name             "usb"
+
+/proc/device-tree/pci@f2000000/mac-io@17:
+compatible       "Keylargo"
+assigned-addresses
+		 8200b810 00000000 80000000 00000000 00080000
+device_type      "mac-io"
+revision-id      00000000
+class-code       00ff0000 (16711680)
+include-k2-support
+		
+model            "AAPL,Keylargo"
+min-grant        00000000
+ranges           00000000 8200b810 00000000 80000000 00080000
+platform-do-wor-disable
+		 ff97f4d0 08000000 00000003 00000038 08000000 08000000
+vendor-id        0000106b (4203)
+#interrupt-cells 00000002
+#address-cells   00000001
+#size-cells      00000001
+device-id        0000003e (62)
+max-latency      00000000
+platform-modem-power
+		 ff97bf10
+phandle          ff975e48
+platform-modem-reset
+		 ff97bdb8
+platform-do-wor-enable
+		 ff97f4d0 08000000 00000003 00000038 00000000 08000000
+reg              0000b800 00000000 00000000 00000000 00000000
+		 0200b810 00000000 00000000 00000000 00080000
+devsel-speed     00000001
+name             "mac-io"
+
+/proc/device-tree/pci@f2000000/mac-io@17/timer@15000:
+compatible       "keylargo-timer"
+device_type      "timer"
+interrupt-parent ff97b7c0
+interrupts       00000020 00000001
+built-in        
+phandle          ff97f328
+reg              00015000 00001000
+clock-frequency  01194000 (18432000)
+name             "timer"
+
+/proc/device-tree/pci@f2000000/mac-io@17/i2c@18000:
+compatible       "keywest-i2c"
+		 ""
+AAPL,driver-name ".i2c-mac-io"
+device_type      "i2c"
+AAPL,address-step
+		 00000010 (16)
+AAPL,address     80018000
+interrupt-parent ff97b7c0
+#address-cells   00000001
+interrupts       0000001a 00000001
+#size-cells      00000000
+AAPL,i2c-rate    00000064 (100)
+built-in        
+phandle          ff985e98
+reg              00018000 00001000
+name             "i2c"
+
+/proc/device-tree/pci@f2000000/mac-io@17/i2c@18000/cereal@1c0:
+device_type      "serial"
+phandle          ff986a50
+reg              000001c0 (448)
+name             "cereal"
+
+/proc/device-tree/pci@f2000000/mac-io@17/ata-3@20000:
+AAPL,bus-id      00000000
+lba-48          
+compatible       "keylargo-ata"
+AAPL,pio-timing  00000526 00000085 00000025 00000025
+		 00000025 00000000 00000000 00000000
+device_type      "ata"
+AAPL,clock-aux-data
+		 00000010 0000003c 00800000 00000000
+		 00000010 00000040 00000002 00000000
+model            "ata-3"
+interrupt-parent ff97b7c0
+#address-cells   00000001
+interrupts       00000018 00000001 0000000c 00000000
+AAPL,clock-data  03ef1480 00000000 00000000 00000000 00000000 00000044
+		 00000100 00000044 00000080 6e756c6c 6e756c6c 00000000
+#size-cells      00000000
+built-in        
+AAPL,clock-id    61746161 61613636
+phandle          ff987148
+reg              00020000 00001000 00008800 00000100
+AAPL,connector   "ata"
+name             "ata-3"
+
+/proc/device-tree/pci@f2000000/mac-io@17/ata-3@20000/disk:
+device_type      "block"
+phandle          ff989e68
+name             "disk"
+
+/proc/device-tree/pci@f2000000/mac-io@17/interrupt-controller@40000:
+compatible       "chrp,open-pic"
+device_type      "open-pic"
+#interrupt-cells 00000002
+#address-cells   00000000
+built-in        
+phandle          ff97b7c0
+reg              00040000 00040000
+clock-frequency  003f940a (4166666)
+name             "interrupt-controller"
+interrupt-controller
+		
+
+/proc/device-tree/pci@f2000000/mac-io@17/escc-legacy@12000:
+compatible       "chrp,es1"
+device_type      "escc-legacy"
+ranges          
+#address-cells   00000001
+built-in        
+phandle          ff97cd10
+reg              00012000 00001000 00008400 00000100 00008500
+		 00000100 00008600 00000100 00008700 00000100
+name             "escc-legacy"
+
+/proc/device-tree/pci@f2000000/mac-io@17/escc-legacy@12000/ch-b@12000:
+compatible       "chrp,es5"
+device_type      "serial"
+interrupt-parent ff97b7c0
+interrupts       00000017 00000001 00000007 00000000 00000008 00000000
+built-in        
+phandle          ff97d0e8
+reg              00012000 00000001 00012002 00000001 00012008
+		 00000001 00008600 00000100 00008700 00000100
+name             "ch-b"
+
+/proc/device-tree/pci@f2000000/mac-io@17/escc-legacy@12000/ch-a@12004:
+compatible       "chrp,es4"
+device_type      "serial"
+interrupt-parent ff97b7c0
+interrupts       00000016 00000001 00000005 00000000 00000006 00000000
+built-in        
+phandle          ff97cf38
+reg              00012004 00000001 00012006 00000001 0001200a
+		 00000001 00008400 00000100 00008500 00000100
+name             "ch-a"
+
+/proc/device-tree/pci@f2000000/mac-io@17/i2s@10000:
+device_type      "i2s"
+ranges          
+#address-cells   00000001
+built-in        
+phandle          ff97ec48
+reg              00010000 00001000 00008000 00000100 00008100
+		 00000100 00008200 00000100 00008300 00000100
+name             "i2s"
+
+/proc/device-tree/pci@f2000000/mac-io@17/i2s@10000/i2s-a@10000:
+compatible       "i2sbus"
+AAPL,requested-priorities
+		 00000002 00000004 00000004
+device_type      "soundbus"
+interrupt-parent ff97b7c0
+interrupts       0000001e 00000001 00000001 00000000 00000002 00000000
+AAPL,clock-data  02b11000 0000003c 00003400 00000044
+		 00004000 00000044 00000400 00000044
+		 00000004 69303439 6e756c6c 00000000
+		 02ee0000 0000003c 00003400 00000044
+		 00004000 00000044 00000200 00000044
+		 00000002 69303435 6e756c6c 00000000
+		 01194000 0000003c 00003000 0000003c
+		 00000400 00000044 00004000 00000000
+		 [144 bytes total]
+built-in        
+AAPL,clock-id    69327330 69303435 69303439 69303138
+phandle          ff97ee30
+reg              00010000 00001000 00008000 00000100 00008100 00000100
+name             "i2s-a"
+
+/proc/device-tree/pci@f2000000/mac-io@17/i2s@10000/i2s-a@10000/sound:
+layout-id        0000003a (58)
+compatible       "AOAKeylargo"
+device_type      "soundchip"
+vendor-id        0000106b (4203)
+phandle          ff97f110
+object-model-version
+		 00000002
+name             "sound"
+
+/proc/device-tree/pci@f2000000/mac-io@17/i2s@10000/i2s-b@11000:
+compatible       "i2s-modem"
+sw-reset-enable  00000000
+device_type      "i2s-b"
+interrupt-parent ff97b7c0
+interrupts       0000001f 00000001 00000003 00000000 00000004 00000000
+built-in        
+phandle          ff9d9140
+reg              00011000 00001000 00008200 00000100 00008300 00000100
+name             "i2s-b"
+
+/proc/device-tree/pci@f2000000/mac-io@17/escc@13000:
+compatible       "chrp,es0"
+device_type      "escc"
+ranges          
+#address-cells   00000001
+built-in        
+phandle          ff97d298
+reg              00013000 00001000 00008400 00000100 00008500
+		 00000100 00008600 00000100 00008700 00000100
+name             "escc"
+
+/proc/device-tree/pci@f2000000/mac-io@17/escc@13000/ch-b@13000:
+compatible       "chrp,es3"
+device_type      "serial"
+interrupt-parent ff97b7c0
+interrupts       00000017 00000001 00000007 00000000 00000008 00000000
+built-in        
+phandle          ff97e0e0
+reg              00013000 00000001 00013010 00000001 00013040
+		 00000001 00008600 00000100 00008700 00000100
+slot-names       00000000
+name             "ch-b"
+
+/proc/device-tree/pci@f2000000/mac-io@17/escc@13000/ch-a@13020:
+compatible       "chrp,es2"
+device_type      "serial"
+interrupt-parent ff97b7c0
+interrupts       00000016 00000001 00000005 00000000 00000006 00000000
+AAPL,clock-data  01de2000 00000038 00000054 00000000 00000000 00000044
+		 00000800 00000044 00000010 73613435 73623331 012ad400
+		 02b11000 00000038 00000050 00000038 00000004 00000044
+		 00000400 00000044 00000004 73613331 73623435 00000000
+built-in        
+AAPL,clock-id    73636361 73613331 73613435
+phandle          ff97d4d0
+reg              00013020 00000001 00013030 00000001 00013050
+		 00000001 00008400 00000100 00008500 00000100
+name             "ch-a"
+
+/proc/device-tree/pci@f2000000/mac-io@17/gpio@50:
+compatible       "mac-io-gpio"
+		 ""
+device_type      "gpio"
+#address-cells   00000001
+#size-cells      00000000
+built-in        
+phandle          ff97ba38
+reg              00000050 00000030
+name             "gpio"
+
+/proc/device-tree/pci@f2000000/mac-io@17/gpio@50/modem-power@1c:
+compatible       "modem-power"
+		 "gpio02"
+		 "gpio"
+		 ""
+device_type      "gpio"
+built-in        
+phandle          ff97bf10
+reg              0000001c (28)
+platform-do-modem-power
+		 ff975e48 08000000 00000000 00000002 00000003 00000038
+		 00000000 00000012 00000003 0000003c 00001a00 00001a00
+name             "modem-power"
+
+/proc/device-tree/pci@f2000000/mac-io@17/gpio@50/extint-gpio1@9:
+compatible       "keywest-gpio1"
+		 "gpio"
+		 ""
+AAPL,interrupt-priorities
+		 00000001
+device_type      "extint-gpio1"
+interrupt-parent ff97b7c0
+interrupts       0000002f 00000001
+built-in        
+phandle          ff97c0a0
+reg              00000009
+name             "extint-gpio1"
+
+/proc/device-tree/pci@f2000000/mac-io@17/gpio@50/extint-gpio15@67:
+audio-gpio-active-state
+		 00000000
+device_type      "extint-gpio15"
+AAPL,address     80000067
+interrupt-parent ff97b7c0
+interrupts       0000003d 00000000
+audio-gpio       "headphone-detect"
+built-in        
+phandle          ff97cb20
+reg              00000067 (103)
+name             "extint-gpio15"
+
+/proc/device-tree/pci@f2000000/mac-io@17/gpio@50/programmer-switch@11:
+compatible       "programmerSwitch-gpio"
+device_type      "gpio"
+interrupt-parent ff97b7c0
+interrupts       00000037 00000000
+built-in        
+phandle          ff97c280
+reg              00000011 (17)
+name             "programmer-switch"
+
+/proc/device-tree/pci@f2000000/mac-io@17/gpio@50/gpio5@6f:
+audio-gpio-active-state
+		 00000000
+device_type      "gpio5"
+AAPL,address     8000006f
+audio-gpio       "headphone-mute"
+built-in        
+phandle          ff97c820
+reg              0000006f (111)
+name             "gpio5"
+
+/proc/device-tree/pci@f2000000/mac-io@17/gpio@50/gpio6@70:
+audio-gpio-active-state
+		 00000000
+device_type      "gpio6"
+AAPL,address     80000070
+audio-gpio       "amp-mute"
+built-in        
+phandle          ff97c9a0
+reg              00000070 (112)
+name             "gpio6"
+
+/proc/device-tree/pci@f2000000/mac-io@17/gpio@50/modem-reset@1d:
+compatible       "modem-reset"
+		 "gpio03"
+		 "gpio"
+		 ""
+device_type      "gpio"
+built-in        
+phandle          ff97bdb8
+reg              0000001d (29)
+platform-do-modem-reset
+		 ff975e48 08000000 00000001 00000000 00000001
+name             "modem-reset"
+
+/proc/device-tree/pci@f2000000/mac-io@17/via-pmu@16000:
+compatible       "pmu"
+platform-wor-disable
+		 ff975e48
+device_type      "via-pmu"
+pmu-version      00001b0e (6926)
+interrupt-parent ff97b7c0
+#address-cells   00000001
+interrupts       00000019 00000001
+AAPL,clock-data  01de2000 00000044 00008000 00000000 00000000 00000044
+		 00008000 00000044 00000010 6e756c6c 6e756c6c 012ad400
+#size-cells      00000000
+AAPL,clock-id    73706920 73703331
+phandle          ff97f4d0
+reg              00016000 00002000
+platform-wor-enable
+		 ff975e48
+name             "via-pmu"
+
+/proc/device-tree/pci@f2000000/mac-io@17/via-pmu@16000/pmu-pwm-fans:
+compatible       "pmu-pwm-fans"
+		 "pwm-fans"
+device_type      "pmu-pwm-fans"
+built-in        
+phandle          ff985870
+hwctrl-params-version
+		 00000002
+name             "pmu-pwm-fans"
+
+/proc/device-tree/pci@f2000000/mac-io@17/via-pmu@16000/pmu-pwm-fans/fan:
+compatible       "micro-pwm-fan"
+version          00000002
+control-id       00000000
+device_type      "fan-pwm-control"
+zone             00000000
+built-in        
+phandle          ff985da8
+location         "MAIN ENCLOSURE"
+name             "fan"
+
+/proc/device-tree/pci@f2000000/mac-io@17/via-pmu@16000/pmu-i2c:
+compatible       "pmu-i2c"
+		 ""
+device_type      "pmu-i2c"
+#address-cells   00000001
+#size-cells      00000000
+phandle          ff982e10
+name             "pmu-i2c"
+
+/proc/device-tree/pci@f2000000/mac-io@17/via-pmu@16000/pmu-i2c/temp-monitor@190:
+compatible       "max6642"
+device_type      "max6642"
+hwsensor-params-version
+		 00000002
+#address-cells   00000001
+#size-cells      00000000
+built-in        
+phandle          ff983e00
+reg              00000190 (400)
+name             "temp-monitor"
+
+/proc/device-tree/pci@f2000000/mac-io@17/via-pmu@16000/pmu-i2c/temp-monitor@190/external-high-limit@7:
+phandle          ff9849d0
+reg              00000007
+name             "external-high-limit"
+
+/proc/device-tree/pci@f2000000/mac-io@17/via-pmu@16000/pmu-i2c/temp-monitor@190/internal-high-limit@5:
+phandle          ff984848
+reg              00000005
+name             "internal-high-limit"
+
+/proc/device-tree/pci@f2000000/mac-io@17/via-pmu@16000/pmu-i2c/temp-monitor@190/configuration@3:
+phandle          ff9846c8
+reg              00000003
+name             "configuration"
+
+/proc/device-tree/pci@f2000000/mac-io@17/via-pmu@16000/pmu-i2c/temp-monitor@190/local@0:
+polling-period   00000005 ffffffff
+version          00000002
+device_type      "temperature"
+zone             00000000
+sensor-id        00000000
+built-in        
+phandle          ff984408
+reg              00000000
+location         "CPU BOTTOMSIDE"
+name             "local"
+
+/proc/device-tree/pci@f2000000/mac-io@17/via-pmu@16000/pmu-i2c/temp-monitor@190/remote@1:
+polling-period   00000005 ffffffff
+version          00000002
+device_type      "temperature"
+zone             00000000
+sensor-id        00000001
+built-in        
+phandle          ff984568
+reg              00000001
+location         "CPU ON DIE"
+name             "remote"
+
+/proc/device-tree/pci@f2000000/mac-io@17/via-pmu@16000/power-mgt:
+max-aux-power    00000000
+registry-name    "extint-gpio1"
+compatible       "via-pmu-99"
+device_type      "power-mgt"
+phandle          ff985630
+name             "power-mgt"
+
+/proc/device-tree/pci@f2000000/mac-io@17/via-pmu@16000/power-mgt/usb-power-mgt:
+compatible       "usb-power-mgt"
+device_type      "usb-power-mgt"
+interrupt-parent ff97b7c0
+interrupts       0000001d 00000001
+phandle          ff9d9850
+name             "usb-power-mgt"
+
+/proc/device-tree/pci@f2000000/mac-io@17/via-pmu@16000/rtc:
+compatible       "rtc,via-pmu"
+device_type      "rtc"
+phandle          ff984f60
+name             "rtc"
+
+/proc/device-tree/pci@f2000000/usb@1b,1:
+compatible       "pci1033,35"
+		 "pciclass,0c0310"
+		 ""
+assigned-addresses
+		 8200d910 00000000 80081000 00000000 00001000
+device_type      "usb"
+revision-id      00000043 (67)
+subsystem-id     00000035 (53)
+class-code       000c0310 (787216)
+min-grant        00000001
+vendor-id        00001033 (4147)
+#address-cells   00000001
+interrupts       00000002
+#size-cells      00000000
+device-id        00000035 (53)
+max-latency      0000002a (42)
+built-in        
+phandle          ff9a9d90
+reg              0000d900 00000000 00000000 00000000 00000000
+		 0200d910 00000000 00000000 00000000 00001000
+devsel-speed     00000001
+subsystem-vendor-id
+		 00001033 (4147)
+sleep-power-state
+		 "D3cold"
+name             "usb"
+
+/proc/device-tree/pci@f2000000/usb@1b,1/hub@1:
+device_type      "hub"
+vendor-id        000005ac (1452)
+#address-cells   00000001
+#size-cells      00000000
+phandle          ff9d7e80
+reg              00000001
+product-id       00001003 (4099)
+assigned-address 00000001
+name             "hub"
+
+/proc/device-tree/pci@f2000000/usb@1b,1/hub@1/device@3:
+device_type      "usb-device"
+vendor-id        000005ac (1452)
+#address-cells   00000002
+#size-cells      00000000
+phandle          ff9d8090
+reg              00000003
+product-id       0000020b (523)
+assigned-address 00000002
+name             "device"
+
+/proc/device-tree/pci@f2000000/usb@1b,1/hub@1/device@3/eject-key@1:
+device_type      "eject-key"
+phandle          ff9d8580
+reg              00000001 00000001
+endpoints        00040382 (263042)
+name             "eject-key"
+
+/proc/device-tree/pci@f2000000/usb@1b,1/hub@1/device@3/keyboard@0:
+device_type      "keyboard"
+phandle          ff9d8240
+reg              00000000 00000001
+endpoints        00080381 (525185)
+name             "keyboard"
+
+/proc/device-tree/pci@f2000000/usb@1a:
+AAPL,bus-id      00000003
+compatible       "pci106b,3f"
+		 "pciclass,0c0310"
+		 ""
+assigned-addresses
+		 8200d010 00000000 80083000 00000000 00001000
+device_type      "usb"
+revision-id      00000000
+AAPL,clock-aux-data
+		 00000002 00000048 0f0f0000 00000001
+		 00000008 00000038 10000000 00000000
+class-code       000c0310 (787216)
+min-grant        00000003
+vendor-id        0000106b (4203)
+#address-cells   00000001
+interrupts       00000001
+AAPL,clock-data  02dc6c00 00000038 01000000 00000038 00400000 00000000
+		 00000000 00000044 00000008 6e756c6c 6e756c6c 01e84800
+#size-cells      00000000
+device-id        0000003f (63)
+max-latency      00000056 (86)
+built-in        
+AAPL,clock-id    75736232 75323438
+phandle          ff9998c8
+reg              0000d000 00000000 00000000 00000000 00000000
+		 0200d010 00000000 00000000 00000000 00001000
+devsel-speed     00000001
+name             "usb"
+
+/proc/device-tree/pci@f2000000/usb@1b,2:
+compatible       "pci1033,e0"
+		 "pci1033,e0"
+		 "pciclass,0c0320"
+		 ""
+		 "ehci"
+		 ""
+assigned-addresses
+		 8200da10 00000000 80080000 00000000 00000100
+device_type      "ehci"
+revision-id      00000004
+subsystem-id     000000e0 (224)
+class-code       000c0320 (787232)
+min-grant        00000010 (16)
+vendor-id        00001033 (4147)
+interrupts       00000003
+device-id        000000e0 (224)
+max-latency      00000022 (34)
+phandle          ff9b2020
+reg              0000da00 00000000 00000000 00000000 00000000
+		 0200da10 00000000 00000000 00000000 00000100
+devsel-speed     00000001
+subsystem-vendor-id
+		 00001033 (4147)
+sleep-power-state
+		 "D3cold"
+name             "usb"
+
+/proc/device-tree/memory@0:
+dimm-speeds      "PC3200U-30330"
+device_type      "memory"
+dimm-info        8008070d 0a024000 04506000 82080001
+		 0e041c01 02200060 7075753c 283c2840
+		 60604040 00000000 00374620 28500000
+		 00000000 00000000 00000000 0000008f
+		 7f7f7f0b 00000000 094d3255 35313236
+		 34445338 48423347 2d355400 00040600
+		 00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 00000000
+dimm-types       "DDR SDRAM"
+available        00003000 001fd000 0021e000 0000f058 0024b058 000b4fa8
+		 00400000 00800000 04800000 00069000 04969000 1b287000
+ram-layout-architecture
+		 00000000
+phandle          ff895e28
+reg              00000000 20000000
+slot-names       00 00 00 01 44 49 4d 4d 30 2f 4a 31 31 00      ....DIMM0/J11.
+name             "memory"
+
+/proc/device-tree/rom@ff800000:
+ranges           ff800000 ff800000 00800000
+#address-cells   00000001
+phandle          ff897468
+reg              ff800000 00000000
+name             "rom"
+
+/proc/device-tree/rom@ff800000/boot-rom@fff00000:
+has-config-block
+write-characteristic
+		 "flash"
+BootROM-version  "$0004.89f1"
+hwi-flags        402a1260 (1076499040)
+BootROM-build-date
+		 "12/10/04 at 09:15:25"
+info             fff00000 00003f00 000489f1 20041209
+		 29c3039a fff08000 00078001 000489f1
+		 20041209 30bd1a94 fff80000 00080002
+		 000489f1 20041209 ff5f0a3a fff03f00
+		 00000083 000489f1 20041209 aab328d8
+		 fff03f80 00000084 785288f3 15a82001
+		 ffffffff fff04000 00004005 6e767261
+		 6d000000 00000000 00000000 00000000
+		 [140 bytes total]
+model            "Apple PowerMac10,1 4.8.9f1 BootROM built on 12/10/04 at 09:15:25"
+phandle          ff897620
+security-modes   6e6f6e65 2c206675 6c6c2c20 636f6d6d
+		 616e642c 206e6f2d 70617373 776f7264
+reg              fff00000 00100000
+image            00080000 (524288)
+name             "boot-rom"
+
+/proc/device-tree/rom@ff800000/macos:
+phandle          ff897818
+name             "macos"
+
+/proc/device-tree/options:
+default-gateway-ip
+		 ""
+oem-banner?      "false"
+scroll-lock      "true"
+screen-#columns  "100"
+real-base        "-1"
+boot-args        ""
+logger-size      "-1"
+boot-volume      "3"
+use-nvramrc?     "false"
+boot-once       
+boot-command     "mac-boot"
+gmt-offset       "0"
+default-subnet-mask
+		 ""
+mouse-device     "mouse"
+input-device-1   "/ipc"
+aapl,pci         2f406630 30303030 30302f40 3130ff01
+		 52324144 ff015c24 82ff8101 90ff8181
+		 ff8101fb ff81082a 3005ff81 010698ff
+		 810130ff 81017004 ff810104 2aff8101
+		 01ff8101 0304ff81 0105ff81 0203ff81
+		 18ff0100
+input-device     "keyboard"
+real-size        "-1"
+skip-netboot?    "false"
+oem-logo?        "false"
+real-mode?       "false"
+boot-file        ""
+default-router-ip
+		 ""
+diag-switch?     "false"
+boot-screen      "screen"
+nvramrc          ""
+boot-device      "/pci@f4000000/ata-6@d/@0:2,\\:tbxi"
+virt-base        "-1"
+boot-script      ""
+output-device    "screen"
+oem-banner       ""
+platform-uuid    ff 06 10 ff 01 80 ff 02 0d 93 78 52 88         ..........xR.
+little-endian?   "false"
+phandle          ff8978a8
+aapl,tdm-units   ""
+console-screen   "screen"
+diag-device      "enet"
+fcode-debug?     "false"
+oem-logo         ""
+default-mac-address?
+		 "false"
+auto-boot?       "false"
+use-generic?     "false"
+logger-base      "-1"
+selftest-#megs   "0"
+boot-last-label  4c 69 6e 75 78                                 Linux
+load-base        "0x800000"
+pci-probe-mask   "-1"
+output-device-1  "/ipc"
+virt-size        "-1"
+diag-file        ",diags"
+default-client-ip
+		 ""
+name             "options"
+ram-size         "0x20000000"
+screen-#rows     "40"
+default-server-ip
+		 ""
+
+/proc/device-tree/firewire-disk-mode:
+phandle          ff93f0f0
+name             "firewire-disk-mode"
+
+/proc/device-tree/pci@f0000000:
+compatible       "uni-north"
+built-in-names   00 01 08 00 55 4e 49 2d 4e 00 41 47 50 00      ....UNI-N.AGP.
+device_type      "pci"
+interrupt-map-mask
+		 0000f800 00000000 00000000 00000000
+model            "AAPL,UniNorth"
+ranges           02000000 00000000 f1000000 f1000000 00000000 01000000
+		 01000000 00000000 00000000 f0000000 00000000 00800000
+		 02000000 00000000 90000000 90000000 00000000 10000000
+#interrupt-cells 00000001
+bus-range        00000000 00000000
+interrupt-parent ff97b7c0
+#address-cells   00000003
+interrupts       0000002d 00000001
+interrupt-map    00008000 00000000 00000000 00000000
+		 ff97b7c0 00000030 00000001
+#size-cells      00000002
+write-combining 
+phandle          ff972890
+reg              f0000000 02000000
+clock-frequency  03f940aa (66666666)
+name             "pci"
+
+/proc/device-tree/pci@f0000000/uni-north-agp@b:
+AGP_Target      
+compatible       "uni-north-agp"
+assigned-addresses
+		
+device_type      "uni-north-agp"
+revision-id      00000000
+class-code       00060000 (393216)
+min-grant        00000000
+vendor-id        0000106b (4203)
+fast-back-to-back
+		
+device-id        00000034 (52)
+max-latency      00000000
+phandle          ff9caca8
+reg              00005800 00000000 00000000 00000000 00000000
+devsel-speed     00000001
+name             "uni-north-agp"
+
+/proc/device-tree/pci@f0000000/ATY,RockHopper2Parent@10:
+ATY,MCLK         0002e630 (190000)
+ATY,Flags        000001a4 (420)
+ATY,RefCLK       00006978 (27000)
+AGP_Address_Range
+		 00000000 ffffffff
+assigned-addresses
+		 c2008010 00000000 98000000 00000000 08000000
+		 82008030 00000000 90020000 00000000 00020000
+		 82008018 00000000 90000000 00000000 00010000
+ATY,Fcode        "1.94"
+device_type      "ATY,DDParent"
+R2AD             5c248200 90ff00fb 00000000 00000000
+		 2a300500 06980030 00700400 042a0001
+		 00030400 05000003 00000000 00000000
+		 00000000 00000000 00000000 00000000
+revision-id      00000001
+AGP_AllowOverlap 00000001
+subsystem-id     00005962 (22882)
+ATY,Rom#         "113-xxxxx-116"
+class-code       00030000 (196608)
+model            "ATY,RV280"
+min-grant        00000008
+vendor-id        00001002 (4098)
+fast-back-to-back
+		
+#address-cells   00000001
+interrupts       00000001
+AGP_Master      
+ATY,Card#        "109-xxxxx-00"
+#size-cells      00000000
+device-id        00005962 (22882)
+max-latency      00000000
+ATY,FCODE_MEM    200200ff (537002239)
+phandle          ff9caf70
+AGP_Alignment    10000000 (268435456)
+AGP_Address_Block
+		 10000000 (268435456)
+ATY,SCLK         0003d090 (250000)
+reg              00008000 00000000 00000000 00000000 00000000
+		 02008030 00000000 00000000 00000000 00020000
+		 42008010 00000000 00000000 00000000 08000000
+		 02008018 00000000 00000000 00000000 00010000
+devsel-speed     00000001
+subsystem-vendor-id
+		 00001002 (4098)
+VRAM,totalsize   02000000 (33554432)
+name             "ATY,RockHopper2Parent"
+
+/proc/device-tree/pci@f0000000/ATY,RockHopper2Parent@10/ATY,RockHopper2_A@0:
+EDID             00ffffff ffffff00 30ae4411 01010101
+		 14180103 80342078 eef915a3 54509e27
+		 125054ad cf003146 8180818c 9500950f
+		 b300a940 d1c0283c 80a070b0 23403020
+		 36000644 2100001a 000000fd 00324b1e
+		 4b11000a 20202020 20200000 00fc004c
+		 454e204c 54323435 32707743 000000ff
+		 00564e2d 35353634 38330a20 20200152
+compatible       "ATY,RockHopper2"
+linux,boot-display
+		
+iso6429-1983-colors
+		
+device_type      "display"
+width            00000780 (1920)
+connector-type   00000004
+linebytes        00000800 (2048)
+phandle          ff9d6df0
+reg              00000000
+display-type     "LCD"
+character-set    "ISO8859-1"
+address          9c008000
+AAPL,gray-page   00000001
+depth            00000008
+linux,opened    
+height           000004b0 (1200)
+name             "ATY,RockHopper2_A"
+
+/proc/device-tree/aliases:
+eject-key        "/pseudo-hid/eject-key"
+uni-n            "/uni-n"
+ki2c-serial      "/pci@f2000000/mac-io@17/i2c/cereal"
+screen           "/pci@f0000000/ATY,RockHopper2Parent@10/ATY,RockHopper2_A@0"
+nvram            "/nvram"
+ultra0           "/pci@f2000000/mac-io@17/ata-4@1f000/disk@0"
+usb-2b           "/pci@f2000000/@1b,1"
+usb1             "/pci@f2000000/usb@1b"
+pci2             "/pci@f4000000"
+usb-1b           "/pci@f2000000/@19"
+ide1             "/pci@f2000000/mac-io@17/ata-3@20000/disk@1"
+ui2c             "/uni-n/i2c"
+sccb             "/pci@f2000000/mac-io@17/escc/ch-b"
+pci              "/pci@f2000000"
+pci0             "/pci@f0000000"
+hd               "/pci@f4000000/ata-6@d/disk@0"
+fans             "/pci@f2000000/mac-io@17/via-pmu/pmu-pwm-fans"
+first-boot       "/pci@f4000000/ata-6@d/disk"
+fw               "/pci@f4000000/firewire"
+cpu1             "/cpus/@1"
+enet             "/pci@f4000000/ethernet"
+second-boot      "/pci@f2000000/mac-io@17/ata-3@20000/disk"
+cd               "/pci@f4000000/ata-6@d/disk@1"
+via-pmu          "/pci@f2000000/mac-io@17/via-pmu"
+agp              "/pci@f0000000"
+phandle          ff897938
+last-boot        "/pci@f4000000/ethernet"
+ultra1           "/pci@f2000000/mac-io@17/ata-4@1f000/disk@1"
+usb-2c           "/pci@f2000000/@1b,2"
+usb2             "/pci@f2000000/usb@1a"
+usb-1c           "/pci@f2000000/@1a"
+mpic             "/pci@f2000000/mac-io@17/interrupt-controller"
+sound            "/pseudo-sound"
+usb-2a           "/pci@f2000000/@1b"
+usb0             "/pci@f2000000/usb@1b,1"
+ui2c-serial      "/uni-n/i2c/cereal"
+wireless         "/pci@f2000000/mac-io@17/@30000"
+pci1             "/pci@f2000000"
+usb-1a           "/pci@f2000000/@18"
+ide0             "/pci@f2000000/mac-io@17/ata-3@20000/disk@0"
+scca             "/pci@f2000000/mac-io@17/escc/ch-a"
+mac-io           "/pci@f2000000/mac-io@17"
+keyboard         "/pseudo-hid/keyboard"
+mouse            "/pseudo-hid/mouse"
+name             "aliases"
+rtc              "/pci@f2000000/mac-io@17/via-pmu/rtc"
+ki2c             "/pci@f2000000/mac-io@17/i2c"
+cpu0             "/cpus/@0"
+pi2c             "/pci@f2000000/mac-io@17/via-pmu/pmu-i2c"
+
+/proc/device-tree/chosen:
+platform         ff9da0b0
+nvram            ffbcff40
+bootargs         "root=/dev/sda4 ro  "
+linux,initrd-start
+		 00000000 01b00000
+cpu              ffbdd0c0
+linux,kernel-end 00df8000 (14647296)
+linux,initrd-end 00000000 04768c00
+phandle          ff895c88
+stdout           ffbbacc0
+memory           ffbdd180
+stdin            ffbc3d00
+linux,stdout-path
+		 "/pci@f0000000/ATY,RockHopper2Parent@10/ATY,RockHopper2_A@0"
+pmu              ffbcfe00
+bootpath         "/pci@f4000000/ata-6@d/@0:2,\\yaboot"
+name             "chosen"
+mmu              ffbdd0c0
+linux,memory-limit
+		 00000000 00000000
+
+/proc/device-tree/pseudo-sound:
+phandle          ff956d88
+name             "pseudo-sound"
+
+/proc/device-tree/multiboot:
+phandle          ff957068
+name             "multiboot"
+
+/proc/device-tree/uni-n@f8000000:
+compatible       "uni-north"
+device_type      "memory-controller"
+model            "AAPL,UniNorth"
+#address-cells   00000001
+#size-cells      00000001
+phandle          ff970278
+device-rev       000000d2 (210)
+reg              f8000000 01000000
+name             "uni-n"
+
+/proc/device-tree/uni-n@f8000000/i2c@f8001000:
+compatible       "keywest-i2c"
+		 "uni-n-i2c"
+		 ""
+AAPL,driver-name ".i2c-uni-n"
+device_type      "i2c"
+AAPL,address-step
+		 00000010 (16)
+AAPL,address     f8001003
+interrupt-parent ff97b7c0
+#address-cells   00000001
+interrupts       0000002a 00000001
+#size-cells      00000000
+AAPL,i2c-rate    00000064 (100)
+built-in        
+phandle          ff971608
+reg              f8001000 00001000
+name             "i2c"
+
+/proc/device-tree/uni-n@f8000000/i2c@f8001000/cereal@1c0:
+device_type      "serial"
+phandle          ff972198
+reg              000001c0 (448)
+name             "cereal"
+
+/proc/device-tree/uni-n@f8000000/hw-clock:
+compatible       "hw-clock"
+platform-do-clockspreading
+		 00000000 20000000 00000000 00000002
+		 00000003 00000190 00000000 ffffffff
+		 00000009 00000028 00000000 10000000
+		 00000003 00000190 00000002 ffffffff
+device_type      "hw-clock"
+phandle          ff970430
+name             "hw-clock"
+
+/proc/device-tree/diagnostics:
+post             706f7374 04c00001 00000000 00010420
+		 00010001 b95bb580 abeaf4c2 abeaf4c2
+		 00000000 00000000 00000000 00000000
+		 00001000 10001000 20000000 20000000
+		 20000000 20000000 20000000 20000000
+		 00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 [1216 bytes total]
+phandle          ff96c138
+post-results     00000000
+name             "diagnostics"
+
+/proc/device-tree/nvram@fff04000:
+compatible       "sharp-B0ED"
+		 "nvram,flash"
+		 ""
+device_type      "nvram"
+#bytes           00002000 (8192)
+phandle          ff96eb98
+reg              fff04000 00004000
+name             "nvram"
+
+/proc/device-tree/openprom:
+relative-addressing
+		
+boot-syntax      00000001
+device_type      "BootROM"
+supports-bootinfo
+		
+model            "OpenFirmware 3"
+phandle          ff896028
+name             "openprom"
+
+/proc/device-tree/openprom/client-services:
+phandle          ff896188
+name             "client-services"
+
+/proc/device-tree/pseudo-hid:
+phandle          ff955bd8
+name             "pseudo-hid"
+
+/proc/device-tree/pseudo-hid/eject-key:
+device_type      "eject-key"
+phandle          ff9568f0
+name             "eject-key"
+
+/proc/device-tree/pseudo-hid/keyboard:
+device_type      "keyboard"
+phandle          ff955c90
+name             "keyboard"
+
+/proc/device-tree/pseudo-hid/mouse:
+device_type      "mouse"
+phandle          ff9563a8
+name             "mouse"
+
+/proc/device-tree/packages:
+phandle          ff89a8f8
+name             "packages"
+
+/proc/device-tree/packages/hfs-plus-files:
+phandle          ff8abc80
+name             "hfs-plus-files"
+
+/proc/device-tree/packages/obp-tftp:
+log              00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 00000000
+		 [4096 bytes total]
+stats            00000000 00000000 00000000 00000000 00000000
+		 00000000 00000000 00000000 00000000 00000000
+phandle          ff89bd60
+name             "obp-tftp"
+
+/proc/device-tree/packages/macho-loader:
+phandle          ff8b7200
+name             "macho-loader"
+
+/proc/device-tree/packages/usb-ms-class:
+phandle          ff8bf528
+name             "usb-ms-class"
+
+/proc/device-tree/packages/fat-files:
+phandle          ff8b0f20
+name             "fat-files"
+
+/proc/device-tree/packages/deblocker:
+phandle          ff89a990
+name             "deblocker"
+
+/proc/device-tree/packages/telnet:
+phandle          ff8a6930
+name             "telnet"
+
+/proc/device-tree/packages/bootinfo-loader:
+phandle          ff8b4ad0
+name             "bootinfo-loader"
+
+/proc/device-tree/packages/elf-loader:
+phandle          ff8baa70
+name             "elf-loader"
+
+/proc/device-tree/packages/pe-loader:
+phandle          ff8ba068
+name             "pe-loader"
+
+/proc/device-tree/packages/iso-9660-files:
+phandle          ff8b3cc0
+name             "iso-9660-files"
+
+/proc/device-tree/packages/bootpath-search:
+phandle          ff9384e0
+name             "bootpath-search"
+
+/proc/device-tree/packages/mac-files:
+phandle          ff8a8b08
+name             "mac-files"
+
+/proc/device-tree/packages/disk-label:
+phandle          ff89b2e0
+name             "disk-label"
+
+/proc/device-tree/packages/terminal-emulator:
+iso6429-1983-colors
+		
+phandle          ff93f028
+name             "terminal-emulator"
+
+/proc/device-tree/packages/usb-audio-class:
+phandle          ff8c2260
+name             "usb-audio-class"
+
+/proc/device-tree/packages/mac-parts:
+phandle          ff8a71e0
+name             "mac-parts"
+
+/proc/device-tree/packages/ata-disk:
+phandle          ff9338d0
+name             "ata-disk"
+
+/proc/device-tree/packages/atapi-disk:
+phandle          ff935e98
+name             "atapi-disk"
+
+/proc/device-tree/packages/xcoff-loader:
+phandle          ff8b6730
+name             "xcoff-loader"
+
+/proc/device-tree/packages/sbp2-disk:
+phandle          ff92fd60
+name             "sbp2-disk"
+
+/proc/device-tree/packages/usb-hid-class:
+phandle          ff8bc9c0
+name             "usb-hid-class"
+
+/proc/device-tree/pci@f4000000:
+compatible       "uni-north"
+built-in-names   00 00 e0 00 41 54 41 2d 31 30 30 00 46 69 72 65....ATA-100.Fire
+		 57 69 72 65 00 45 74 68 65 72 6e 65 74 00      Wire.Ethernet.
+device_type      "pci"
+interrupt-map-mask
+		 0000f800 00000000 00000000 00000001
+model            "AAPL,UniNorth"
+ranges           02000000 00000000 f5000000 f5000000 00000000 01000000
+		 01000000 00000000 00000000 f4000000 00000000 00800000
+#interrupt-cells 00000001
+bus-range        00000000 00000000
+interrupt-parent ff97b7c0
+#address-cells   00000003
+interrupts       0000002d 00000001
+interrupt-map    00006800 00000000 00000000 00000001
+		 ff97b7c0 00000027 00000001 00006800
+		 00000000 00000000 00000000 ff97b7c0
+		 0000000b 00000000 00007000 00000000
+		 00000000 00000001 ff97b7c0 00000028
+		 00000001 00007800 00000000 00000000
+		 00000001 ff97b7c0 00000029 00000001
+#size-cells      00000002
+write-combining 
+phandle          ff974c68
+reg              f4000000 02000000
+clock-frequency  03f940aa (66666666)
+name             "pci"
+
+/proc/device-tree/pci@f4000000/firewire@e:
+compatible       "pci106b,5811"
+		 "pci106b,31"
+		 "pciclass,0c0010"
+		 ""
+assigned-addresses
+		 82007010 00000000 f5000000 00000000 00001000
+device_type      "ieee1394"
+revision-id      00000081 (129)
+subsystem-id     00005811 (22545)
+class-code       000c0010 (786448)
+local-guid       000d93ff fe785288
+min-grant        0000000c (12)
+vendor-id        0000106b (4203)
+fast-back-to-back
+		
+#address-cells   00000004
+interrupts       00000001
+#size-cells      00000002
+device-id        00000031 (49)
+max-latency      00000018 (24)
+phandle          ff9b5cf8
+reg              00007000 00000000 00000000 00000000 00000000
+		 02007010 00000000 00000000 00000000 00001000
+devsel-speed     00000001
+subsystem-vendor-id
+		 0000106b (4203)
+name             "firewire"
+
+/proc/device-tree/pci@f4000000/ata-6@d:
+AAPL,bus-id      00000003
+lba-48          
+compatible       "kauai-ata"
+assigned-addresses
+		 82006810 00000000 f5004000 00000000 00004000
+AAPL,pio-timing  00000526 00000085 00000025 00000025
+		 00000025 00000000 00000000 00000000
+AAPL,requested-priorities
+		 00000002 00000004
+device_type      "ata"
+cable-type       "80-conductor"
+revision-id      00000000
+class-code       00ff0000 (16711680)
+model            "ata-6"
+min-grant        00000000
+vendor-id        0000106b (4203)
+#address-cells   00000001
+interrupts       00000001 00000000
+#size-cells      00000000
+device-id        0000003b (59)
+max-latency      00000000
+phandle          ff9b24a8
+reg              00006800 00000000 00000000 00000000 00000000
+		 02006810 00000000 00000000 00000000 00004000
+devsel-speed     00000001
+AAPL,connector   "ata"
+name             "ata-6"
+
+/proc/device-tree/pci@f4000000/ata-6@d/disk:
+device_type      "block"
+category         "hd"
+phandle          ff9b5690
+name             "disk"
+
+/proc/device-tree/pci@f4000000/ethernet@f:
+network-type     "ethernet"
+compatible       "gmac"
+assigned-addresses
+		 82007810 00000000 f5200000 00000000 00200000
+		 82007830 00000000 f5100000 00000000 00100000
+local-mac-address
+		 00 0d 93 78 52 88                              ...xR.
+device_type      "network"
+max-frame-size   000005ee (1518)
+revision-id      00000080 (128)
+cache-line-size  00000080 (128)
+class-code       00020000 (131072)
+min-grant        00000040 (64)
+vendor-id        0000106b (4203)
+fast-back-to-back
+		
+stats            00000000 00000000 00000000 00000000 00000000
+interrupts       00000001
+device-id        00000032 (50)
+max-latency      00000040 (64)
+removable        "network"
+category         "net"
+built-in        
+phandle          ff9c53c0
+address-bits     00000030 (48)
+reg              00007800 00000000 00000000 00000000 00000000
+		 02007810 00000000 00000000 00000000 00020000
+		 02007830 00000000 00000000 00000000 00010000
+devsel-speed     00000002
+name             "ethernet"
+
+/proc/device-tree/pci@f4000000/ethernet@f/ethernet-phy:
+compatible       "B5221"
+device_type      "ethernet-phy"
+gpio-reg         00000010 (16)
+gpio-value       00000001
+interrupt-parent ff97b7c0
+interrupts       00000033 00000000
+phandle          ff9d99a0
+phy-id           000061e4 (25060)
+gpio-parent      ff97ba38
+gpio-mask        00000001
+name             "ethernet-phy"
+
+/proc/device-tree/cpus:
+#interrupt-cells 00000002
+#address-cells   00000001
+#size-cells      00000000
+phandle          ff894520
+name             "cpus"
+
+/proc/device-tree/cpus/PowerPC,G4@0:
+bus-frequency    09ec5815 (166483989)
+rounded-clock-frequency
+		 4a723a40 (1249000000)
+performance-monitor
+		
+recalced-clock-frequency
+		 4a6c949d (1248629917)
+l2cr             80000000
+altivec         
+timebase-frequency
+		 027b1605 (41620997)
+translations     00000000 00003000 00000000 00000010
+		 00200000 0001e000 00200000 00000002
+		 0022d000 0001f000 0022d000 00000002
+		 00300000 00100000 00300000 00000010
+		 00c00000 00f00000 00c00000 00000010
+		 01b00000 00100000 01b00000 00000010
+		 01c00000 00100000 01c00000 00000010
+		 01d00000 00100000 01d00000 00000010
+		 [1184 bytes total]
+data-streams    
+tlb-size         00000080 (128)
+graphics        
+device_type      "cpu"
+dcba            
+l2-cache         ff894bf0
+tlb-sets         00000040 (64)
+reservation-granule-size
+		 00000020 (32)
+soft-reset       0000005b (91)
+config-bus-frequency
+		 09ef21aa (166666666)
+available        00003000 7fffd000 d0000000 20000000
+processor-to-bus-ratio*2
+		 0000000f (15)
+cpu-version      80030102
+phandle          ff8947b0
+i-cache-block-size
+		 00000020 (32)
+existing         00000000 80000000 80000000 80000000
+cpu-info         8410c0bc 80000000 80030102 00000000
+		 00000000 00000000 00000000 00000000
+cpu#             00000000
+reg              00000000
+d-cache-block-size
+		 00000020 (32)
+clock-frequency  4a817c7b (1249999995)
+state            "running"
+d-cache-size     00008000 (32768)
+i-cache-size     00008000 (32768)
+dcbz             00000020 (32)
+name             "PowerPC,G4"
+d-cache-sets     00000080 (128)
+i-cache-sets     00000080 (128)
+
+/proc/device-tree/cpus/PowerPC,G4@0/l2-cache#1:
+device_type      "cache"
+cache-unified   
+i-cache-line-size
+		 00000040 (64)
+phandle          ff894bf0
+clock-frequency  4a817c7b (1249999995)
+d-cache-size     00080000 (524288)
+i-cache-size     00080000 (524288)
+name             "l2-cache"
+d-cache-sets     00000200 (512)
+i-cache-sets     00000200 (512)
+d-cache-line-size
+		 00000040 (64)
+
+/proc/device-tree/sep:
+compatible       "aapl,sep-1"
+		 "aapl,sep"
+		 ""
+#address-cells   00000001
+#size-cells      00000000
+phandle          ff9da0b0
+name             "sep"
+
+/proc/device-tree/sep/clocks:
+#address-cells   00000001
+#size-cells      00000000
+phandle          ff9da430
+name             "clocks"
+
+/proc/device-tree/sep/temperatures:
+#address-cells   00000001
+#size-cells      00000000
+phandle          ff9daa68
+name             "temperatures"
+
+/proc/device-tree/sep/temperatures/cpu-bottomside@0:
+compatible       "sep-temperature"
+device           ff984408
+phandle          ff9daf68
+reg              00000000
+name             "cpu-bottomside"
+
+/proc/device-tree/sep/temperatures/cpu-on-die@1:
+compatible       "sep-temperature"
+device           ff984568
+phandle          ff9db2c0
+reg              00000001
+name             "cpu-on-die"
+
+/proc/device-tree/sep/audible-alarm:
+#address-cells   00000001
+#size-cells      00000000
+phandle          ff9dabf8
+name             "audible-alarm"
+
+/proc/device-tree/sep/device-slots:
+#address-cells   00000001
+#size-cells      00000000
+phandle          ff9da748
+name             "device-slots"
+
+/proc/device-tree/sep/fans:
+#address-cells   00000001
+#size-cells      00000000
+phandle          ff9da2a8
+name             "fans"
+
+/proc/device-tree/sep/fans/main-enclosure@0:
+compatible       "sep-fan"
+device           ff985da8
+phandle          ff9db648
+reg              00000000
+name             "main-enclosure"
+
+/proc/device-tree/sep/thermostats:
+#address-cells   00000001
+#size-cells      00000000
+phandle          ff9dad88
+name             "thermostats"
+
+/proc/device-tree/sep/door-lock:
+#address-cells   00000001
+#size-cells      00000000
+phandle          ff9da8d8
+name             "door-lock"
+
+/proc/device-tree/sep/power-supplies:
+#address-cells   00000001
+#size-cells      00000000
+phandle          ff9da5b8
+name             "power-supplies"
